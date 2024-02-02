@@ -1,0 +1,36 @@
+{
+    "name"              : "Node.js, Terraform, gcloud",
+    "image"             : "mcr.microsoft.com/devcontainers/base:latest",
+    "customizations"    : {
+        "vscode" : {
+            "extensions" : [
+                "hashicorp.terraform"
+            ]
+        }
+    },
+    "features"          : {
+        "ghcr.io/devcontainers/features/node:1"       : {
+        },
+        "ghcr.io/devcontainers/features/terraform:1"  : {
+            "terragrunt" : "none"
+        },
+        "ghcr.io/dhoeric/features/google-cloud-cli:1" : {
+        }
+    },
+    "postCreateCommand" : "apt-get update && apt-get install -y google-cloud-sdk-firestore-emulator && rm -rf /var/lib/apt/lists/* /var/cache/apt/*",
+    "containerEnv"      : {
+        "GOOGLE_APPLICATION_CREDENTIALS" : "/workspaces/brewmymac.sh/service-account.json",
+        "FIRESTORE_EMULATOR_HOST"        : "localhost:8081"
+    },
+    "appPort"           : [
+        5137,
+        6006,
+        8080,
+        51204
+    ],
+    "remoteUser"        : "root",
+    "runArgs"           : [
+        "--name",
+        "BrewMyMac"
+    ]
+}
