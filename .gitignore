@@ -1,0 +1,12 @@
+# macOS
+.DS_Store
+
+# JetBrains
+.idea/
+*.iml
+
+# PNPM
+.pnpm-store/
+
+# Secrets
+service-account.json

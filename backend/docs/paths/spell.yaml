@@ -1,0 +1,24 @@
+get:
+  tags:
+    - spellbook
+  operationId: getSpellApi
+  summary: Get a spell by ID
+  description: Get a spell by ID
+  parameters:
+    - name: id
+      in: path
+      required: true
+      description: The ID of the spell
+      schema:
+        type: string
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/Tweak.yaml'
+    '400':
+      description: Bad Request
+    '404':
+      description: Not Found

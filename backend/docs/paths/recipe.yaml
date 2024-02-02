@@ -1,0 +1,24 @@
+get:
+  tags:
+    - recipe
+  operationId: getRecipeApi
+  summary: Get a recipe
+  description: Get a recipe by ID
+  parameters:
+    - name: id
+      in: path
+      required: true
+      description: The ID of the recipe
+      schema:
+        type: string
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/Recipe.yaml'
+    '400':
+      description: Bad Request
+    '404':
+      description: Not Found

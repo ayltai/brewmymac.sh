@@ -1,0 +1,15 @@
+export type Tweak = {
+    id           : string,
+    name         : string,
+    description? : string,
+    category?    : string,
+    imageUrl?    : string,
+    infoUrl?     : string,
+    author?      : string,
+    parameters   : string[],
+    types        : ('boolean' | 'number' | 'string')[],
+    values       : (boolean | number | string)[],
+    impact?      : 'Dock' | 'Finder' | 'SystemUIServer',
+    privileged?  : boolean,
+    sipInvolved? : boolean,
+};
