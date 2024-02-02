@@ -1,0 +1,45 @@
+openapi: 3.1.0
+info:
+  title: BrewMyMac API
+  version: 1.0.0
+  description: API for BrewMyMac
+  termsOfService: https://github.com/ayltai/brewmymac.sh/blob/master/TERMS.md
+  contact:
+    name: Alan Tai
+    url: https://www.linkedin.com/in/ayltai
+externalDocs:
+  description: Find out more about BrewMyMac
+  url: https://github.com/ayltai/brewmymac.sh
+servers:
+  - url: https://europe-west2-brewmymac.cloudfunctions.net/api
+    description: Production server
+  - url: http://localhost:8080
+    description: Development server
+tags:
+  - name: system
+    description: System API
+  - name: recipe
+    description: Recipe API
+  - name: spellbook
+    description: Spellbook API
+  - name: install
+    description: Installation script generation API
+paths:
+  /health:
+    $ref: './paths/health.yaml'
+  /recipes:
+    $ref: './paths/recipes.yaml'
+  /recipes/{id}:
+    $ref: './paths/recipe.yaml'
+  /recipes/install/{id}:
+    $ref: './paths/install_recipe.yaml'
+  /spellbooks:
+    $ref: './paths/spellbooks.yaml'
+  /spellbooks/{id}:
+    $ref: './paths/spellbook.yaml'
+  /spellbooks/install/{id}:
+    $ref: './paths/install_spellbook.yaml'
+  /spells:
+    $ref: './paths/spells.yaml'
+  /spells/{id}:
+    $ref: './paths/spell.yaml'

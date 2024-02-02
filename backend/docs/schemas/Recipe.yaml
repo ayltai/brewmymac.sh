@@ -1,0 +1,18 @@
+type: object
+properties:
+  id:
+    type: string
+    description: The ID of the recipe
+  creationDate:
+    type: string
+    format: date-time
+    description: The date and time the recipe that was created
+  ingredients:
+    type: array
+    description: The description of the recipe
+    items:
+      $ref: './Ingredient.yaml'
+required:
+  - id
+  - creationDate
+  - ingredients

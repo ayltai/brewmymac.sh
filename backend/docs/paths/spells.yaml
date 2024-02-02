@@ -1,0 +1,17 @@
+get:
+  tags:
+    - spellbook
+  operationId: getSpellsApi
+  summary: Get all spells
+  description: Get all spells
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '../schemas/Tweak.yaml'
+    '400':
+      description: Bad Request
