@@ -27,8 +27,7 @@ exports[`<Footer /> > renders correctly 1`] = `
               </span>
               <a
                 class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-r74m4g-MuiTypography-root-MuiLink-root"
-                href="https://github.com/ayltai/brewmymac.sh"
-                target="_blank"
+                href="/#/pages/about"
               >
                 <p
                   class="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
@@ -89,8 +88,7 @@ exports[`<Footer /> > renders correctly 1`] = `
               </span>
               <a
                 class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-r74m4g-MuiTypography-root-MuiLink-root"
-                href="https://github.com/ayltai/brewmymac.sh/blob/master/TERMS.md"
-                target="_blank"
+                href="/#/pages/terms"
               >
                 <p
                   class="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
@@ -100,8 +98,7 @@ exports[`<Footer /> > renders correctly 1`] = `
               </a>
               <a
                 class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-r74m4g-MuiTypography-root-MuiLink-root"
-                href="https://github.com/ayltai/brewmymac.sh/blob/master/DISCLAIMER.md"
-                target="_blank"
+                href="/#/pages/disclaimer"
               >
                 <p
                   class="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
@@ -111,8 +108,7 @@ exports[`<Footer /> > renders correctly 1`] = `
               </a>
               <a
                 class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-r74m4g-MuiTypography-root-MuiLink-root"
-                href="https://github.com/ayltai/brewmymac.sh/blob/master/PRIVACY.md"
-                target="_blank"
+                href="/#/pages/privacy"
               >
                 <p
                   class="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
@@ -211,8 +207,7 @@ exports[`<Footer /> > renders correctly 1`] = `
             </span>
             <a
               class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-r74m4g-MuiTypography-root-MuiLink-root"
-              href="https://github.com/ayltai/brewmymac.sh"
-              target="_blank"
+              href="/#/pages/about"
             >
               <p
                 class="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
@@ -273,8 +268,7 @@ exports[`<Footer /> > renders correctly 1`] = `
             </span>
             <a
               class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-r74m4g-MuiTypography-root-MuiLink-root"
-              href="https://github.com/ayltai/brewmymac.sh/blob/master/TERMS.md"
-              target="_blank"
+              href="/#/pages/terms"
             >
               <p
                 class="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
@@ -284,8 +278,7 @@ exports[`<Footer /> > renders correctly 1`] = `
             </a>
             <a
               class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-r74m4g-MuiTypography-root-MuiLink-root"
-              href="https://github.com/ayltai/brewmymac.sh/blob/master/DISCLAIMER.md"
-              target="_blank"
+              href="/#/pages/disclaimer"
             >
               <p
                 class="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
@@ -295,8 +288,7 @@ exports[`<Footer /> > renders correctly 1`] = `
             </a>
             <a
               class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-r74m4g-MuiTypography-root-MuiLink-root"
-              href="https://github.com/ayltai/brewmymac.sh/blob/master/PRIVACY.md"
-              target="_blank"
+              href="/#/pages/privacy"
             >
               <p
                 class="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"

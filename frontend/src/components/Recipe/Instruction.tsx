@@ -1,4 +1,4 @@
-import { Link, Stack, Typography, } from '@mui/material';
+import { Box, Link, Stack, Typography, } from '@mui/material';
 import React, { FC, useContext, } from 'react';
 import { useTranslation, } from 'react-i18next';
 
@@ -24,9 +24,10 @@ export const Instruction : FC<InstructionProps> = ({
     onClose,
     ...rest
 }) => {
-    const { ingredients, } : { ingredients : Ingredient[], } = useAppSelector(state => state.recipe);
+    const { ingredients, } : { ingredients : Ingredient[],     } = useAppSelector(state => state.recipe);
+    const { themeMode,   } : { themeMode   : 'light' | 'dark', } = useAppSelector(state => state.preference);
 
-    const app = useContext(FirebaseContext);
+    const app  = useContext(FirebaseContext);
 
     const { t, } = useTranslation();
 
@@ -54,11 +55,18 @@ export const Instruction : FC<InstructionProps> = ({
                             target='_blank'>
                             https://support.apple.com/en-gb/guide/app-store/fir6253293d/mac
                         </Link>
-                        {ingredients.filter(ingredient => ingredient.source === 'App Store').map(ingredient => (
-                            <Typography key={ingredient.id}>
-                                {`- ${ingredient.name}`}
-                            </Typography>
-                        ))}
+                        <Box
+                            sx={{
+                                borderRadius    : '1rem',
+                                backgroundColor : themeMode === 'light' ? '#e1f5fe' : '#01579b',
+                            }}
+                            padding={2}>
+                            {ingredients.filter(ingredient => ingredient.source === 'App Store').map(ingredient => (
+                                <Typography key={ingredient.id}>
+                                    {`- ${ingredient.name}`}
+                                </Typography>
+                            ))}
+                        </Box>
                     </>
                 )}
                 <Typography>

@@ -5,21 +5,22 @@ import React, { ReactNode, } from 'react';
 import { Provider, } from 'react-redux';
 import { MemoryRouter, } from 'react-router-dom';
 
-import { appStoreApi, brewMyMacApi, homebrewApi, } from '../apis';
+import { appStoreApi, brewMyMacApi, contentfulApi, homebrewApi, } from '../apis';
 import { recipeReducer, preferenceReducer, spellbookReducer, } from '../states';
 import { appTheme, } from '../styles';
 
 export const createStore = (preloadedState? : unknown) => configureStore({
     preloadedState,
     reducer    : {
-        recipe                       : recipeReducer,
-        preference                   : preferenceReducer,
-        spellbook                    : spellbookReducer,
-        [ appStoreApi.reducerPath  ] : appStoreApi.reducer,
-        [ brewMyMacApi.reducerPath ] : brewMyMacApi.reducer,
-        [ homebrewApi.reducerPath  ] : homebrewApi.reducer,
+        recipe                        : recipeReducer,
+        preference                    : preferenceReducer,
+        spellbook                     : spellbookReducer,
+        [ appStoreApi.reducerPath  ]  : appStoreApi.reducer,
+        [ brewMyMacApi.reducerPath ]  : brewMyMacApi.reducer,
+        [ contentfulApi.reducerPath ] : contentfulApi.reducer,
+        [ homebrewApi.reducerPath  ]  : homebrewApi.reducer,
     },
-    middleware : getDefaultMiddleware => getDefaultMiddleware().concat(appStoreApi.middleware, brewMyMacApi.middleware, homebrewApi.middleware),
+    middleware : getDefaultMiddleware => getDefaultMiddleware().concat(appStoreApi.middleware, brewMyMacApi.middleware, contentfulApi.middleware, homebrewApi.middleware),
 });
 
 export const defaultStore = createStore();

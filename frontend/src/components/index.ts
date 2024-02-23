@@ -8,4 +8,5 @@ export { SearchInput, } from './SearchInput';
 export { Spellbook, } from './Spellbook';
 export { StyledButton, } from './StyledButton';
 export { Terminal, } from './Terminal';
+export { ThemeModeToggle, } from './ThemeModeToggle';
 export { TopAppBar, } from './TopAppBar';

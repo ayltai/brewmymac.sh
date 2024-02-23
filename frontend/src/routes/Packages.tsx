@@ -3,26 +3,24 @@ import MiniSearch from 'minisearch';
 import React, { useCallback, useContext, useEffect, useRef, useState, useTransition, } from 'react';
 import { useTranslation, } from 'react-i18next';
 
-import { useCaskQuery, useFormulaQuery, useSearchQuery, } from '../apis';
+import { useCaskQuery, useFormulaQuery, useIngredientsQuery, useSearchQuery, } from '../apis';
 import { DetailsView, GridView, Loading, SearchInput, SectionedGridView, SelectableCardView, Terminal, } from '../components';
 import { FirebaseContext, } from '../contexts';
-import { ESSENTIAL_APPS, DEVELOPMENT_APPS, HOMEBREW_REFRESH_INTERVAL, MIN_SEARCH_LENGTH, SEARCH_FUZZINESS, UTILITY_APPS, RECIPE_COMMANDS, } from '../constants';
+import { HOMEBREW_REFRESH_INTERVAL, INGREDIENT_CATEGORIES, MIN_SEARCH_LENGTH, SEARCH_FUZZINESS, RECIPE_COMMANDS, } from '../constants';
 import { useAppDispatch, useAppSelector, } from '../hooks';
 import type { Ingredient, } from '../models';
 import { addIngredient, removeIngredient, } from '../states';
 import { handleError, logAddToCart, logPageView, logRemoveFromCart, logSearch, } from '../utils';
-
-const PLACEHOLDER : Record<string, string[]> = {
-    'packages.apps.essentials'  : ESSENTIAL_APPS,
-    'packages.apps.development' : DEVELOPMENT_APPS,
-    'packages.apps.utilities'   : UTILITY_APPS,
-};
 
 export const Packages = () => {
     const [ query,              setQuery,              ] = useState('');
     const [ matchedIngredients, setMatchedIngredients, ] = useState<Ingredient[] | undefined>();
 
     const { ingredients, } : { ingredients : Ingredient[], } = useAppSelector(state => state.recipe);
+
+    const { data : ingredientsData, error : ingredientsError, } = useIngredientsQuery(undefined, {
+        pollingInterval : HOMEBREW_REFRESH_INTERVAL,
+    });
 
     const { data : caskData, error : caskError, } = useCaskQuery(undefined, {
         pollingInterval : HOMEBREW_REFRESH_INTERVAL,
@@ -64,11 +62,6 @@ export const Packages = () => {
     const [ isPending, startTransition, ] = useTransition();
 
     const { t, } = useTranslation();
-
-    const formulaCaskData : Ingredient[] = [
-        ...(formulaData ?? []),
-        ...(caskData ?? []),
-    ];
 
     const search = useCallback((keyword : string) => {
         if (app) logSearch(app, {
@@ -151,10 +144,11 @@ export const Packages = () => {
     }, [ caskData, formulaData, search, searchData, query, ]);
 
     useEffect(() => {
+        if (ingredientsError) handleError(ingredientsError);
         if (caskError) handleError(caskError);
         if (formulaError) handleError(formulaError);
         if (searchError) handleError(searchError);
-    }, [ caskError, formulaError, searchError, ]);
+    }, [ ingredientsError, caskError, formulaError, searchError, ]);
 
     useEffect(() => {
         if (app) logPageView(app, {
@@ -234,16 +228,16 @@ export const Packages = () => {
                             ))}
                         </GridView>
                     )}
-                    {!matchedIngredients && caskData && formulaData && Object.keys(PLACEHOLDER).map(key => (
+                    {!matchedIngredients && ingredientsData && INGREDIENT_CATEGORIES.map(category => (
                         <SectionedGridView
                             sx={{
                                 paddingY : 4,
                             }}
-                            key={key}
+                            key={category}
                             paddingTop={4}
                             color='primary'
-                            title={t(key)}>
-                            {PLACEHOLDER[key].map(id => formulaCaskData.find(ingredient => ingredient.id === id.substring(id.indexOf('/') + 1) && ingredient.source === id.substring(0, id.indexOf('/')))!).map(ingredient => (
+                            title={category}>
+                            {ingredientsData.filter(ingredient => ingredient.category === category).map(ingredient => (
                                 <IngredientView
                                     key={ingredient.id}
                                     ingredient={ingredient} />

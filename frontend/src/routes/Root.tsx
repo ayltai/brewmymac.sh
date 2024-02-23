@@ -10,7 +10,7 @@ export const Root = () => {
     const [ expanded , setExpanded , ] = useState(false);
     const [ onboarded, setOnboarded, ] = useState(false);
 
-    const { product, } : { product : 'packages' | 'tweaks', } = useAppSelector(state => state.preference);
+    const { product, themeMode, } : { product : 'packages' | 'tweaks', themeMode : 'light' | 'dark', } = useAppSelector(state => state.preference);
 
     const { ingredients, } : { ingredients : Ingredient[], } = useAppSelector(state => state.recipe);
 
@@ -28,7 +28,15 @@ export const Root = () => {
     }, [ ingredients, onboarded, product, tweaks, ]);
 
     return (
-        <Box width='100%'>
+        <Box
+            sx={{
+                backgroundImage      : themeMode === 'dark' ? 'url(data:image/svg+xml;base64,PCEtLT94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/LS0+CjxzdmcKICAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgIHZpZXdCb3g9IjAgMCAxMDAgMTAwIgogICAgd2lkdGg9IjY0MCIKICAgIGhlaWdodD0iNjQwIj4KICAgIDxkZWZzPgogICAgICAgIDxsaW5lYXJHcmFkaWVudAogICAgICAgICAgICBpZD0ic3ctZ3JhZGllbnQiCiAgICAgICAgICAgIHgxPSIwIgogICAgICAgICAgICB4Mj0iMSIKICAgICAgICAgICAgeTE9IjEiCiAgICAgICAgICAgIHkyPSIwIj4KICAgICAgICAgICAgPHN0b3AKICAgICAgICAgICAgICAgIHN0b3AtY29sb3I9InJnYmEoMzQsIDM2LCAzOCwgMSkiCiAgICAgICAgICAgICAgICBvZmZzZXQ9IjAlIiAvPgogICAgICAgICAgICA8c3RvcAogICAgICAgICAgICAgICAgc3RvcC1jb2xvcj0icmdiYSgzOCwgNTAsIDU2LCAxKSIKICAgICAgICAgICAgICAgIG9mZnNldD0iMTAwJSIgLz4KICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPC9kZWZzPgogICAgPHBhdGgKICAgICAgICBmaWxsPSJ1cmwoI3N3LWdyYWRpZW50KSIKICAgICAgICBkPSJNMjEuNywtMTEuOUMyMy42LC0xLjQsMTcuMyw2LjgsOC42LDEzLjVDMCwyMC4xLC0xMSwyNS4xLC0xOC45LDIwLjZDLTI2LjksMTYuMSwtMzEuOSwyLjEsLTI4LjIsLTEwLjlDLTI0LjYsLTIzLjksLTEyLjMsLTM1LjksLTEuMiwtMzUuNUMxMCwtMzUuMSwxOS45LC0yMi40LDIxLjcsLTExLjlaIgogICAgICAgIHRyYW5zZm9ybT0idHJhbnNsYXRlKDUwIDUwKSIgLz4KPC9zdmc+Cg==)' : 'url(data:image/svg+xml;base64,PCEtLT94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/LS0+CjxzdmcKICAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgIHZpZXdCb3g9IjAgMCAxMDAgMTAwIgogICAgd2lkdGg9IjY0MCIKICAgIGhlaWdodD0iNjQwIj4KICAgIDxkZWZzPgogICAgICAgIDxsaW5lYXJHcmFkaWVudAogICAgICAgICAgICBpZD0ic3ctZ3JhZGllbnQiCiAgICAgICAgICAgIHgxPSIwIgogICAgICAgICAgICB4Mj0iMSIKICAgICAgICAgICAgeTE9IjEiCiAgICAgICAgICAgIHkyPSIwIj4KICAgICAgICAgICAgPHN0b3AKICAgICAgICAgICAgICAgIHN0b3AtY29sb3I9InJnYmEoMjI4LCAyMzIsIDIzNCwgMSkiCiAgICAgICAgICAgICAgICBvZmZzZXQ9IjAlIiAvPgogICAgICAgICAgICA8c3RvcAogICAgICAgICAgICAgICAgc3RvcC1jb2xvcj0icmdiYSgyMzYsIDIzOSwgMjQxLCAxKSIKICAgICAgICAgICAgICAgIG9mZnNldD0iMTAwJSIgLz4KICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPC9kZWZzPgogICAgPHBhdGgKICAgICAgICBmaWxsPSJ1cmwoI3N3LWdyYWRpZW50KSIKICAgICAgICBkPSJNMjEuNywtMTEuOUMyMy42LC0xLjQsMTcuMyw2LjgsOC42LDEzLjVDMCwyMC4xLC0xMSwyNS4xLC0xOC45LDIwLjZDLTI2LjksMTYuMSwtMzEuOSwyLjEsLTI4LjIsLTEwLjlDLTI0LjYsLTIzLjksLTEyLjMsLTM1LjksLTEuMiwtMzUuNUMxMCwtMzUuMSwxOS45LC0yMi40LDIxLjcsLTExLjlaIgogICAgICAgIHRyYW5zZm9ybT0idHJhbnNsYXRlKDUwIDUwKSIgLz4KPC9zdmc+Cg==)',
+                backgroundPosition   : 'left -10vw center',
+                backgroundSize       : '125%',
+                backgroundAttachment : 'fixed',
+                backgroundRepeat     : 'no-repeat',
+            }}
+            width='100%'>
             <TopAppBar onExpand={handleExpand} />
             <Outlet />
             <Drawer

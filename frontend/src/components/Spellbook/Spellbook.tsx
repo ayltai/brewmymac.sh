@@ -163,6 +163,7 @@ export const Spellbook : FC<SpellbookProps> = ({
                         </Typography>
                         <StyledButton
                             disabled={openInstruction}
+                            color='secondary'
                             variant='contained'
                             startIcon={<AutoFixHigh />}
                             onClick={handleNext}>

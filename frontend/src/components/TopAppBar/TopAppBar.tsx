@@ -1,7 +1,7 @@
-import { AppBar, Box, Container, Toolbar, useScrollTrigger, } from '@mui/material';
+import { AppBar, Box, Container, Toolbar, Typography, useScrollTrigger, } from '@mui/material';
 import React, { cloneElement, FC, Fragment, ReactElement, } from 'react';
 import { useTranslation, } from 'react-i18next';
-import { useNavigate, } from 'react-router-dom';
+import { Link, useNavigate, } from 'react-router-dom';
 
 import { ProductSelection, } from '../ProductSelection';
 import { ShoppingCart, } from '../ShoppingCart';
@@ -55,15 +55,27 @@ export const TopAppBar : FC<TopAppBarProps> = ({
                         }}
                         maxWidth='lg'>
                         <Toolbar disableGutters>
-                            <img
-                                style={{
-                                    marginRight : 8,
+                            <Link to='/'>
+                                <img
+                                    style={{
+                                        marginRight : 8,
+                                    }}
+                                    src={SmallLogo}
+                                    alt={t('app.name')}
+                                    width={48}
+                                    height={48} />
+                            </Link>
+                            <Typography
+                                variant='h4'
+                                fontWeight='bold'>
+                                {t('app.name')}
+                            </Typography>
+                            <Box flexGrow={1} />
+                            <ProductSelection
+                                sx={{
+                                    marginLeft : -16,
                                 }}
-                                src={SmallLogo}
-                                alt={t('app.name')}
-                                width={48}
-                                height={48} />
-                            <ProductSelection onChange={handleChange} />
+                                onChange={handleChange} />
                             <Box flexGrow={1} />
                             <ThemeModeToggle />
                             <Box padding={1} />

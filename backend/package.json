@@ -1,7 +1,7 @@
 {
     "name"            : "brewmymac-backend",
     "description"     : "The backend for BrewMyMac",
-    "version"         : "1.0.0",
+    "version"         : "1.1.0",
     "author"          : {
         "name" : "Alan Tai"
     },
@@ -15,14 +15,14 @@
     "main"            : "src/index.js",
     "scripts"         : {
         "clean"         : "pnpm dlx rimraf --glob **/node_modules pnpm-lock.yaml",
-        "reset"         : "pnpm run clean && pnpm i && pnpm audit -P",
+        "reset"         : "pnpm clean && pnpm i && pnpm audit -P",
         "build"         : "tsc",
         "lint"          : "eslint --ext .ts src",
-        "pretest"       : "pnpm run lint",
-        "test"          : "pnpm run build && concurrently --k -s command-jest -n firestore,jest \"pnpm run dev:firestore\" \"wait-on tcp:8081 && jest --no-cache --maxWorkers=100%\"",
+        "pretest"       : "pnpm lint",
+        "test"          : "pnpm build && concurrently --k -s command-jest -n firestore,jest \"pnpm dev:firestore\" \"wait-on tcp:8081 && jest --no-cache --maxWorkers=100%\"",
         "dev:firestore" : "gcloud emulators firestore start --host-port=localhost:8081",
         "dev:functions" : "functions-framework --target=api --source=src --signature-type=http",
-        "dev"           : "pnpm run build && concurrently --k -n firestore,functions \"pnpm run dev:firestore\" \"wait-on tcp:8081 && pnpm run dev:functions\"",
+        "dev"           : "pnpm build && concurrently --k -n firestore,functions \"pnpm dev:firestore\" \"wait-on tcp:8081 && pnpm dev:functions\"",
         "start"         : "functions-framework --target=api --source=src --signature-type=http",
         "update"        : "pnpm dlx npm-check-updates"
     },

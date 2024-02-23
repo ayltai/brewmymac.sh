@@ -34,7 +34,7 @@ variable "backend_runtime" {
 variable "backend_memory" {
   description = "The memory to use for the backend"
   type        = number
-  default     = 128
+  default     = 256
 }
 
 variable "backend_timeout" {

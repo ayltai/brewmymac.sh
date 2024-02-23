@@ -4,7 +4,7 @@ import MiniSearch from 'minisearch';
 import React, { useCallback, useContext, useEffect, useRef, useState, useTransition, } from 'react';
 import { useTranslation, } from 'react-i18next';
 
-import { useGetSpellsQuery, } from '../apis';
+import { useTweaksQuery, } from '../apis';
 import { MIN_SEARCH_LENGTH, SEARCH_FUZZINESS, SPELLBOOK_COMMANDS, TWEAKS_REFRESH_INTERVAL, TWEAK_CATEGORIES, } from '../constants';
 import { GridView, Loading, SearchInput, SectionedGridView, SelectableCardView, Terminal, TweakDetailsView, } from '../components';
 import { FirebaseContext, } from '../contexts';
@@ -19,7 +19,7 @@ export const Tweaks = () => {
 
     const { tweaks, } : { tweaks : Tweak[], } = useAppSelector(state => state.spellbook);
 
-    const { data, error, } = useGetSpellsQuery(undefined, {
+    const { data, error, } = useTweaksQuery(undefined, {
         pollingInterval : TWEAKS_REFRESH_INTERVAL,
     });
 

@@ -2,7 +2,7 @@ import { combineReducers, configureStore, } from '@reduxjs/toolkit';
 import { FLUSH, PAUSE, PERSIST, persistReducer, persistStore, PURGE, REGISTER, REHYDRATE, } from 'redux-persist';
 import createWebStorage from 'redux-persist/lib/storage/createWebStorage';
 
-import { appStoreApi, brewMyMacApi, homebrewApi, } from '../apis';
+import { appStoreApi, brewMyMacApi, contentfulApi, homebrewApi, } from '../apis';
 import { recipeReducer, } from './recipeSlice';
 import { preferenceReducer, } from './preferenceSlice';
 import { spellbookReducer, } from './spellbookSlice';
@@ -25,12 +25,13 @@ const makeStore = () => configureStore({
             homebrewApi.reducerPath,
         ],
     }, combineReducers({
-        recipe                       : recipeReducer,
-        preference                   : preferenceReducer,
-        spellbook                    : spellbookReducer,
-        [ appStoreApi.reducerPath  ] : appStoreApi.reducer,
-        [ brewMyMacApi.reducerPath ] : brewMyMacApi.reducer,
-        [ homebrewApi.reducerPath  ] : homebrewApi.reducer,
+        recipe                        : recipeReducer,
+        preference                    : preferenceReducer,
+        spellbook                     : spellbookReducer,
+        [ appStoreApi.reducerPath  ]  : appStoreApi.reducer,
+        [ brewMyMacApi.reducerPath ]  : brewMyMacApi.reducer,
+        [ contentfulApi.reducerPath ] : contentfulApi.reducer,
+        [ homebrewApi.reducerPath  ]  : homebrewApi.reducer,
     })),
     middleware : getDefaultMiddleware => getDefaultMiddleware({
         serializableCheck : {
@@ -43,7 +44,7 @@ const makeStore = () => configureStore({
                 REHYDRATE,
             ],
         },
-    }).concat(appStoreApi.middleware, brewMyMacApi.middleware, homebrewApi.middleware),
+    }).concat(appStoreApi.middleware, brewMyMacApi.middleware, contentfulApi.middleware, homebrewApi.middleware),
     devTools   : import.meta.env.DEV,
 });
 

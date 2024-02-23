@@ -6,8 +6,6 @@ import { connector, } from 'swagger-routes-express';
 import swaggerUi from 'swagger-ui-express';
 
 import { createRecipeApi, createSpellbookApi, getHealthApi, getRecipeApi, getRecipeScriptApi, getSpellApi, getSpellbookScriptApi, getSpellbookApi, getSpellsApi, } from './apis';
-import { createSpell, getSpells, } from './models';
-import { spellbook, } from './spellbook';
 
 const app = express().disable('x-powered-by');
 
@@ -53,10 +51,6 @@ new SwaggerParser()
         app.use('/docs', swaggerUi.serve, swaggerUi.setup(definition));
 
         connect(app);
-
-        if ((await getSpells()).length === 0) {
-            for (const tweak of spellbook) await createSpell(tweak);
-        }
     })
     .catch(console.error);
 

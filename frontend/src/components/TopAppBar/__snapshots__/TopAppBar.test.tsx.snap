@@ -14,15 +14,27 @@ exports[`<TopAppBar /> > renders correctly 1`] = `
           <div
             class="MuiToolbar-root MuiToolbar-regular css-r6ewbb-MuiToolbar-root"
           >
-            <img
-              alt="app.name"
-              height="48"
-              src="/src/components/TopAppBar/SmallLogo.png"
-              style="margin-right: 8px;"
-              width="48"
+            <a
+              href="/"
+            >
+              <img
+                alt="app.name"
+                height="48"
+                src="/src/components/TopAppBar/SmallLogo.png"
+                style="margin-right: 8px;"
+                width="48"
+              />
+            </a>
+            <h4
+              class="MuiTypography-root MuiTypography-h4 css-5nas4o-MuiTypography-root"
+            >
+              app.name
+            </h4>
+            <div
+              class="MuiBox-root css-i9gxme"
             />
             <div
-              class="MuiButtonGroup-root MuiButtonGroup-outlined css-edsu1d-MuiButtonGroup-root"
+              class="MuiButtonGroup-root MuiButtonGroup-outlined css-18alvwn-MuiButtonGroup-root"
               role="group"
             >
               <button
@@ -117,15 +129,27 @@ exports[`<TopAppBar /> > renders correctly 1`] = `
         <div
           class="MuiToolbar-root MuiToolbar-regular css-r6ewbb-MuiToolbar-root"
         >
-          <img
-            alt="app.name"
-            height="48"
-            src="/src/components/TopAppBar/SmallLogo.png"
-            style="margin-right: 8px;"
-            width="48"
+          <a
+            href="/"
+          >
+            <img
+              alt="app.name"
+              height="48"
+              src="/src/components/TopAppBar/SmallLogo.png"
+              style="margin-right: 8px;"
+              width="48"
+            />
+          </a>
+          <h4
+            class="MuiTypography-root MuiTypography-h4 css-5nas4o-MuiTypography-root"
+          >
+            app.name
+          </h4>
+          <div
+            class="MuiBox-root css-i9gxme"
           />
           <div
-            class="MuiButtonGroup-root MuiButtonGroup-outlined css-edsu1d-MuiButtonGroup-root"
+            class="MuiButtonGroup-root MuiButtonGroup-outlined css-18alvwn-MuiButtonGroup-root"
             role="group"
           >
             <button

@@ -24,9 +24,10 @@ export const Instruction : FC<InstructionProps> = ({
     onClose,
     ...rest
 }) => {
-    const { tweaks, } : { tweaks : Tweak[], } = useAppSelector(state => state.spellbook);
+    const { tweaks,    } : { tweaks    : Tweak[],          } = useAppSelector(state => state.spellbook);
+    const { themeMode, } : { themeMode : 'light' | 'dark', } = useAppSelector(state => state.preference);
 
-    const app = useContext(FirebaseContext);
+    const app  = useContext(FirebaseContext);
 
     const { t, } = useTranslation();
 
@@ -50,11 +51,18 @@ export const Instruction : FC<InstructionProps> = ({
                             <Typography>
                                 {t('tweaks.checkout.instructions.1')}
                             </Typography>
-                            {tweaks.filter(tweak => tweak.sipInvolved).map(tweak => (
-                                <Typography key={tweak.id}>
-                                    {`- ${tweak.name}`}
-                                </Typography>
-                            ))}
+                            <Box
+                                sx={{
+                                    borderRadius    : '1rem',
+                                    backgroundColor : themeMode === 'light' ? '#fbe9e7' : '#bf360c',
+                                }}
+                                padding={2}>
+                                {tweaks.filter(tweak => tweak.sipInvolved).map(tweak => (
+                                    <Typography key={tweak.id}>
+                                        {`- ${tweak.name}`}
+                                    </Typography>
+                                ))}
+                            </Box>
                         </Box>
                         <Box paddingBottom={2}>
                             <Typography>

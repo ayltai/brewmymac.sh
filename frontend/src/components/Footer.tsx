@@ -17,10 +17,12 @@ const Heading = ({
 
 const LinkItem = ({
     href,
+    openInNewWindow,
     children,
 } : {
-    href     : string,
-    children : ReactNode,
+    href             : string,
+    openInNewWindow? : boolean,
+    children         : ReactNode,
 }) => {
     const theme = useTheme();
 
@@ -28,7 +30,7 @@ const LinkItem = ({
         <Link
             underline='none'
             href={href}
-            target='_blank'>
+            target={openInNewWindow ? '_blank' : undefined}>
             <Typography
                 color={theme.palette.text.secondary}
                 variant='body2'>
@@ -65,10 +67,13 @@ export const Footer = ({
                         <Heading>
                             {t('footer.header.product')}
                         </Heading>
-                        <LinkItem href='https://github.com/ayltai/brewmymac.sh'>
+                        <LinkItem
+                            href='/#/pages/about'>
                             {t('footer.product.about')}
                         </LinkItem>
-                        <LinkItem href='https://ayltai.medium.com/install-mac-apps-and-tweaks-with-a-single-command-6b1b90c466b5'>
+                        <LinkItem
+                            openInNewWindow
+                            href='https://ayltai.medium.com/install-mac-apps-and-tweaks-with-a-single-command-6b1b90c466b5'>
                             {t('footer.product.blog')}
                         </LinkItem>
                     </Stack>
@@ -76,10 +81,14 @@ export const Footer = ({
                         <Heading>
                             {t('footer.header.support')}
                         </Heading>
-                        <LinkItem href='https://github.com/ayltai/brewmymac.sh/issues/new?assignees=&labels=help+wanted&projects=&template=help_wanted.md&title='>
+                        <LinkItem
+                            openInNewWindow
+                            href='https://github.com/ayltai/brewmymac.sh/issues/new?assignees=&labels=help+wanted&projects=&template=help_wanted.md&title='>
                             {t('footer.support.help')}
                         </LinkItem>
-                        <LinkItem href='https://github.com/ayltai/brewmymac.sh/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title='>
+                        <LinkItem
+                            openInNewWindow
+                            href='https://github.com/ayltai/brewmymac.sh/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title='>
                             {t('footer.support.bugs')}
                         </LinkItem>
                     </Stack>
@@ -87,13 +96,13 @@ export const Footer = ({
                         <Heading>
                             {t('footer.header.terms')}
                         </Heading>
-                        <LinkItem href='https://github.com/ayltai/brewmymac.sh/blob/master/TERMS.md'>
+                        <LinkItem href='/#/pages/terms'>
                             {t('footer.terms.terms')}
                         </LinkItem>
-                        <LinkItem href='https://github.com/ayltai/brewmymac.sh/blob/master/DISCLAIMER.md'>
+                        <LinkItem href='/#/pages/disclaimer'>
                             {t('footer.terms.disclaimer')}
                         </LinkItem>
-                        <LinkItem href='https://github.com/ayltai/brewmymac.sh/blob/master/PRIVACY.md'>
+                        <LinkItem href='/#/pages/privacy'>
                             {t('footer.terms.privacy')}
                         </LinkItem>
                     </Stack>

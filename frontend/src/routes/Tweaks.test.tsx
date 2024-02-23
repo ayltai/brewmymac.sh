@@ -12,7 +12,7 @@ describe('<Tweaks />', () => {
     it('renders correctly', () => expect(render(<Tweaks />)).toMatchSnapshot());
 
     it('searches tweaks', async () => {
-        fetch.mockIf('http://localhost:8080/spells', request => {
+        fetch.mockIf(request => request.url.startsWith('https://cdn.contentful.com'), request => {
             if (request.method === 'GET') return {
                 status  : 200,
                 body    : JSON.stringify(spells),

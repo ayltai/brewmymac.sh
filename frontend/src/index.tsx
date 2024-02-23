@@ -24,11 +24,13 @@ let app : FirebaseApp | undefined;
 
 if (import.meta.env.PROD) {
     if (import.meta.env.VITE_APP_SENTRY_DSN) init({
-        dsn              : import.meta.env.VITE_APP_SENTRY_DSN,
-        environment      : 'production',
-        release          : PackageInfo.version,
-        tracesSampleRate : 1,
-        integrations     : [
+        dsn                      : import.meta.env.VITE_APP_SENTRY_DSN,
+        environment              : 'production',
+        release                  : PackageInfo.version,
+        replaysSessionSampleRate : 0.1,
+        replaysOnErrorSampleRate : 1,
+        tracesSampleRate         : 1,
+        integrations             : [
             browserTracingIntegration(),
             reactRouterV6BrowserTracingIntegration({
                 createRoutesFromChildren,
