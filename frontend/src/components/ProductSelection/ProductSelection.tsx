@@ -2,7 +2,7 @@ import ButtonGroup from '@mui/material/ButtonGroup';
 import React, { FC, } from 'react';
 import { useTranslation, } from 'react-i18next';
 
-import { useAppSelector, useAppDispatch, } from '../../hooks';
+import { useAppSelector, useAppDispatch, useDesktopMode, } from '../../hooks';
 import { setProduct, } from '../../states';
 import { StyledButton, } from '../StyledButton';
 import type { ProductSelectionProps, } from './ProductSelection.types';
@@ -17,6 +17,8 @@ export const ProductSelection : FC<ProductSelectionProps> = ({
     ...rest
 }) => {
     const { product, } = useAppSelector(state => state.preference);
+
+    const isDesktopMode = useDesktopMode();
 
     const dispatch = useAppDispatch();
 
@@ -42,13 +44,13 @@ export const ProductSelection : FC<ProductSelectionProps> = ({
                 variant={product === 'packages' ? 'contained' : 'outlined'}
                 color={'primary'}
                 onClick={selectPackages}>
-                {t('app.brewmymac')}
+                {t(isDesktopMode ? 'app.brewmymac' : 'app.brewmymac.small')}
             </StyledButton>
             <StyledButton
                 variant={product === 'tweaks' ? 'contained' : 'outlined'}
                 color={'secondary'}
                 onClick={selectTweaks}>
-                {t('app.tweakmymac')}
+                {t(isDesktopMode ? 'app.tweakmymac' : 'app.tweakmymac.small')}
             </StyledButton>
         </ButtonGroup>
     );

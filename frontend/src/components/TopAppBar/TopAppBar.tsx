@@ -8,6 +8,7 @@ import React, { cloneElement, FC, Fragment, ReactElement, } from 'react';
 import { useTranslation, } from 'react-i18next';
 import { Link, useNavigate, } from 'react-router-dom';
 
+import { useDesktopMode, } from '../../hooks';
 import { ProductSelection, } from '../ProductSelection';
 import { ShoppingCart, } from '../ShoppingCart';
 import { ThemeModeToggle, } from '../ThemeModeToggle';
@@ -38,6 +39,8 @@ export const TopAppBar : FC<TopAppBarProps> = ({
     onExpand,
     ...rest
 }) => {
+    const isDesktopMode = useDesktopMode();
+
     const navigate = useNavigate();
 
     const { t, } = useTranslation();
@@ -70,15 +73,17 @@ export const TopAppBar : FC<TopAppBarProps> = ({
                                     width={48}
                                     height={48} />
                             </Link>
-                            <Typography
-                                variant='h4'
-                                fontWeight='bold'>
-                                {t('app.name')}
-                            </Typography>
+                            {isDesktopMode && (
+                                <Typography
+                                    variant='h4'
+                                    fontWeight='bold'>
+                                    {t('app.name')}
+                                </Typography>
+                            )}
                             <Box flexGrow={1} />
                             <ProductSelection
                                 sx={{
-                                    marginLeft : -16,
+                                    marginLeft : isDesktopMode ? -16 : 6,
                                 }}
                                 onChange={handleChange} />
                             <Box flexGrow={1} />

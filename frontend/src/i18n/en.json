@@ -1,7 +1,9 @@
 {
     "app.name"                          : "BrewMyMac",
     "app.brewmymac"                     : "☕ BrewMyMac",
+    "app.brewmymac.small"               : "☕",
     "app.tweakmymac"                    : "TweakMyMac \uD83E\uDE84",
+    "app.tweakmymac.small"              : "\uD83E\uDE84",
     "action.close"                      : "Close",
     "action.select"                     : "Select",
     "action.deselect"                   : "Selected",

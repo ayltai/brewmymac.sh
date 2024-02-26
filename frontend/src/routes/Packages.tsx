@@ -15,7 +15,7 @@ import { SearchInput, } from '../components/SearchInput';
 import { Terminal, } from '../components/Terminal';
 import { FirebaseContext, } from '../contexts';
 import { HOMEBREW_REFRESH_INTERVAL, INGREDIENT_CATEGORIES, MIN_SEARCH_LENGTH, SEARCH_FUZZINESS, RECIPE_COMMANDS, } from '../constants';
-import { useAppDispatch, useAppSelector, } from '../hooks';
+import { useAppDispatch, useAppSelector, useDesktopMode, } from '../hooks';
 import type { Ingredient, } from '../models';
 import { addIngredient, removeIngredient, } from '../states';
 import { handleError, logAddToCart, logPageView, logRemoveFromCart, logSearch, } from '../utils';
@@ -62,6 +62,8 @@ export const Packages = () => {
             fuzzy : SEARCH_FUZZINESS,
         },
     }));
+
+    const isDesktopMode = useDesktopMode();
 
     const dispatch = useAppDispatch();
 
@@ -180,7 +182,7 @@ export const Packages = () => {
                         overflow             : 'hidden',
                     }}
                     width='100%'
-                    padding={8}
+                    padding={isDesktopMode ? 8 : 2}
                     position='relative'
                     textAlign='center'>
                     <div className='wave' />
@@ -191,7 +193,7 @@ export const Packages = () => {
                             paddingX={8}
                             paddingBottom={8}
                             textAlign='center'
-                            variant='h2'>
+                            variant={isDesktopMode ? 'h2' : 'h4'}>
                             {t('packages.tagline')}
                         </Typography>
                         <SearchInput
@@ -205,7 +207,9 @@ export const Packages = () => {
                         <Stack
                             paddingTop={8}
                             display='flex'
-                            direction='row'>
+                            direction={isDesktopMode ? 'row' : 'column'}
+                            alignItems={isDesktopMode ? undefined : 'center'}
+                            textAlign={isDesktopMode ? undefined : 'center'}>
                             <Box flexGrow={1}>
                                 <Typography
                                     gutterBottom
@@ -218,7 +222,9 @@ export const Packages = () => {
                                     {t('packages.about.description')}
                                 </Typography>
                             </Box>
-                            <Box marginRight={-4}>
+                            <Box
+                                marginRight={isDesktopMode ? -4 : 0}
+                                textAlign='left'>
                                 <Terminal commands={RECIPE_COMMANDS} />
                             </Box>
                         </Stack>
