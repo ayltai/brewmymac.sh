@@ -21,6 +21,13 @@ Object.defineProperty(window, 'matchMedia', {
     })),
 });
 
+Object.defineProperty(window, 'requestAnimationFrame', {
+    writable : true,
+    value    : vi.fn().mockImplementation((callback : () => void) => {
+        callback();
+    }),
+});
+
 vi.mock('i18next', () => ({
     language       : 'en',
     changeLanguage : () => new Promise(() => {

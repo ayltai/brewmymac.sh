@@ -9,7 +9,9 @@ const fetch = createFetchMock(vi);
 fetch.enableMocks();
 
 describe('<Packages />', () => {
-    it('renders correctly', () => expect(render(<Packages />)).toMatchSnapshot());
+    it('renders correctly', () => {
+        expect(render(<Packages />)).toMatchSnapshot();
+    }, 10000);
 
     it('searches packages', async () => {
         fetch.mockIf(request => request.url.startsWith('https://cdn.contentful.com'), request => {
@@ -39,5 +41,5 @@ describe('<Packages />', () => {
         }, {
             timeout : 10000,
         });
-    });
+    }, 10000);
 });

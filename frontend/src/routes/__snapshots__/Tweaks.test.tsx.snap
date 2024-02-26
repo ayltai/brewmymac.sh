@@ -83,7 +83,7 @@ exports[`<Tweaks /> > renders correctly 1`] = `
               class="MuiBox-root css-16m052m"
             >
               <div
-                class="MuiBox-root css-42gs87"
+                class="MuiBox-root css-1tqadvh"
               >
                 <span
                   class="index-module_type__E-SaG type"
@@ -212,7 +212,7 @@ exports[`<Tweaks /> > renders correctly 1`] = `
             class="MuiBox-root css-16m052m"
           >
             <div
-              class="MuiBox-root css-42gs87"
+              class="MuiBox-root css-1tqadvh"
             >
               <span
                 class="index-module_type__E-SaG type"

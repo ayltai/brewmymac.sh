@@ -136,6 +136,7 @@ export const Footer = ({
                         </Typography>
                         <Box flexGrow={1} />
                         <IconButton
+                            aria-label={t('footer.link.github')}
                             size='small'
                             href='https://github.com/ayltai/brewmymac.sh'
                             target='_blank'>
@@ -144,6 +145,7 @@ export const Footer = ({
                             }} />
                         </IconButton>
                         <IconButton
+                            aria-label={t('footer.link.linkedin')}
                             size='small'
                             href='https://linkedin.com/in/ayltai'
                             target='_blank'>

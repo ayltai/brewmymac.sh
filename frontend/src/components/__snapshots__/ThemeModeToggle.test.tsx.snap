@@ -6,6 +6,7 @@ exports[`<ThemeModeToggle /> > renders correctly 1`] = `
   "baseElement": <body>
     <div>
       <button
+        aria-label="action.theme_toggle"
         class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-78trlr-MuiButtonBase-root-MuiIconButton-root"
         tabindex="0"
         type="button"
@@ -29,6 +30,7 @@ exports[`<ThemeModeToggle /> > renders correctly 1`] = `
   </body>,
   "container": <div>
     <button
+      aria-label="action.theme_toggle"
       class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-78trlr-MuiButtonBase-root-MuiIconButton-root"
       tabindex="0"
       type="button"

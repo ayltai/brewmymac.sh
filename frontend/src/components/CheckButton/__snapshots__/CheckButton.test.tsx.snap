@@ -6,6 +6,7 @@ exports[`<CheckButton /> > renders correctly 1`] = `
   "baseElement": <body>
     <div>
       <button
+        aria-selected="false"
         class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-1imumyu-MuiButtonBase-root-MuiButton-root"
         role="checkbox"
         tabindex="0"
@@ -34,6 +35,7 @@ exports[`<CheckButton /> > renders correctly 1`] = `
   </body>,
   "container": <div>
     <button
+      aria-selected="false"
       class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-1imumyu-MuiButtonBase-root-MuiButton-root"
       role="checkbox"
       tabindex="0"

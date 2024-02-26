@@ -6,7 +6,7 @@ exports[`<Terminal /> > renders correctly 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="MuiBox-root css-42gs87"
+        class="MuiBox-root css-1tqadvh"
       >
         <span
           class="index-module_type__E-SaG type"
@@ -17,7 +17,7 @@ exports[`<Terminal /> > renders correctly 1`] = `
   </body>,
   "container": <div>
     <div
-      class="MuiBox-root css-42gs87"
+      class="MuiBox-root css-1tqadvh"
     >
       <span
         class="index-module_type__E-SaG type"

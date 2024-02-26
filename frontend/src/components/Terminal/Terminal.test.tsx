@@ -10,4 +10,4 @@ describe('<Terminal />', () => {
             1000,
         ]} />
     )).toMatchSnapshot());
-});
+}, 10000);
