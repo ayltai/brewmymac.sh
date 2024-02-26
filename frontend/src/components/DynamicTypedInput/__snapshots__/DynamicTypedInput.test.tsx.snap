@@ -20,7 +20,6 @@ exports[`<DynamicTypedInput /> > renders boolean typed input correctly 1`] = `
             class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
           >
             <input
-              checked=""
               class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
               type="checkbox"
             />
@@ -54,7 +53,6 @@ exports[`<DynamicTypedInput /> > renders boolean typed input correctly 1`] = `
           class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
         >
           <input
-            checked=""
             class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
             type="checkbox"
           />

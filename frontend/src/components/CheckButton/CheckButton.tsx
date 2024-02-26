@@ -42,7 +42,7 @@ export const CheckButton : FC<CheckButtonProps> = ({
     return (
         <Button
             {...rest}
-            aria-selected={checked}
+            aria-checked={checked}
             sx={{
                 boxShadow : theme.shadows[0],
                 ':hover'  : {
