@@ -1,10 +1,18 @@
-import { Box, Container, Stack, Typography, } from '@mui/material';
+import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
+import Stack from '@mui/material/Stack';
+import Typography from '@mui/material/Typography';
 import MiniSearch from 'minisearch';
 import React, { useCallback, useContext, useEffect, useRef, useState, useTransition, } from 'react';
 import { useTranslation, } from 'react-i18next';
 
 import { useCaskQuery, useFormulaQuery, useIngredientsQuery, useSearchQuery, } from '../apis';
-import { DetailsView, GridView, Loading, SearchInput, SectionedGridView, SelectableCardView, Terminal, } from '../components';
+import { SelectableCardView, } from '../components/CardView';
+import { DetailsView, } from '../components/DetailsView';
+import { GridView, SectionedGridView, } from '../components/GridView';
+import { Loading, } from '../components/Loading';
+import { SearchInput, } from '../components/SearchInput';
+import { Terminal, } from '../components/Terminal';
 import { FirebaseContext, } from '../contexts';
 import { HOMEBREW_REFRESH_INTERVAL, INGREDIENT_CATEGORIES, MIN_SEARCH_LENGTH, SEARCH_FUZZINESS, RECIPE_COMMANDS, } from '../constants';
 import { useAppDispatch, useAppSelector, } from '../hooks';

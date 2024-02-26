@@ -1,4 +1,5 @@
-import { styled, Typography, } from '@mui/material';
+import Typography from '@mui/material/Typography';
+import styled from '@mui/material/styles/styled';
 import { FC, } from 'react';
 
 import type { TruncatedTypographyProps, } from './TruncatedTypography.types';

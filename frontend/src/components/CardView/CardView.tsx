@@ -1,4 +1,9 @@
-import { Box, Card, CardActions, CardActionArea, CardContent, Tooltip, } from '@mui/material';
+import Box from '@mui/material/Box';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardActionArea from '@mui/material/CardActionArea';
+import CardContent from '@mui/material/CardContent';
+import Tooltip from '@mui/material/Tooltip';
 import React, { FC, Fragment, } from 'react';
 
 import { TruncatedTypography, } from '../TruncatedTypography';

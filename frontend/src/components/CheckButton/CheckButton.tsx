@@ -1,4 +1,5 @@
-import { Button, useTheme, } from '@mui/material';
+import Button from '@mui/material/Button';
+import useTheme from '@mui/material/styles/useTheme';
 import React, { FC, useState, } from 'react';
 
 import type { CheckButtonProps, } from './CheckButton.types';

@@ -1,5 +1,6 @@
-import { Check, DeleteForever, } from '@mui/icons-material';
-import { useTheme, } from '@mui/material';
+import Check from '@mui/icons-material/Check';
+import DeleteForever from '@mui/icons-material/DeleteForever';
+import useTheme from '@mui/material/styles/useTheme';
 import React, { ComponentType, JSX, useState, } from 'react';
 import { useTranslation, } from 'react-i18next';
 

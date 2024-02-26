@@ -1,4 +1,6 @@
-import { createTheme, CssBaseline, ThemeProvider, } from '@mui/material';
+import CssBaseline from '@mui/material/CssBaseline';
+import createTheme from '@mui/material/styles/createTheme';
+import ThemeProvider from '@mui/material/styles/ThemeProvider';
 import React, { Fragment, useEffect, useState, } from 'react';
 import { RouterProvider, } from 'react-router-dom';
 

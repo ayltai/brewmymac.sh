@@ -1,5 +1,6 @@
-import { DarkMode, LightMode, } from '@mui/icons-material';
-import { IconButton, } from '@mui/material';
+import DarkMode from '@mui/icons-material/DarkMode';
+import LightMode from '@mui/icons-material/LightMode';
+import IconButton from '@mui/material/IconButton';
 import React from 'react';
 
 import { useAppDispatch, useAppSelector, } from '../hooks';

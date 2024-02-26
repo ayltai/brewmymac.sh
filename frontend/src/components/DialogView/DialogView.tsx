@@ -1,5 +1,10 @@
-import { Close, } from '@mui/icons-material';
-import { Button, Dialog, DialogActions, DialogContent, DialogTitle, IconButton, } from '@mui/material';
+import Close from '@mui/icons-material/Close';
+import Button from '@mui/material/Button';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogTitle from '@mui/material/DialogTitle';
+import IconButton from '@mui/material/IconButton';
 import React, { FC, } from 'react';
 import { useTranslation, } from 'react-i18next';
 

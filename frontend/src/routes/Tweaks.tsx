@@ -1,12 +1,21 @@
-import { Settings, } from '@mui/icons-material';
-import { Box, Container, Stack, Typography, } from '@mui/material';
+import Settings from '@mui/icons-material/Settings';
+import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
+import Stack from '@mui/material/Stack';
+import Typography from '@mui/material/Typography';
 import MiniSearch from 'minisearch';
 import React, { useCallback, useContext, useEffect, useRef, useState, useTransition, } from 'react';
 import { useTranslation, } from 'react-i18next';
 
 import { useTweaksQuery, } from '../apis';
 import { MIN_SEARCH_LENGTH, SEARCH_FUZZINESS, SPELLBOOK_COMMANDS, TWEAKS_REFRESH_INTERVAL, TWEAK_CATEGORIES, } from '../constants';
-import { GridView, Loading, SearchInput, SectionedGridView, SelectableCardView, Terminal, TweakDetailsView, } from '../components';
+import { SelectableCardView, } from '../components/CardView';
+import { TweakDetailsView, } from '../components/DetailsView';
+import { GridView, SectionedGridView, } from '../components/GridView';
+import { Loading, } from '../components/Loading';
+import { SearchInput, } from '../components/SearchInput';
+import { StyledButton, } from '../components/StyledButton';
+import { Terminal, } from '../components/Terminal';
 import { FirebaseContext, } from '../contexts';
 import { useAppDispatch, useAppSelector, } from '../hooks';
 import type { Tweak, } from '../models';

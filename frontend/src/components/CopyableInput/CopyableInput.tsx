@@ -1,5 +1,10 @@
-import { ContentCopy, } from '@mui/icons-material';
-import { IconButton, InputAdornment, OutlinedInput, Snackbar, styled, Tooltip, } from '@mui/material';
+import ContentCopy from '@mui/icons-material/ContentCopy';
+import IconButton from '@mui/material/IconButton';
+import InputAdornment from '@mui/material/InputAdornment';
+import OutlinedInput from '@mui/material/OutlinedInput';
+import Snackbar from '@mui/material/Snackbar';
+import Tooltip from '@mui/material/Tooltip';
+import styled from '@mui/material/styles/styled';
 import React, { FC, useState, } from 'react';
 import { useTranslation, } from 'react-i18next';
 

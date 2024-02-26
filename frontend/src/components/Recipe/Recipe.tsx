@@ -1,5 +1,11 @@
-import { InstallDesktop, RemoveShoppingCart, } from '@mui/icons-material';
-import { Box, Divider, ListItemText, Stack, Tooltip, Typography, } from '@mui/material';
+import InstallDesktop from '@mui/icons-material/InstallDesktop';
+import RemoveShoppingCart from '@mui/icons-material/RemoveShoppingCart';
+import Box from '@mui/material/Box';
+import Divider from '@mui/material/Container';
+import ListItemText from '@mui/material/ListItemText';
+import Stack from '@mui/material/Stack';
+import Tooltip from '@mui/material/Tooltip';
+import Typography from '@mui/material/Typography';
 import React, { FC, useContext, useEffect, useState, } from 'react';
 import { useTranslation, } from 'react-i18next';
 

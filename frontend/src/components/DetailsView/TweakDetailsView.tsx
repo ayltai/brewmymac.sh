@@ -1,4 +1,5 @@
-import { Divider, Stack, } from '@mui/material';
+import Divider from '@mui/material/Divider';
+import Stack from '@mui/material/Stack';
 import React, { ComponentType, } from 'react';
 
 import { DynamicTypedInput, } from '../DynamicTypedInput';

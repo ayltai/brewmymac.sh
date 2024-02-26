@@ -1,9 +1,10 @@
-import { Stack, Typography, } from '@mui/material';
+import Stack from '@mui/material/Stack';
+import Typography from '@mui/material/Typography';
 import React from 'react';
 import { useTranslation, } from 'react-i18next';
 import { isRouteErrorResponse, useNavigate, useRouteError, } from 'react-router-dom';
 
-import { StyledButton, } from '../components';
+import { StyledButton, } from '../components/StyledButton';
 
 export const RouteError = () => {
     const error        = useRouteError();

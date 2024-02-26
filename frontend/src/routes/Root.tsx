@@ -1,8 +1,12 @@
-import { Box, Drawer, } from '@mui/material';
+import Box from '@mui/material/Box';
+import Drawer from '@mui/material/Drawer';
 import React, { useEffect, useState, } from 'react';
 import { Outlet, } from 'react-router-dom';
 
-import { Footer, Recipe, Spellbook, TopAppBar, } from '../components';
+import { Footer, } from '../components/Footer';
+import { Recipe, } from '../components/Recipe';
+import { Spellbook, } from '../components/Spellbook';
+import { TopAppBar, } from '../components/TopAppBar';
 import { useAppSelector, } from '../hooks';
 import type { Ingredient, Tweak, } from '../models';
 

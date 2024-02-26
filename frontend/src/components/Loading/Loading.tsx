@@ -1,4 +1,6 @@
-import { Backdrop, CircularProgress, Stack, } from '@mui/material';
+import Backdrop from '@mui/material/Backdrop';
+import CircularProgress from '@mui/material/CircularProgress';
+import Stack from '@mui/material/Stack';
 import React, { FC, } from 'react';
 
 import { useAppSelector, } from '../../hooks';

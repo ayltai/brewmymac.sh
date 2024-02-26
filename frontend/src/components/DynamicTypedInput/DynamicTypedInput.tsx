@@ -1,4 +1,7 @@
-import { Stack, Switch, TextField, Typography, } from '@mui/material';
+import Stack from '@mui/material/Stack';
+import Switch from '@mui/material/Switch';
+import TextField from '@mui/material/TextField';
+import Typography from '@mui/material/Typography';
 import React, { FC, useState, } from 'react';
 import { useTranslation, } from 'react-i18next';
 

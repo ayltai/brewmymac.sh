@@ -9,6 +9,7 @@ coverage/
 # Generated
 dist/
 html/
+stats.html
 
 # Secrets
 .env

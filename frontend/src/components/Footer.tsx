@@ -1,5 +1,13 @@
-import { GitHub, LinkedIn, } from '@mui/icons-material';
-import { Box, Container, Divider, IconButton, Link, Stack, Typography, useTheme, } from '@mui/material';
+import GitHub from '@mui/icons-material/GitHub';
+import LinkedIn from '@mui/icons-material/LinkedIn';
+import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
+import Divider from '@mui/material/Divider';
+import IconButton from '@mui/material/IconButton';
+import Link from '@mui/material/Link';
+import Stack from '@mui/material/Stack';
+import Typography from '@mui/material/Typography';
+import useTheme from '@mui/material/styles/useTheme';
 import React, { ReactNode, } from 'react';
 import { useTranslation, } from 'react-i18next';
 

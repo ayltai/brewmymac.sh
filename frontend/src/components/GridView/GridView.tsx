@@ -1,4 +1,4 @@
-import { Grid, } from '@mui/material';
+import Grid from '@mui/material/Grid';
 import React, { Children, FC, } from 'react';
 import type { GridViewProps, } from './GridView.types';
 

@@ -1,4 +1,9 @@
-import { AppBar, Box, Container, Toolbar, Typography, useScrollTrigger, } from '@mui/material';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import useScrollTrigger from '@mui/material/useScrollTrigger';
 import React, { cloneElement, FC, Fragment, ReactElement, } from 'react';
 import { useTranslation, } from 'react-i18next';
 import { Link, useNavigate, } from 'react-router-dom';

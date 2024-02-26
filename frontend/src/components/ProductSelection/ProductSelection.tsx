@@ -1,4 +1,4 @@
-import { ButtonGroup, } from '@mui/material';
+import ButtonGroup from '@mui/material/ButtonGroup';
 import React, { FC, } from 'react';
 import { useTranslation, } from 'react-i18next';
 

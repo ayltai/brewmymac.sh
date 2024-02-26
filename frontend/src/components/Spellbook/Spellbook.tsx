@@ -1,5 +1,11 @@
-import { AutoFixHigh, AutoFixOff, } from '@mui/icons-material';
-import { Box, Divider, ListItemText, Stack, Tooltip, Typography, } from '@mui/material';
+import AutoFixHigh from '@mui/icons-material/AutoFixHigh';
+import AutoFixOff from '@mui/icons-material/AutoFixOff';
+import Box from '@mui/material/Box';
+import Divider from '@mui/material/Container';
+import ListItemText from '@mui/material/ListItemText';
+import Stack from '@mui/material/Stack';
+import Tooltip from '@mui/material/Tooltip';
+import Typography from '@mui/material/Typography';
 import React, { FC, useContext, useEffect, useState, } from 'react';
 import { useTranslation, } from 'react-i18next';
 
