@@ -6,7 +6,7 @@ exports[`<DynamicTypedInput /> > renders boolean typed input correctly 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="MuiStack-root css-1n7yl32-MuiStack-root"
+        class="MuiStack-root css-crjfvx-MuiStack-root"
       >
         <p
           class="MuiTypography-root MuiTypography-body1 css-1oc1ahk-MuiTypography-root"
@@ -40,7 +40,7 @@ exports[`<DynamicTypedInput /> > renders boolean typed input correctly 1`] = `
   </body>,
   "container": <div>
     <div
-      class="MuiStack-root css-1n7yl32-MuiStack-root"
+      class="MuiStack-root css-crjfvx-MuiStack-root"
     >
       <p
         class="MuiTypography-root MuiTypography-body1 css-1oc1ahk-MuiTypography-root"
@@ -131,7 +131,7 @@ exports[`<DynamicTypedInput /> > renders string typed input correctly 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="MuiStack-root css-1n7yl32-MuiStack-root"
+        class="MuiStack-root css-crjfvx-MuiStack-root"
       >
         <p
           class="MuiTypography-root MuiTypography-body1 css-1oc1ahk-MuiTypography-root"
@@ -148,6 +148,7 @@ exports[`<DynamicTypedInput /> > renders string typed input correctly 1`] = `
               aria-invalid="false"
               class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
               id=":r0:"
+              required=""
               type="text"
               value="test"
             />
@@ -172,7 +173,7 @@ exports[`<DynamicTypedInput /> > renders string typed input correctly 1`] = `
   </body>,
   "container": <div>
     <div
-      class="MuiStack-root css-1n7yl32-MuiStack-root"
+      class="MuiStack-root css-crjfvx-MuiStack-root"
     >
       <p
         class="MuiTypography-root MuiTypography-body1 css-1oc1ahk-MuiTypography-root"
@@ -189,6 +190,7 @@ exports[`<DynamicTypedInput /> > renders string typed input correctly 1`] = `
             aria-invalid="false"
             class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
             id=":r0:"
+            required=""
             type="text"
             value="test"
           />

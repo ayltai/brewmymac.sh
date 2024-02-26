@@ -12,7 +12,7 @@ import type { SelectableCardViewProps, } from './SelectableCardView.types';
 
 const withSelectable = (Component : ComponentType<CardViewProps>) => {
     const ComponentWithSelectable : (props : SelectableCardViewProps) => JSX.Element = (props : SelectableCardViewProps) => {
-        const { sx, selected = false, color, actionIcon, actionText, children, onChange, ...rest } = props;
+        const { sx, selected = false, color, action, actionIcon, actionText, children, onChange, ...rest } = props;
 
         const [ open, setOpen, ] = useState(false);
 
@@ -62,6 +62,7 @@ const withSelectable = (Component : ComponentType<CardViewProps>) => {
                     <DialogView
                         open={open}
                         title={props.title}
+                        action={action}
                         onClose={handleClose}>
                         {children}
                     </DialogView>

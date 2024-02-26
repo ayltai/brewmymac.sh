@@ -9,6 +9,7 @@ import type { DialogViewProps, } from './DialogView.types';
  * A dialog that can be used to inform users about a task or show critical information, or requires decisions.
  * @param open Whether the dialog is open
  * @param title The title of the dialog
+ * @param action The primary action of the dialog
  * @param children The content of the component
  * @param onClose Function to call when the close button is clicked
  * @param rest Other props
@@ -16,6 +17,7 @@ import type { DialogViewProps, } from './DialogView.types';
 export const DialogView : FC<DialogViewProps> = ({
     open = false,
     title,
+    action,
     children,
     onClose,
     ...rest
@@ -44,6 +46,7 @@ export const DialogView : FC<DialogViewProps> = ({
                 {children}
             </DialogContent>
             <DialogActions>
+                {action}
                 <Button onClick={onClose}>
                     {t('action.close')}
                 </Button>

@@ -16,6 +16,7 @@ import { handleError, logAddToCart, logPageView, logRemoveFromCart, logSearch, }
 export const Tweaks = () => {
     const [ query,         setQuery,         ] = useState('');
     const [ matchedTweaks, setMatchedTweaks, ] = useState<Tweak[] | undefined>();
+    const [ cachedTweaks,  setCachedTweaks,  ] = useState<Tweak[] | undefined>();
 
     const { tweaks, } : { tweaks : Tweak[], } = useAppSelector(state => state.spellbook);
 
@@ -84,6 +85,10 @@ export const Tweaks = () => {
     } : {
         tweak : Tweak,
     }) => {
+        const tweakRef = useRef({
+            ...tweak,
+        });
+
         const isSelected = tweaks.some(selected => selected.id === tweak.id);
 
         const handleSelectionChange = (selected : boolean) => {
@@ -104,15 +109,44 @@ export const Tweaks = () => {
 
         const handleValueChange = (parameter : string, value? : boolean | number | string) => {
             if (value) {
-                const updatedTweak = {
-                    ...tweak,
-                };
-
-                updatedTweak.values[tweak.parameters.indexOf(parameter)] = value;
-
-                dispatch(updateTweak(updatedTweak));
+                const targetIndex = tweak.parameters.indexOf(parameter);
+                tweakRef.current.values = tweakRef.current.values.map((oldValue, index) => index === targetIndex ? value : oldValue);
             }
         };
+
+        const handleSubmit = () => {
+            const updatedTweak = {
+                ...tweakRef.current,
+            };
+
+            if (cachedTweaks) {
+                const newCachedTweaks = [
+                    ...cachedTweaks,
+                ];
+
+                newCachedTweaks[newCachedTweaks.findIndex(cachedTweak => cachedTweak.id === updatedTweak.id)] = updatedTweak;
+
+                setCachedTweaks(newCachedTweaks);
+            }
+
+            if (matchedTweaks) {
+                const newMatchedTweaks = [
+                    ...matchedTweaks,
+                ];
+
+                newMatchedTweaks[newMatchedTweaks.findIndex(matchedTweak => matchedTweak.id === updatedTweak.id)] = updatedTweak;
+
+                setMatchedTweaks(newMatchedTweaks);
+            }
+
+            if (tweaks.some(selectedTweak => selectedTweak.id === updatedTweak.id)) dispatch(updateTweak(updatedTweak));
+        };
+
+        useEffect(() => {
+            tweakRef.current = {
+                ...tweak,
+            };
+        }, [ tweak, ]);
 
         return (
             <SelectableCardView
@@ -122,6 +156,13 @@ export const Tweaks = () => {
                 title={tweak.name}
                 subtitle={tweak.author}
                 description={tweak.description}
+                action={
+                    <StyledButton
+                        color='secondary'
+                        onClick={handleSubmit}>
+                        {t('action.save')}
+                    </StyledButton>
+                }
                 actionText={isSelected ? t('action.configure') : undefined}
                 actionIcon={isSelected ? <Settings /> : undefined}
                 onChange={handleSelectionChange}>
@@ -147,6 +188,10 @@ export const Tweaks = () => {
             startTransition(() => setMatchedTweaks(search(query)));
         }
     }, [ data, query, search, ]);
+
+    useEffect(() => {
+        if (data) setCachedTweaks(data);
+    }, [ data, ]);
 
     useEffect(() => {
         if (error) handleError(error);
@@ -219,7 +264,7 @@ export const Tweaks = () => {
                     </Container>
                 )}
                 <Container maxWidth='lg'>
-                    {!matchedTweaks && data && TWEAK_CATEGORIES.map(category => (
+                    {!matchedTweaks && cachedTweaks && TWEAK_CATEGORIES.map(category => (
                         <SectionedGridView
                             sx={{
                                 paddingY : 4,
@@ -228,7 +273,7 @@ export const Tweaks = () => {
                             paddingTop={4}
                             color='secondary'
                             title={category}>
-                            {data.filter(tweak => tweak.category === category).map(tweak => (
+                            {cachedTweaks.filter(tweak => tweak.category === category).map(tweak => (
                                 <TweakView
                                     key={tweak.id}
                                     tweak={tweak} />
@@ -239,7 +284,7 @@ export const Tweaks = () => {
                         <GridView sx={{
                             paddingTop : 4,
                         }}>
-                            {(matchedTweaks ?? data ?? []).map(tweak => (
+                            {(matchedTweaks ?? cachedTweaks ?? []).map(tweak => (
                                 <TweakView
                                     key={tweak.id}
                                     tweak={tweak} />

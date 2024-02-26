@@ -8,6 +8,7 @@
     "action.remove"                     : "Remove",
     "action.copy"                       : "Copy",
     "action.configure"                  : "Configure",
+    "error.input.required"              : "Please input a valid value",
     "error.route_not_found.title"       : "Oops!",
     "error.route_not_found.description" : "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.",
     "error.route_not_found.action"      : "Go to homepage",

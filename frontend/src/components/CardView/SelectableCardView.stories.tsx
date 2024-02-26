@@ -18,6 +18,9 @@ const meta : Meta<typeof SelectableCardView> = {
         color      : {
             description : 'Color of the card. Defaults to `inherit`.',
         },
+        action     : {
+            description : 'The primary action to show in the action area.',
+        },
         actionText : {
             description : 'Text to show in the action area.',
         },

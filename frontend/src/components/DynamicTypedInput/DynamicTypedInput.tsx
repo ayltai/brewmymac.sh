@@ -1,5 +1,6 @@
 import { Stack, Switch, TextField, Typography, } from '@mui/material';
-import React, { FC, } from 'react';
+import React, { FC, useState, } from 'react';
+import { useTranslation, } from 'react-i18next';
 
 import type { DynamicTypedInputProps, } from './DynamicTypedInput.types';
 
@@ -18,19 +19,47 @@ export const DynamicTypedInput : FC<DynamicTypedInputProps> = ({
     onChange,
     ...rest
 }) => {
+    const [ currentValue, setCurrentValue, ] = useState(value);
+    const [ error,        setError,        ] = useState(false);
+
+    const { t, } = useTranslation();
+
     const handleChange = (event : React.ChangeEvent<HTMLInputElement>) => {
+        setCurrentValue(event.target.value);
+
         if (onChange) {
             switch (type) {
                 case 'boolean':
                     onChange(event.target.checked);
+
                     break;
 
                 case 'number':
+                    if (event.target.value && event.target.value.length > 0) {
+                        if (isNaN(Number(event.target.value))) {
+                            setError(true);
+                        } else if (Number(event.target.value) >>> 0 === parseFloat(event.target.value)) {
+                            setError(false);
+                        } else {
+                            setError(true);
+                        }
+                    } else {
+                        setError(true);
+                    }
+
                     onChange(Number(event.target.value));
+
                     break;
 
                 case 'string':
+                    if (event.target.value && event.target.value.length > 0) {
+                        setError(false);
+                    } else {
+                        setError(true);
+                    }
+
                     onChange(event.target.value);
+
                     break;
 
                 default:
@@ -44,24 +73,30 @@ export const DynamicTypedInput : FC<DynamicTypedInputProps> = ({
             spacing={1}
             display='flex'
             direction='row'
-            alignItems='center'
+            alignItems='top'
             {...rest}>
             <Typography flexGrow={1}>
                 {title}
             </Typography>
             {type === 'boolean' && (
                 <Switch
-                    checked={value as boolean}
+                    checked={currentValue as boolean}
                     onChange={handleChange} />
             )}
             {type === 'number' && (
                 <TextField
-                    value={value as number}
+                    required
+                    error={error}
+                    helperText={error ? t('error.input.required') : undefined}
+                    value={currentValue as number}
                     onChange={handleChange} />
             )}
             {type === 'string' && (
                 <TextField
-                    value={value as string}
+                    required
+                    error={error}
+                    helperText={error ? t('error.input.required') : undefined}
+                    value={currentValue as string}
                     onChange={handleChange} />
             )}
         </Stack>

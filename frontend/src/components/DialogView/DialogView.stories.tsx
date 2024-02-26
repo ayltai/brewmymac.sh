@@ -16,6 +16,9 @@ const meta : Meta<typeof DialogView> = {
         title    : {
             description : 'The title of the dialog',
         },
+        actions  : {
+            description : 'The primary action of the dialog',
+        },
         children : {
             description : 'The content of the component',
         },
