@@ -65,7 +65,7 @@ jobs:
         run: pnpm lint
         working-directory: frontend
       - name: Testing
-        run: pnpm test
+        run: pnpm test:ci
         working-directory: frontend
       - name: Upload artifact
         uses: actions/upload-artifact@v4

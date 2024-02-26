@@ -7,6 +7,7 @@ data "archive_file" "backend" {
     "node_modules",
     ".gcloudignore",
     ".gitignore",
+    ".eslintrc.js",
     "src/apis.test.*",
     "babel.config.js",
     "package-lock.json",

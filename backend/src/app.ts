@@ -6,6 +6,7 @@ import { connector, } from 'swagger-routes-express';
 import swaggerUi from 'swagger-ui-express';
 
 import { createRecipeApi, createSpellbookApi, getHealthApi, getRecipeApi, getRecipeScriptApi, getSpellApi, getSpellbookScriptApi, getSpellbookApi, getSpellsApi, } from './apis';
+import { handleError, } from './utils';
 
 const app = express().disable('x-powered-by');
 
@@ -52,6 +53,6 @@ new SwaggerParser()
 
         connect(app);
     })
-    .catch(console.error);
+    .catch(handleError);
 
 export default app;

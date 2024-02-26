@@ -23,10 +23,11 @@
         "FIRESTORE_EMULATOR_HOST"        : "localhost:8081"
     },
     "appPort"           : [
-        5173,
-        6006,
-        8080,
-        51204
+        4173, // Vite (Production)
+        5173, // Vite (Development)
+        6006, // Storybook
+        8080, // Google Cloud Functions
+        51204 // Google Firestore emulator
     ],
     "remoteUser"        : "root",
     "runArgs"           : [
