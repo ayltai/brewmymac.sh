@@ -61,3 +61,10 @@ export const TWEAK_CATEGORIES = [
     'Security',
     'Operating System',
 ];
+
+export const PAGE_PATHS : Record<string, string> = {
+    'about'      : '2Kz5ZxqBxTm6O9Jy5f0t1y',
+    'terms'      : '7rGcIumbIVDuu0KZqVauvH',
+    'privacy'    : 'kirxbfcCbtRcCaGlxLZFE',
+    'disclaimer' : '5JIZ4p8HrhBkuF5NI5F0dH',
+};

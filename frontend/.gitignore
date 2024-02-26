@@ -12,4 +12,4 @@ html/
 stats.html
 
 # Secrets
-.env
+.env.*

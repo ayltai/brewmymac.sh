@@ -3,7 +3,7 @@ import React, { FC, } from 'react';
 import { TypeAnimation, } from 'react-type-animation';
 
 import './terminal.css';
-import background from './terminal.png';
+import background from './terminal.webp';
 import type { TerminalProps, } from './Terminal.types';
 
 /**

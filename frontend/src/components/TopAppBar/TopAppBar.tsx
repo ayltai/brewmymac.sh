@@ -11,7 +11,7 @@ import { Link, useNavigate, } from 'react-router-dom';
 import { ProductSelection, } from '../ProductSelection';
 import { ShoppingCart, } from '../ShoppingCart';
 import { ThemeModeToggle, } from '../ThemeModeToggle';
-import SmallLogo from './SmallLogo.png';
+import SmallLogo from './SmallLogo.webp';
 import type { TopAppBarProps, } from './TopAppBar.types';
 
 const ElevationScroll = ({

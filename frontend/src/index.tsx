@@ -1,4 +1,4 @@
-import { browserTracingIntegration, ErrorBoundary, init, reactRouterV6BrowserTracingIntegration, replayIntegration, } from '@sentry/react';
+import { browserTracingIntegration, ErrorBoundary, init, reactRouterV6BrowserTracingIntegration, } from '@sentry/react';
 import { FirebaseApp, initializeApp, } from 'firebase/app';
 import React, { StrictMode, useEffect, } from 'react';
 import ReactDOM from 'react-dom/client';
@@ -23,25 +23,26 @@ import { handleError, } from './utils';
 let app : FirebaseApp | undefined;
 
 if (import.meta.env.PROD) {
-    if (import.meta.env.VITE_APP_SENTRY_DSN) init({
-        dsn                      : import.meta.env.VITE_APP_SENTRY_DSN,
-        environment              : 'production',
-        release                  : PackageInfo.version,
-        replaysSessionSampleRate : 0.1,
-        replaysOnErrorSampleRate : 1,
-        tracesSampleRate         : 1,
-        integrations             : [
-            browserTracingIntegration(),
-            reactRouterV6BrowserTracingIntegration({
-                createRoutesFromChildren,
-                matchRoutes,
-                useEffect,
-                useLocation,
-                useNavigationType,
-            }),
-            replayIntegration(),
-        ],
-    });
+    if (import.meta.env.VITE_APP_SENTRY_DSN) {
+        init({
+            dsn                      : import.meta.env.VITE_APP_SENTRY_DSN,
+            environment              : 'production',
+            release                  : PackageInfo.version,
+            replaysSessionSampleRate : 0.1,
+            replaysOnErrorSampleRate : 1,
+            tracesSampleRate         : 1,
+            integrations             : [
+                browserTracingIntegration(),
+                reactRouterV6BrowserTracingIntegration({
+                    createRoutesFromChildren,
+                    matchRoutes,
+                    useEffect,
+                    useLocation,
+                    useNavigationType,
+                }),
+            ],
+        });
+    }
 
     if (import.meta.env.VITE_APP_FIREBASE_API_KEY && import.meta.env.VITE_APP_FIREBASE_APP_ID && import.meta.env.VITE_APP_FIREBASE_PROJECT_ID && import.meta.env.VITE_APP_FIREBASE_MEASUREMENT_ID) {
         app = initializeApp({
