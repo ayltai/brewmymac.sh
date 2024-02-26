@@ -3,12 +3,6 @@ import React from 'react';
 import { fireEvent, render, waitFor, } from '../../utils/test';
 import { CopyableInput, } from './CopyableInput';
 
-Object.assign(navigator, {
-    clipboard: {
-        writeText : vi.fn(),
-    },
-});
-
 const DUMMY_VALUE = 'This is a test';
 
 const component = (

@@ -1,5 +1,12 @@
 import '@testing-library/jest-dom/vitest';
 
+Object.defineProperty(navigator, 'clipboard', {
+    writable : true,
+    value    : {
+        writeText : vi.fn(),
+    },
+});
+
 Object.defineProperty(window, 'location', {
     writable : true,
     value    : {
@@ -19,13 +26,6 @@ Object.defineProperty(window, 'matchMedia', {
         removeEventListener : vi.fn(),
         dispatchEvent       : vi.fn(),
     })),
-});
-
-Object.defineProperty(window, 'requestAnimationFrame', {
-    writable : true,
-    value    : vi.fn().mockImplementation((callback : () => void) => {
-        callback();
-    }),
 });
 
 vi.mock('i18next', () => ({

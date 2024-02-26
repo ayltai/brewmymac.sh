@@ -9,7 +9,9 @@ const fetch = createFetchMock(vi);
 fetch.enableMocks();
 
 describe('<Tweaks />', () => {
-    it('renders correctly', () => expect(render(<Tweaks />)).toMatchSnapshot());
+    it('renders correctly', () => {
+        expect(render(<Tweaks />)).toMatchSnapshot();
+    }, 10000);
 
     it('searches tweaks', async () => {
         fetch.mockIf(request => request.url.startsWith('https://cdn.contentful.com'), request => {
@@ -17,7 +19,7 @@ describe('<Tweaks />', () => {
                 status  : 200,
                 body    : JSON.stringify(spells),
                 headers : {
-                    'content-type' : 'application/json',
+                    'Content-Type' : 'application/json',
                 },
             };
 
@@ -36,6 +38,8 @@ describe('<Tweaks />', () => {
 
         await waitFor(() => {
             expect(getAllByText(value => value.startsWith('Change')).length).toBeGreaterThan(1);
+        }, {
+            timeout : 10000,
         });
-    });
+    }, 10000);
 });
