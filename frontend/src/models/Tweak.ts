@@ -1,11 +1,6 @@
-export type Tweak = {
-    id           : string,
-    name         : string,
-    description? : string,
-    category?    : string,
-    imageUrl?    : string,
-    infoUrl?     : string,
-    author?      : string,
+import type { Item, } from './Item';
+
+export type Tweak = Item & {
     parameters   : string[],
     types        : ('boolean' | 'number' | 'string')[],
     values       : (boolean | number | string)[],

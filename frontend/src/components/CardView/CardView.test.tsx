@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { fireEvent, render, } from '../../utils/test';
-import { StyledButton, } from '../StyledButton';
+import { MaterialButton, } from '../Button';
 import { CardView, } from './CardView';
 
 const TITLE       = 'Headline';
@@ -21,8 +21,8 @@ describe('<CardView />', () => {
             title={TITLE}
             subtitle={SUBTITLE}
             description={DESCRIPTION}>
-            <StyledButton key="1">Action 1</StyledButton>
-            <StyledButton key="2">Action 2</StyledButton>
+            <MaterialButton key="1">Action 1</MaterialButton>
+            <MaterialButton key="2">Action 2</MaterialButton>
         </CardView>
     )).toMatchSnapshot());
 

@@ -1,8 +1,4 @@
-import type { ReactNode, } from 'react';
+import type { SectionProps, } from '../Section';
+import type { GridViewProps, } from './GridView.types';
 
-import { GridViewProps, } from './GridView.types';
-
-export type SectionedGridViewProps = GridViewProps & {
-    children?        : ReactNode,
-    [ key : string ] : any,
-};
+export type SectionedGridViewProps = SectionProps & GridViewProps;

@@ -1,8 +1,7 @@
-import type { ReactNode, } from 'react';
+import type { HTMLAttributes, } from 'react';
 
-export interface DetailsViewProps {
-    description?     : string,
-    infoUrl?         : string,
-    children?        : ReactNode,
-    [ key : string ] : any,
-}
+export type DetailsViewProps = Omit<HTMLAttributes<HTMLDivElement>, 'color' | 'onChange'> & {
+    color?       : 'primary' | 'secondary',
+    description? : string,
+    infoUrl?     : string,
+};

@@ -8,6 +8,8 @@ import { Packages, } from './Packages';
 const fetch = createFetchMock(vi);
 fetch.enableMocks();
 
+vi.spyOn(Math, 'random').mockReturnValue(0);
+
 describe('<Packages />', () => {
     it('renders correctly', () => {
         expect(render(<Packages />)).toMatchSnapshot();

@@ -2,23 +2,26 @@ import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import React, { FC, } from 'react';
+import React, { type FC, } from 'react';
 import { useTranslation, } from 'react-i18next';
 
 import type { DetailsViewProps, } from './DetailsView.types';
 
 /**
+ * A details view displays a title and content.
+ * @param color The color of the component
  * @param description The description of the component
  * @param infoUrl The URL of the information
- * @param children The content of the component
  * @param rest Other props
  */
 export const DetailsView : FC<DetailsViewProps> = ({
+    color = 'primary',
     description,
     infoUrl,
-    children,
     ...rest
 }) => {
+    const { children, } = rest;
+
     const { t, } = useTranslation();
 
     return (
@@ -26,7 +29,9 @@ export const DetailsView : FC<DetailsViewProps> = ({
             spacing={2}
             {...rest}>
             <Box>
-                <Typography variant='caption'>
+                <Typography
+                    variant='overline'
+                    fontWeight='bold'>
                     {t('common.description')}
                 </Typography>
                 <Typography>
@@ -35,10 +40,13 @@ export const DetailsView : FC<DetailsViewProps> = ({
             </Box>
             {infoUrl && (
                 <Box>
-                    <Typography variant='caption'>
+                    <Typography
+                        variant='overline'
+                        fontWeight='bold'>
                         {t('common.website')}
                     </Typography>
                     <Link
+                        color={color}
                         href={infoUrl}
                         target='_blank'>
                         <Typography>

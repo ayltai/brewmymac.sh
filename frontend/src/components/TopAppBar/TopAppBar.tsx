@@ -2,17 +2,11 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
-import React, { cloneElement, FC, Fragment, ReactElement, } from 'react';
-import { useTranslation, } from 'react-i18next';
-import { Link, useNavigate, } from 'react-router-dom';
+import React, { cloneElement, type FC, type ReactElement, } from 'react';
+import { Link, } from 'react-router-dom';
 
 import { useDesktopMode, } from '../../hooks';
-import { ProductSelection, } from '../ProductSelection';
-import { ShoppingCart, } from '../ShoppingCart';
-import { ThemeModeToggle, } from '../ThemeModeToggle';
-import SmallLogo from './SmallLogo.webp';
 import type { TopAppBarProps, } from './TopAppBar.types';
 
 const ElevationScroll = ({
@@ -32,30 +26,29 @@ const ElevationScroll = ({
 
 /**
  * A top app bar that displays the title and actions related to the currently displayed content.
- * @param onExpand Function to call when the button is clicked
+ * @param logo The logo to show at the start of the top app bar
+ * @param title The title to show at the start of the top app bar and after the logo
+ * @param actions The actions to show at the end of the top app bar
+ * @param children The content to show at the middle of the top app bar
  * @param rest Other props
  */
 export const TopAppBar : FC<TopAppBarProps> = ({
-    onExpand,
+    logo,
+    title,
+    actions,
+    children,
     ...rest
 }) => {
     const isDesktopMode = useDesktopMode();
 
-    const navigate = useNavigate();
-
-    const { t, } = useTranslation();
-
-    const handleChange = (product : 'packages' | 'tweaks') => navigate(`/${product}`);
-
-    const handleClick = () => {
-        if (onExpand) onExpand();
-    };
-
     return (
-        <Fragment>
+        <>
             <ElevationScroll>
                 <AppBar
-                    color='inherit'
+                    style={{
+                        backdropFilter : 'blur(16px)',
+                    }}
+                    color='transparent'
                     {...rest}>
                     <Container
                         sx={{
@@ -64,37 +57,18 @@ export const TopAppBar : FC<TopAppBarProps> = ({
                         maxWidth='lg'>
                         <Toolbar disableGutters>
                             <Link to='/'>
-                                <img
-                                    style={{
-                                        marginRight : 8,
-                                    }}
-                                    src={SmallLogo}
-                                    alt={t('app.name')}
-                                    width={48}
-                                    height={48} />
+                                {logo}
                             </Link>
-                            {isDesktopMode && (
-                                <Typography
-                                    variant='h4'
-                                    fontWeight='bold'>
-                                    {t('app.name')}
-                                </Typography>
-                            )}
+                            {isDesktopMode && title}
                             <Box flexGrow={1} />
-                            <ProductSelection
-                                sx={{
-                                    marginLeft : isDesktopMode ? -16 : 6,
-                                }}
-                                onChange={handleChange} />
+                            {children}
                             <Box flexGrow={1} />
-                            <ThemeModeToggle />
-                            <Box padding={1} />
-                            <ShoppingCart onClick={handleClick} />
+                            {actions}
                         </Toolbar>
                     </Container>
                 </AppBar>
             </ElevationScroll>
             <Toolbar />
-        </Fragment>
+        </>
     );
 };

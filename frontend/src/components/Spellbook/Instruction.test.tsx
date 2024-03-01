@@ -1,19 +1,19 @@
 import React from 'react';
 
 import { render, } from '../../utils/test';
-import { Instruction, } from './Instruction';
+import { SpellbookInstruction, } from './Instruction';
 
 describe('<Instruction />', () => {
     it('renders correctly', () => expect(render(
-        <Instruction
-            open
-            spellbookId='dummy' />
+        <SpellbookInstruction
+            open={true}
+            transactionId='dummy' />
     )).toMatchSnapshot());
 
     it('renders instructions correctly', () => expect(render(
-        <Instruction
-            open
-            spellbookId='dummy' />,
+        <SpellbookInstruction
+            open={true}
+            transactionId='dummy' />,
         {
             spellbook : {
                 tweaks : [

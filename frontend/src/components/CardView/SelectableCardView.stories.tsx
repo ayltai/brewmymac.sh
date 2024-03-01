@@ -12,25 +12,25 @@ const meta : Meta<typeof SelectableCardView> = {
         'autodocs',
     ],
     argTypes  : {
-        selected   : {
+        selected     : {
             description : 'Whether the card is selected.',
         },
-        color      : {
+        color        : {
             description : 'Color of the card. Defaults to `inherit`.',
         },
-        action     : {
+        dialogAction : {
             description : 'The primary action to show in the action area.',
         },
-        actionText : {
+        actionText   : {
             description : 'Text to show in the action area.',
         },
-        actionIcon : {
+        actionIcon   : {
             description : 'Icon to show in the action area.',
         },
-        children   : {
+        children     : {
             description : 'The detailed content of the component',
         },
-        onChange   : {
+        onChange     : {
             description : 'Function to call when the card selection state is changed.',
         },
     },

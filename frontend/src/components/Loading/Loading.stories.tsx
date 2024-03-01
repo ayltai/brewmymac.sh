@@ -11,8 +11,11 @@ const meta : Meta<typeof Loading> = {
         show     : {
             description : 'Whether to show the component',
         },
+        size     : {
+            description : 'The size of the component',
+        },
         children : {
-            description : 'The content of the component',
+            description : 'Additional content to show below the component',
         },
     },
 };
@@ -33,5 +36,13 @@ export const Default : Story = {
                 iframeHeight : 200,
             },
         },
+    },
+};
+
+export const Large : Story = {
+    ...Default,
+    args : {
+        ...Default.args,
+        size : '2rem',
     },
 };

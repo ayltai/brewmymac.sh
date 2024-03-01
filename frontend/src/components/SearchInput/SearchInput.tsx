@@ -1,8 +1,8 @@
 import SearchIcon from '@mui/icons-material/Search';
 import CircularProgress from '@mui/material/CircularProgress';
 import InputBase from '@mui/material/InputBase';
-import styled from '@mui/material/styles/styled';
-import React, { ChangeEvent, FC, useCallback, useEffect, } from 'react';
+import { styled, } from '@mui/material/styles';
+import React, { type ChangeEvent, type FC, useCallback, useEffect, } from 'react';
 import { useDebounceValue, } from 'usehooks-ts';
 
 import type { SearchInputProps, } from './SearchInput.types';
@@ -31,7 +31,7 @@ const StyledInputBase = styled(InputBase)(({ theme, }) => ({
     color                   : 'inherit',
     '& .MuiInputBase-input' : {
         padding                          : theme.spacing(1, 1, 1, 0),
-        paddingLeft                      : `calc(1em + ${ theme.spacing(4) })`,
+        paddingLeft                      : `calc(1em + ${theme.spacing(4)})`,
         transition                       : theme.transitions.create('width'),
         width                            : '100%',
         [ theme.breakpoints.down('lg') ] : {

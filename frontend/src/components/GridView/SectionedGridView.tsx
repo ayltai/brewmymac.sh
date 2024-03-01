@@ -1,8 +1,8 @@
-import React, { ComponentType, JSX, } from 'react';
+import React, { type ComponentType, JSX, } from 'react';
 
 import { Section, } from '../Section';
 import { GridView, } from './GridView';
-import { GridViewProps, } from './GridView.types';
+import type { GridViewProps, } from './GridView.types';
 import type { SectionedGridViewProps, } from './SectionedGridView.types';
 
 const withSection = (Component : ComponentType<GridViewProps>) => {

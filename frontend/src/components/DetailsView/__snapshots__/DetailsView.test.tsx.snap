@@ -12,12 +12,12 @@ exports[`<DetailsView /> > renders correctly 1`] = `
           class="MuiBox-root css-0"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption css-1sn4lm3-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-overline css-1ooch7a-MuiTypography-root"
           >
             common.description
           </span>
           <p
-            class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 css-1che66z-MuiTypography-root"
           >
             Description
           </p>
@@ -26,17 +26,17 @@ exports[`<DetailsView /> > renders correctly 1`] = `
           class="MuiBox-root css-0"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption css-1sn4lm3-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-overline css-1ooch7a-MuiTypography-root"
           >
             common.website
           </span>
           <a
-            class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1xylxj1-MuiTypography-root-MuiLink-root"
+            class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1b3q4o2-MuiTypography-root-MuiLink-root"
             href="https://example.com"
             target="_blank"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-1che66z-MuiTypography-root"
             >
               https://example.com
             </p>
@@ -53,12 +53,12 @@ exports[`<DetailsView /> > renders correctly 1`] = `
         class="MuiBox-root css-0"
       >
         <span
-          class="MuiTypography-root MuiTypography-caption css-1sn4lm3-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-overline css-1ooch7a-MuiTypography-root"
         >
           common.description
         </span>
         <p
-          class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-1che66z-MuiTypography-root"
         >
           Description
         </p>
@@ -67,17 +67,17 @@ exports[`<DetailsView /> > renders correctly 1`] = `
         class="MuiBox-root css-0"
       >
         <span
-          class="MuiTypography-root MuiTypography-caption css-1sn4lm3-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-overline css-1ooch7a-MuiTypography-root"
         >
           common.website
         </span>
         <a
-          class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1xylxj1-MuiTypography-root-MuiLink-root"
+          class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1b3q4o2-MuiTypography-root-MuiLink-root"
           href="https://example.com"
           target="_blank"
         >
           <p
-            class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 css-1che66z-MuiTypography-root"
           >
             https://example.com
           </p>

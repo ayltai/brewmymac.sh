@@ -1,19 +1,19 @@
 import Check from '@mui/icons-material/Check';
 import DeleteForever from '@mui/icons-material/DeleteForever';
-import useTheme from '@mui/material/styles/useTheme';
-import React, { ComponentType, JSX, useState, } from 'react';
+import { useTheme, } from '@mui/material/styles';
+import React, { type ComponentType, JSX, useMemo, useState, } from 'react';
 import { useTranslation, } from 'react-i18next';
 
-import { CheckButton, } from '../CheckButton';
+import { ToggleButton, } from '../ToggleButton';
 import { DialogView, } from '../DialogView';
-import { StyledButton, } from '../StyledButton';
+import { MaterialButton, } from '../Button';
 import { CardView, } from './CardView';
-import { CardViewProps, } from './CardView.types';
+import type { CardViewProps, } from './CardView.types';
 import type { SelectableCardViewProps, } from './SelectableCardView.types';
 
 const withSelectable = (Component : ComponentType<CardViewProps>) => {
     const ComponentWithSelectable : (props : SelectableCardViewProps) => JSX.Element = (props : SelectableCardViewProps) => {
-        const { sx, selected = false, color, action, actionIcon, actionText, children, onChange, ...rest } = props;
+        const { style, selected = false, color, dialogAction, actionIcon, actionText, children, onChange, ...rest } = props;
 
         const [ open, setOpen, ] = useState(false);
 
@@ -21,49 +21,51 @@ const withSelectable = (Component : ComponentType<CardViewProps>) => {
 
         const { t, } = useTranslation();
 
-        const borderColor = color === 'primary' ? theme.palette.primary.main : color === 'secondary' ? theme.palette.secondary.main : theme.palette.divider;
+        const borderColor = useMemo(() => color === 'primary' ? theme.palette.primary.main : color === 'secondary' ? theme.palette.secondary.main : theme.palette.divider, [ color, theme, ]);
 
         const handleClick = () => setOpen(true);
 
-        const handleChange = (checked : boolean) => {
-            if (onChange) onChange(checked);
-        };
+        const handleChange = (checked : boolean) => onChange && onChange(checked);
 
         const handleClose = () => setOpen(false);
 
         return (
             <>
                 <Component
-                    sx={{
-                        ...sx,
-                        border          : `1px solid ${selected ? borderColor : theme.palette.divider}`,
+                    style={{
+                        ...style,
+                        border          : `1px solid ${selected ? borderColor : 'transparent'}`,
                         backgroundColor : selected ? theme.palette.action.selected : theme.palette.background.paper,
                     }}
-                    {...rest}
-                    onClick={handleClick}>
+                    aria-checked={selected}
+                    role='button'
+                    onClick={handleClick}
+                    {...rest}>
                     {(actionIcon || actionText) && (
-                        <StyledButton
+                        <MaterialButton
                             color={color}
                             startIcon={actionIcon}
                             onClick={handleClick}>
                             {actionText}
-                        </StyledButton>
+                        </MaterialButton>
                     )}
-                    <CheckButton
-                        checked={selected}
+                    <ToggleButton
+                        selected={selected}
                         color={color}
-                        checkedText={t('action.deselect')}
-                        checkedIcon={<Check />}
-                        uncheckText={t('action.remove')}
-                        uncheckedText={t('action.select')}
-                        uncheckedIcon={<DeleteForever />}
+                        icon={<Check />}
+                        text={t('action.select')}
+                        selectedIcon={<Check />}
+                        selectedText={t('action.deselect')}
+                        deselectIcon={<DeleteForever />}
+                        deselectText={t('action.remove')}
                         onChange={handleChange} />
                 </Component>
                 {children && (
                     <DialogView
                         open={open}
+                        color={color}
                         title={props.title}
-                        action={action}
+                        action={dialogAction}
                         onClose={handleClose}>
                         {children}
                     </DialogView>

@@ -10,19 +10,13 @@ const meta : Meta<typeof DialogView> = {
         'autodocs',
     ],
     argTypes  : {
-        open     : {
-            description : 'Whether the dialog is open',
-        },
-        title    : {
+        title   : {
             description : 'The title of the dialog',
         },
-        actions  : {
+        action  : {
             description : 'The primary action of the dialog',
         },
-        children : {
-            description : 'The content of the component',
-        },
-        onClose  : {
+        onClose : {
             description : 'Function to call when the close button is clicked',
         },
     },

@@ -6,7 +6,7 @@ exports[`<CopyableInput /> > renders correctly 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-adornedEnd css-1oi4ow-MuiInputBase-root-MuiOutlinedInput-root"
+        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-adornedEnd css-16tmvdj-MuiInputBase-root-MuiOutlinedInput-root"
       >
         <input
           class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd css-nxo287-MuiInputBase-input-MuiOutlinedInput-input"
@@ -58,7 +58,7 @@ exports[`<CopyableInput /> > renders correctly 1`] = `
   </body>,
   "container": <div>
     <div
-      class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-adornedEnd css-1oi4ow-MuiInputBase-root-MuiOutlinedInput-root"
+      class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-adornedEnd css-16tmvdj-MuiInputBase-root-MuiOutlinedInput-root"
     >
       <input
         class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd css-nxo287-MuiInputBase-input-MuiOutlinedInput-input"

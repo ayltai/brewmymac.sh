@@ -1,15 +1,15 @@
-import { browserTracingIntegration, ErrorBoundary, init, reactRouterV6BrowserTracingIntegration, } from '@sentry/react';
-import { FirebaseApp, initializeApp, } from 'firebase/app';
+import { browserTracingIntegration, ErrorBoundary, init, reactRouterV6BrowserTracingIntegration, replayIntegration, } from '@sentry/react';
+import { type FirebaseApp, initializeApp, } from 'firebase/app';
 import React, { StrictMode, useEffect, } from 'react';
 import ReactDOM from 'react-dom/client';
 import { createRoutesFromChildren, matchRoutes, useLocation, useNavigationType, } from 'react-router-dom';
 import { Provider, } from 'react-redux';
 import { PersistGate, } from 'redux-persist/integration/react';
 import '@fontsource/fjalla-one/latin-400.css';
-import '@fontsource/roboto/latin-300.css';
-import '@fontsource/roboto/latin-400.css';
-import '@fontsource/roboto/latin-500.css';
-import '@fontsource/roboto/latin-700.css';
+import '@fontsource/rubik/latin-300.css';
+import '@fontsource/rubik/latin-400.css';
+import '@fontsource/rubik/latin-500.css';
+import '@fontsource/rubik/latin-700.css';
 
 import PackageInfo from '../package.json';
 import { App, } from './App';
@@ -40,6 +40,7 @@ if (import.meta.env.PROD) {
                     useLocation,
                     useNavigationType,
                 }),
+                replayIntegration(),
             ],
         });
     }

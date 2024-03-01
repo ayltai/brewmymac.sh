@@ -9,7 +9,8 @@ exports[`<Page /> > renders correctly 1`] = `
         class="MuiBox-root css-173mpwd"
       >
         <header
-          class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiAppBar-root MuiAppBar-colorInherit MuiAppBar-positionFixed mui-fixed css-yiikg7-MuiPaper-root-MuiAppBar-root"
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiAppBar-root MuiAppBar-colorTransparent MuiAppBar-positionFixed mui-fixed css-1jvst5f-MuiPaper-root-MuiAppBar-root"
+          style="backdrop-filter: blur(16px);"
         >
           <div
             class="MuiContainer-root MuiContainer-maxWidthLg css-kicy4c-MuiContainer-root"
@@ -29,10 +30,13 @@ exports[`<Page /> > renders correctly 1`] = `
                 />
               </a>
               <h5
-                class="MuiTypography-root MuiTypography-h5 css-bezmlo-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h5 css-sd49be-MuiTypography-root"
               >
                 app.name
               </h5>
+              <div
+                class="MuiBox-root css-i9gxme"
+              />
               <div
                 class="MuiBox-root css-i9gxme"
               />
@@ -78,7 +82,7 @@ exports[`<Page /> > renders correctly 1`] = `
               class="MuiStack-root css-6rg9iv-MuiStack-root"
             >
               <span
-                class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-18lrjg1-MuiCircularProgress-root"
+                class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-mod6k9-MuiCircularProgress-root"
                 role="progressbar"
                 style="width: 40px; height: 40px;"
               >
@@ -100,7 +104,7 @@ exports[`<Page /> > renders correctly 1`] = `
           </div>
         </div>
         <div
-          class="MuiStack-root css-1pbn36i-MuiStack-root"
+          class="MuiStack-root css-b6lxw6-MuiStack-root"
         >
           <hr
             class="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
@@ -109,33 +113,34 @@ exports[`<Page /> > renders correctly 1`] = `
             class="MuiContainer-root MuiContainer-maxWidthLg css-1oqqzyl-MuiContainer-root"
           >
             <div
-              class="MuiStack-root css-12vctl4-MuiStack-root"
+              class="MuiStack-root css-3hgi49-MuiStack-root"
             >
               <div
                 class="MuiStack-root css-nen11g-MuiStack-root"
               >
                 <span
-                  class="MuiTypography-root MuiTypography-overline css-2ue52b-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-overline css-1ooch7a-MuiTypography-root"
                 >
                   footer.header.product
                 </span>
                 <a
-                  class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-r74m4g-MuiTypography-root-MuiLink-root"
+                  class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1y0wc18-MuiTypography-root-MuiLink-root"
                   href="/#/pages/about"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-j4exjj-MuiTypography-root"
                   >
                     footer.product.about
                   </p>
                 </a>
                 <a
-                  class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-r74m4g-MuiTypography-root-MuiLink-root"
+                  class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1y0wc18-MuiTypography-root-MuiLink-root"
                   href="https://ayltai.medium.com/install-mac-apps-and-tweaks-with-a-single-command-6b1b90c466b5"
+                  rel="noreferrer"
                   target="_blank"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-j4exjj-MuiTypography-root"
                   >
                     footer.product.blog
                   </p>
@@ -145,28 +150,30 @@ exports[`<Page /> > renders correctly 1`] = `
                 class="MuiStack-root css-nen11g-MuiStack-root"
               >
                 <span
-                  class="MuiTypography-root MuiTypography-overline css-2ue52b-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-overline css-1ooch7a-MuiTypography-root"
                 >
                   footer.header.support
                 </span>
                 <a
-                  class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-r74m4g-MuiTypography-root-MuiLink-root"
+                  class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1y0wc18-MuiTypography-root-MuiLink-root"
                   href="https://github.com/ayltai/brewmymac.sh/issues/new?assignees=&labels=help+wanted&projects=&template=help_wanted.md&title="
+                  rel="noreferrer"
                   target="_blank"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-j4exjj-MuiTypography-root"
                   >
                     footer.support.help
                   </p>
                 </a>
                 <a
-                  class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-r74m4g-MuiTypography-root-MuiLink-root"
+                  class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1y0wc18-MuiTypography-root-MuiLink-root"
                   href="https://github.com/ayltai/brewmymac.sh/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title="
+                  rel="noreferrer"
                   target="_blank"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-j4exjj-MuiTypography-root"
                   >
                     footer.support.bugs
                   </p>
@@ -176,36 +183,36 @@ exports[`<Page /> > renders correctly 1`] = `
                 class="MuiStack-root css-nen11g-MuiStack-root"
               >
                 <span
-                  class="MuiTypography-root MuiTypography-overline css-2ue52b-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-overline css-1ooch7a-MuiTypography-root"
                 >
                   footer.header.terms
                 </span>
                 <a
-                  class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-r74m4g-MuiTypography-root-MuiLink-root"
+                  class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1y0wc18-MuiTypography-root-MuiLink-root"
                   href="/#/pages/terms"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-j4exjj-MuiTypography-root"
                   >
                     footer.terms.terms
                   </p>
                 </a>
                 <a
-                  class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-r74m4g-MuiTypography-root-MuiLink-root"
+                  class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1y0wc18-MuiTypography-root-MuiLink-root"
                   href="/#/pages/disclaimer"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-j4exjj-MuiTypography-root"
                   >
                     footer.terms.disclaimer
                   </p>
                 </a>
                 <a
-                  class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-r74m4g-MuiTypography-root-MuiLink-root"
+                  class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1y0wc18-MuiTypography-root-MuiLink-root"
                   href="/#/pages/privacy"
                 >
                   <p
-                    class="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-body2 css-j4exjj-MuiTypography-root"
                   >
                     footer.terms.privacy
                   </p>
@@ -223,7 +230,7 @@ exports[`<Page /> > renders correctly 1`] = `
                 class="MuiStack-root css-1jch9ch-MuiStack-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body2 css-1cl5n3e-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body2 css-4pw5dy-MuiTypography-root"
                 >
                   footer.copyright
                 </p>
@@ -286,7 +293,8 @@ exports[`<Page /> > renders correctly 1`] = `
       class="MuiBox-root css-173mpwd"
     >
       <header
-        class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiAppBar-root MuiAppBar-colorInherit MuiAppBar-positionFixed mui-fixed css-yiikg7-MuiPaper-root-MuiAppBar-root"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiAppBar-root MuiAppBar-colorTransparent MuiAppBar-positionFixed mui-fixed css-1jvst5f-MuiPaper-root-MuiAppBar-root"
+        style="backdrop-filter: blur(16px);"
       >
         <div
           class="MuiContainer-root MuiContainer-maxWidthLg css-kicy4c-MuiContainer-root"
@@ -306,10 +314,13 @@ exports[`<Page /> > renders correctly 1`] = `
               />
             </a>
             <h5
-              class="MuiTypography-root MuiTypography-h5 css-bezmlo-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 css-sd49be-MuiTypography-root"
             >
               app.name
             </h5>
+            <div
+              class="MuiBox-root css-i9gxme"
+            />
             <div
               class="MuiBox-root css-i9gxme"
             />
@@ -355,7 +366,7 @@ exports[`<Page /> > renders correctly 1`] = `
             class="MuiStack-root css-6rg9iv-MuiStack-root"
           >
             <span
-              class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-18lrjg1-MuiCircularProgress-root"
+              class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-mod6k9-MuiCircularProgress-root"
               role="progressbar"
               style="width: 40px; height: 40px;"
             >
@@ -377,7 +388,7 @@ exports[`<Page /> > renders correctly 1`] = `
         </div>
       </div>
       <div
-        class="MuiStack-root css-1pbn36i-MuiStack-root"
+        class="MuiStack-root css-b6lxw6-MuiStack-root"
       >
         <hr
           class="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
@@ -386,33 +397,34 @@ exports[`<Page /> > renders correctly 1`] = `
           class="MuiContainer-root MuiContainer-maxWidthLg css-1oqqzyl-MuiContainer-root"
         >
           <div
-            class="MuiStack-root css-12vctl4-MuiStack-root"
+            class="MuiStack-root css-3hgi49-MuiStack-root"
           >
             <div
               class="MuiStack-root css-nen11g-MuiStack-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-overline css-2ue52b-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-overline css-1ooch7a-MuiTypography-root"
               >
                 footer.header.product
               </span>
               <a
-                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-r74m4g-MuiTypography-root-MuiLink-root"
+                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1y0wc18-MuiTypography-root-MuiLink-root"
                 href="/#/pages/about"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body2 css-j4exjj-MuiTypography-root"
                 >
                   footer.product.about
                 </p>
               </a>
               <a
-                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-r74m4g-MuiTypography-root-MuiLink-root"
+                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1y0wc18-MuiTypography-root-MuiLink-root"
                 href="https://ayltai.medium.com/install-mac-apps-and-tweaks-with-a-single-command-6b1b90c466b5"
+                rel="noreferrer"
                 target="_blank"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body2 css-j4exjj-MuiTypography-root"
                 >
                   footer.product.blog
                 </p>
@@ -422,28 +434,30 @@ exports[`<Page /> > renders correctly 1`] = `
               class="MuiStack-root css-nen11g-MuiStack-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-overline css-2ue52b-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-overline css-1ooch7a-MuiTypography-root"
               >
                 footer.header.support
               </span>
               <a
-                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-r74m4g-MuiTypography-root-MuiLink-root"
+                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1y0wc18-MuiTypography-root-MuiLink-root"
                 href="https://github.com/ayltai/brewmymac.sh/issues/new?assignees=&labels=help+wanted&projects=&template=help_wanted.md&title="
+                rel="noreferrer"
                 target="_blank"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body2 css-j4exjj-MuiTypography-root"
                 >
                   footer.support.help
                 </p>
               </a>
               <a
-                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-r74m4g-MuiTypography-root-MuiLink-root"
+                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1y0wc18-MuiTypography-root-MuiLink-root"
                 href="https://github.com/ayltai/brewmymac.sh/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title="
+                rel="noreferrer"
                 target="_blank"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body2 css-j4exjj-MuiTypography-root"
                 >
                   footer.support.bugs
                 </p>
@@ -453,36 +467,36 @@ exports[`<Page /> > renders correctly 1`] = `
               class="MuiStack-root css-nen11g-MuiStack-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-overline css-2ue52b-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-overline css-1ooch7a-MuiTypography-root"
               >
                 footer.header.terms
               </span>
               <a
-                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-r74m4g-MuiTypography-root-MuiLink-root"
+                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1y0wc18-MuiTypography-root-MuiLink-root"
                 href="/#/pages/terms"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body2 css-j4exjj-MuiTypography-root"
                 >
                   footer.terms.terms
                 </p>
               </a>
               <a
-                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-r74m4g-MuiTypography-root-MuiLink-root"
+                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1y0wc18-MuiTypography-root-MuiLink-root"
                 href="/#/pages/disclaimer"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body2 css-j4exjj-MuiTypography-root"
                 >
                   footer.terms.disclaimer
                 </p>
               </a>
               <a
-                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-r74m4g-MuiTypography-root-MuiLink-root"
+                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1y0wc18-MuiTypography-root-MuiLink-root"
                 href="/#/pages/privacy"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body2 css-j4exjj-MuiTypography-root"
                 >
                   footer.terms.privacy
                 </p>
@@ -500,7 +514,7 @@ exports[`<Page /> > renders correctly 1`] = `
               class="MuiStack-root css-1jch9ch-MuiStack-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 css-1cl5n3e-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-4pw5dy-MuiTypography-root"
               >
                 footer.copyright
               </p>

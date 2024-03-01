@@ -1,28 +1,80 @@
 import type { Meta, StoryObj, } from '@storybook/react';
+import React from 'react';
+import { Provider, } from 'react-redux';
 
-import { Instruction, } from './Instruction';
+import { createStore, } from '../../utils/test';
+import { SpellbookInstruction, } from './Instruction';
 
-const meta : Meta<typeof Instruction> = {
-    component : Instruction,
+const meta : Meta<typeof SpellbookInstruction> = {
+    component : SpellbookInstruction,
     tags      : [
         'autodocs',
     ],
     argTypes  : {
-        open    : {
-            description : 'Whether the dialog is open',
-        },
-        onClose : {
-            description : 'Function to call when the close button is clicked',
+        transactionId : {
+            description : 'The ID of the transaction',
         },
     },
 };
 
 export default meta;
 
-type Story = StoryObj<typeof Instruction>;
+type Story = StoryObj<typeof SpellbookInstruction>;
+
+const store = createStore({
+    spellbook : {
+        tweaks : [
+            {
+                id          : '1',
+                name        : 'magic.1',
+                description : 'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.',
+                author      : 'BrewMyMac',
+                parameters  : [
+                    'Disable',
+                ],
+                types       : [
+                    'boolean',
+                ],
+                values      : [
+                    true,
+                ],
+            },
+            {
+                id          : '2',
+                name        : 'magic.2',
+                description : 'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.',
+                author      : 'BrewMyMac',
+                parameters  : [
+                    'Name',
+                    'Width',
+                    'Height',
+                ],
+                types       : [
+                    'string',
+                    'number',
+                    'number',
+                ],
+                values      : [
+                    'Magic',
+                    1920,
+                    1024,
+                ],
+                sipInvolved : true,
+            },
+        ],
+    },
+});
 
 export const Default : Story = {
     args : {
-        open : true,
+        open          : true,
+        transactionId : '1',
     },
+    decorators : [
+        StoryComponent => (
+            <Provider store={store}>
+                <StoryComponent />
+            </Provider>
+        ),
+    ],
 };

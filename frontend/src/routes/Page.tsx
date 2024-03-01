@@ -1,111 +1,35 @@
-import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
-import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import useScrollTrigger from '@mui/material/useScrollTrigger';
-import React, { cloneElement, Fragment, ReactElement, useEffect, } from 'react';
+import React, { useEffect, } from 'react';
 import { useTranslation, } from 'react-i18next';
 import MarkdownRenderer from 'react-markdown';
-import { Link, useParams, } from 'react-router-dom';
+import { useParams, } from 'react-router-dom';
 
 import { usePageQuery, } from '../apis';
-import { Footer, Loading, ThemeModeToggle, } from '../components';
+import { DarkModeSwitch, } from '../components/DarkModeSwitch';
+import { Footer, } from '../components/Footer';
+import { Loading, } from '../components/Loading';
+import { TopAppBar, } from '../components/TopAppBar';
 import SmallLogo from '../components/TopAppBar/SmallLogo.webp';
 import { PAGE_PATHS, PAGES_REFRESH_INTERVAL, } from '../constants';
 import { useAppSelector, } from '../hooks';
 import { handleError, } from '../utils';
 
-const ElevationScroll = ({
-    children,
-} : {
-    children : ReactElement,
-}) => {
-    const trigger = useScrollTrigger({
-        disableHysteresis : true,
-        threshold         : 0,
-    });
+export const Page = () => {
+    const { page, } = useParams();
 
-    return cloneElement(children, {
-        elevation : trigger ? 4 : 0,
-    });
-};
-
-const TopAppBar = ({
-    title,
-} : {
-    title? : string,
-}) => {
-    const { t, } = useTranslation();
-
-    return (
-        <Fragment>
-            <ElevationScroll>
-                <AppBar color='inherit'>
-                    <Container
-                        sx={{
-                            paddingLeft : 0,
-                        }}
-                        maxWidth='lg'>
-                        <Toolbar disableGutters>
-                            <Link to='/'>
-                                <img
-                                    style={{
-                                        marginRight : 8,
-                                    }}
-                                    src={SmallLogo}
-                                    alt={t('app.name')}
-                                    width={48}
-                                    height={48} />
-                            </Link>
-                            <Typography
-                                variant='h5'
-                                fontWeight='bold'>
-                                {title || t('app.name')}
-                            </Typography>
-                            <Box flexGrow={1} />
-                            <ThemeModeToggle />
-                        </Toolbar>
-                    </Container>
-                </AppBar>
-            </ElevationScroll>
-            <Toolbar />
-        </Fragment>
-    );
-};
-
-const Markdown = ({
-    page,
-} : {
-    page : string,
-}) => {
-    const { data, error, } = usePageQuery(PAGE_PATHS[page], {
+    const { data, error, } = usePageQuery(PAGE_PATHS[page!], {
         pollingInterval : PAGES_REFRESH_INTERVAL,
     });
+
+    const { themeMode, } : { themeMode : 'light' | 'dark', } = useAppSelector(state => state.preference);
+
+    const { t, } = useTranslation();
 
     useEffect(() => {
         if (error) handleError(error);
     }, [ error, ]);
-
-    return (
-        <Fragment>
-            <TopAppBar title={data ? data[0] : undefined} />
-            <Container maxWidth='lg'>
-                <Box
-                    paddingTop={4}
-                    paddingBottom={8}>
-                    <MarkdownRenderer>{data ? data[1] : undefined}</MarkdownRenderer>
-                </Box>
-                <Loading show={!data} />
-            </Container>
-        </Fragment>
-    );
-};
-
-export const Page = () => {
-    const { themeMode, } : { themeMode : 'light' | 'dark', } = useAppSelector(state => state.preference);
-
-    const { page, } = useParams();
 
     return (
         <Box
@@ -117,7 +41,33 @@ export const Page = () => {
                 backgroundRepeat     : 'no-repeat',
             }}
             width='100%'>
-            <Markdown page={page!} />
+            <TopAppBar
+                logo={
+                    <img
+                        style={{
+                            marginRight : 8,
+                        }}
+                        src={SmallLogo}
+                        alt={t('app.name')}
+                        width={48}
+                        height={48} />
+                }
+                title={
+                    <Typography
+                        variant='h5'
+                        fontWeight='bold'>
+                        {data ? data[0] : t('app.name')}
+                    </Typography>
+                }
+                actions={<DarkModeSwitch />} />
+            <Container maxWidth='lg'>
+                <Box
+                    paddingTop={4}
+                    paddingBottom={8}>
+                    <MarkdownRenderer>{data ? data[1] : undefined}</MarkdownRenderer>
+                </Box>
+                <Loading show={!data} />
+            </Container>
             <Footer />
         </Box>
     );

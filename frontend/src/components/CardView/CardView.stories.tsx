@@ -1,7 +1,7 @@
 import type { Meta, StoryObj, } from '@storybook/react';
 import React from 'react';
 
-import { StyledButton, } from '../StyledButton';
+import { MaterialButton, } from '../Button';
 import { CardView, } from './CardView';
 
 const meta : Meta<typeof CardView> = {
@@ -44,16 +44,16 @@ export const WithButtons : Story = {
     args : {
         ...Default.args,
         children : [
-            <StyledButton
+            <MaterialButton
                 key='1'
                 variant='outlined'>
                 Action 1
-            </StyledButton>,
-            <StyledButton
+            </MaterialButton>,
+            <MaterialButton
                 key='2'
                 variant='contained'>
                 Action 2
-            </StyledButton>,
+            </MaterialButton>,
         ],
     },
 };

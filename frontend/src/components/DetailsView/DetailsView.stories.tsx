@@ -14,9 +14,6 @@ const meta : Meta<typeof DetailsView> = {
         infoUrl     : {
             description : 'The info URL of the component',
         },
-        children    : {
-            description : 'The children of the component',
-        },
     },
 };
 

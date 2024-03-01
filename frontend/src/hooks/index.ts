@@ -1,7 +1,7 @@
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { TypedUseSelectorHook, useDispatch, useSelector, } from 'react-redux';
+import { type TypedUseSelectorHook, useDispatch, useSelector, } from 'react-redux';
 
-import { AppDispatch, AppState, } from '../states';
+import type { AppDispatch, AppState, } from '../states';
 
 export const useAppDispatch : () => AppDispatch = useDispatch;
 

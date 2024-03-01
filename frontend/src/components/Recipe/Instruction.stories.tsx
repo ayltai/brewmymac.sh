@@ -1,28 +1,57 @@
 import type { Meta, StoryObj, } from '@storybook/react';
+import React from 'react';
+import { Provider, } from 'react-redux';
 
-import { Instruction, } from './Instruction';
+import { createStore, } from '../../utils/test';
+import { RecipeInstruction, } from './Instruction';
 
-const meta : Meta<typeof Instruction> = {
-    component : Instruction,
+const meta : Meta<typeof RecipeInstruction> = {
+    component : RecipeInstruction,
     tags      : [
         'autodocs',
     ],
     argTypes  : {
-        open    : {
-            description : 'Whether the dialog is open',
-        },
-        onClose : {
-            description : 'Function to call when the close button is clicked',
+        transactionId : {
+            description : 'The ID of the transaction',
         },
     },
 };
 
 export default meta;
 
-type Story = StoryObj<typeof Instruction>;
+type Story = StoryObj<typeof RecipeInstruction>;
+
+const store = createStore({
+    recipe : {
+        ingredients : [
+            {
+                id          : '1',
+                name        : 'spotify',
+                description : 'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.',
+                author      : 'Spotify',
+                source      : 'App Store',
+            },
+            {
+                id          : '2',
+                name        : 'Spotify Player',
+                description : 'Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.',
+                author      : 'Spotify',
+                source      : 'App Store',
+            },
+        ],
+    },
+});
 
 export const Default : Story = {
     args : {
-        open : true,
+        open          : true,
+        transactionId : '1',
     },
+    decorators : [
+        StoryComponent => (
+            <Provider store={store}>
+                <StoryComponent />
+            </Provider>
+        ),
+    ],
 };

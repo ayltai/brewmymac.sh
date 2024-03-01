@@ -1,19 +1,19 @@
 import React from 'react';
 
 import { render, } from '../../utils/test';
-import { Instruction, } from './Instruction';
+import { RecipeInstruction, } from './Instruction';
 
-describe('<Instruction />', () => {
+describe('<RecipeInstruction />', () => {
     it('renders correctly', () => expect(render(
-        <Instruction
-            open
-            recipeId='dummy' />
+        <RecipeInstruction
+            open={true}
+            transactionId='dummy' />
     )).toMatchSnapshot());
 
     it('renders instructions correctly', () => expect(render(
-        <Instruction
-            open
-            recipeId='dummy' />,
+        <RecipeInstruction
+            open={true}
+            transactionId='dummy' />,
         {
             recipe : {
                 ingredients : [

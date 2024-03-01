@@ -2,13 +2,14 @@ import Stack from '@mui/material/Stack';
 import Switch from '@mui/material/Switch';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
-import React, { FC, useState, } from 'react';
+import React, { type FC, useCallback, useState, } from 'react';
 import { useTranslation, } from 'react-i18next';
 
 import type { DynamicTypedInputProps, } from './DynamicTypedInput.types';
 
 /**
  * An input that can be used to enter a boolean, number, or string value.
+ * @param color Color of the input
  * @param title Title of the input
  * @param type Type of the input
  * @param value Value of the input
@@ -16,6 +17,7 @@ import type { DynamicTypedInputProps, } from './DynamicTypedInput.types';
  * @param rest Other props
  */
 export const DynamicTypedInput : FC<DynamicTypedInputProps> = ({
+    color,
     title,
     type,
     value,
@@ -27,7 +29,7 @@ export const DynamicTypedInput : FC<DynamicTypedInputProps> = ({
 
     const { t, } = useTranslation();
 
-    const handleChange = (event : React.ChangeEvent<HTMLInputElement>) => {
+    const handleChange = useCallback((event : React.ChangeEvent<HTMLInputElement>) => {
         setCurrentValue(event.target.value);
 
         if (onChange) {
@@ -69,7 +71,7 @@ export const DynamicTypedInput : FC<DynamicTypedInputProps> = ({
                     break;
             }
         }
-    };
+    }, [ onChange, type, ]);
 
     return (
         <Stack
@@ -84,11 +86,13 @@ export const DynamicTypedInput : FC<DynamicTypedInputProps> = ({
             {type === 'boolean' && (
                 <Switch
                     checked={currentValue as boolean}
+                    color={color}
                     onChange={handleChange} />
             )}
             {type === 'number' && (
                 <TextField
                     required
+                    color={color}
                     error={error}
                     helperText={error ? t('error.input.required') : undefined}
                     value={currentValue as number}
@@ -97,6 +101,7 @@ export const DynamicTypedInput : FC<DynamicTypedInputProps> = ({
             {type === 'string' && (
                 <TextField
                     required
+                    color={color}
                     error={error}
                     helperText={error ? t('error.input.required') : undefined}
                     value={currentValue as string}

@@ -4,8 +4,8 @@ import InputAdornment from '@mui/material/InputAdornment';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import Snackbar from '@mui/material/Snackbar';
 import Tooltip from '@mui/material/Tooltip';
-import styled from '@mui/material/styles/styled';
-import React, { FC, useState, } from 'react';
+import { styled, } from '@mui/material/styles';
+import React, { type FC, useState, } from 'react';
 import { useTranslation, } from 'react-i18next';
 
 import type { CopyableInputProps, } from './CopyableInput.types';
@@ -64,9 +64,9 @@ export const CopyableInput : FC<CopyableInputProps> = ({
                     horizontal : 'center',
                     vertical   : 'bottom',
                 }}
-                onClose={handleClose}
                 autoHideDuration={2500}
-                message={t('common.copied')} />
+                message={t('common.copied')}
+                onClose={handleClose} />
         </>
     );
 };

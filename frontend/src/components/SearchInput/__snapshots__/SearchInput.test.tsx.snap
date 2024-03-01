@@ -24,7 +24,7 @@ exports[`<SearchInput /> > renders correctly 1`] = `
           </svg>
         </div>
         <div
-          class="MuiInputBase-root MuiInputBase-colorPrimary css-1ywv74a-MuiInputBase-root"
+          class="MuiInputBase-root MuiInputBase-colorPrimary css-8b2o5r-MuiInputBase-root"
         >
           <input
             class="MuiInputBase-input css-yz9k0d-MuiInputBase-input"
@@ -55,7 +55,7 @@ exports[`<SearchInput /> > renders correctly 1`] = `
         </svg>
       </div>
       <div
-        class="MuiInputBase-root MuiInputBase-colorPrimary css-1ywv74a-MuiInputBase-root"
+        class="MuiInputBase-root MuiInputBase-colorPrimary css-8b2o5r-MuiInputBase-root"
       >
         <input
           class="MuiInputBase-input css-yz9k0d-MuiInputBase-input"

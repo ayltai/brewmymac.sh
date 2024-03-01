@@ -9,7 +9,7 @@ exports[`<Section /> > renders correctly 1`] = `
         class="MuiStack-root css-nen11g-MuiStack-root"
       >
         <h4
-          class="MuiTypography-root MuiTypography-h4 css-reyzdw-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h4 css-ncxtz2-MuiTypography-root"
         >
           Title
         </h4>
@@ -29,7 +29,7 @@ exports[`<Section /> > renders correctly 1`] = `
       class="MuiStack-root css-nen11g-MuiStack-root"
     >
       <h4
-        class="MuiTypography-root MuiTypography-h4 css-reyzdw-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-h4 css-ncxtz2-MuiTypography-root"
       >
         Title
       </h4>

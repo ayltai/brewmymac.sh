@@ -1,6 +1,6 @@
+import type { GridProps, } from '@mui/material/Grid/Grid';
 import type { ReactNode, } from 'react';
 
-export interface GridViewProps {
-    children?        : ReactNode,
-    [ key : string ] : any,
-}
+export type GridViewProps = Omit<GridProps, 'children'> & {
+    children? : ReactNode,
+};

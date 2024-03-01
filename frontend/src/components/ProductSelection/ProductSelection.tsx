@@ -1,10 +1,10 @@
 import ButtonGroup from '@mui/material/ButtonGroup';
-import React, { FC, } from 'react';
+import React, { type FC, useCallback, } from 'react';
 import { useTranslation, } from 'react-i18next';
 
 import { useAppSelector, useAppDispatch, useDesktopMode, } from '../../hooks';
 import { setProduct, } from '../../states';
-import { StyledButton, } from '../StyledButton';
+import { MaterialButton, } from '../Button';
 import type { ProductSelectionProps, } from './ProductSelection.types';
 
 /**
@@ -24,34 +24,34 @@ export const ProductSelection : FC<ProductSelectionProps> = ({
 
     const { t, } = useTranslation();
 
-    const selectPackages = () => {
+    const selectPackages = useCallback(() => {
         dispatch(setProduct('packages'));
 
         if (onChange) onChange('packages');
-    };
+    }, [ dispatch, onChange, ]);
 
-    const selectTweaks = () => {
+    const selectTweaks = useCallback(() => {
         dispatch(setProduct('tweaks'));
 
         if (onChange) onChange('tweaks');
-    };
+    }, [ dispatch, onChange, ]);
 
     return (
         <ButtonGroup
             size='large'
             {...rest}>
-            <StyledButton
+            <MaterialButton
                 variant={product === 'packages' ? 'contained' : 'outlined'}
                 color={'primary'}
                 onClick={selectPackages}>
                 {t(isDesktopMode ? 'app.brewmymac' : 'app.brewmymac.small')}
-            </StyledButton>
-            <StyledButton
+            </MaterialButton>
+            <MaterialButton
                 variant={product === 'tweaks' ? 'contained' : 'outlined'}
                 color={'secondary'}
                 onClick={selectTweaks}>
                 {t(isDesktopMode ? 'app.tweakmymac' : 'app.tweakmymac.small')}
-            </StyledButton>
+            </MaterialButton>
         </ButtonGroup>
     );
 };

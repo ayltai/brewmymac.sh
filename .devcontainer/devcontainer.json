@@ -27,7 +27,7 @@
         5173, // Vite (Development)
         6006, // Storybook
         8080, // Google Cloud Functions
-        51204 // Google Firestore emulator
+        51204 // Vitest UI
     ],
     "remoteUser"        : "root",
     "runArgs"           : [

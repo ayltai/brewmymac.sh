@@ -8,6 +8,8 @@ import { Tweaks, } from './Tweaks';
 const fetch = createFetchMock(vi);
 fetch.enableMocks();
 
+vi.spyOn(Math, 'random').mockReturnValue(0);
+
 describe('<Tweaks />', () => {
     it('renders correctly', () => {
         expect(render(<Tweaks />)).toMatchSnapshot();

@@ -1,5 +1,6 @@
-export interface CopyableInputProps {
-    value            : string,
-    onCopy?          : () => void,
-    [ key : string ] : any,
+import type { InputBaseProps, } from '@mui/material/InputBase';
+
+export interface CopyableInputProps extends InputBaseProps {
+    value   : string,
+    onCopy? : () => void,
 }

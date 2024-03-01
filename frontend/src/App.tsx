@@ -1,7 +1,7 @@
 import CssBaseline from '@mui/material/CssBaseline';
 import createTheme from '@mui/material/styles/createTheme';
 import ThemeProvider from '@mui/material/styles/ThemeProvider';
-import React, { Fragment, useEffect, useState, } from 'react';
+import React, { useEffect, useState, } from 'react';
 import { RouterProvider, } from 'react-router-dom';
 
 import { useAppSelector, } from './hooks';
@@ -30,11 +30,9 @@ export const App = () => {
     }, [ themeMode, ]);
 
     return (
-        <Fragment>
-            <ThemeProvider theme={theme}>
-                <CssBaseline />
-                <RouterProvider router={router} />
-            </ThemeProvider>
-        </Fragment>
+        <ThemeProvider theme={theme}>
+            <CssBaseline />
+            <RouterProvider router={router} />
+        </ThemeProvider>
     );
 };

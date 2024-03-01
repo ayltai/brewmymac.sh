@@ -1,8 +1,7 @@
-import type { ReactNode, } from 'react';
+import type { HTMLAttributes, ReactNode, } from 'react';
 
-export interface SectionProps {
-    title?           : string,
-    color?           : 'primary' | 'secondary',
-    children?        : ReactNode,
-    [ key : string ] : any,
-}
+export type SectionProps = HTMLAttributes<HTMLDivElement> & {
+    title?    : string,
+    color?    : 'primary' | 'secondary',
+    children? : ReactNode,
+};

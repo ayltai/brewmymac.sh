@@ -4,12 +4,12 @@ import IconButton from '@mui/material/IconButton';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
-import React, { Children, FC, Fragment, } from 'react';
+import React, { Children, type FC, Fragment, } from 'react';
 
 import type { ListViewProps, } from './ListView.types';
 
 /**
- *
+ * A list view that displays one or more list items.
  * @param children The content of the component
  * @param onClick Function to call when the list item is clicked
  * @param onDelete Function to call when the delete button is clicked
@@ -27,13 +27,9 @@ export const ListView : FC<ListViewProps> = ({
         {Children.toArray(children).map((child, index) => {
             const key = (child as any).key.substring(2);
 
-            const handleClick = () => {
-                if (onClick) onClick(key);
-            };
+            const handleClick = () => onClick && onClick(key);
 
-            const handleDelete = () => {
-                if (onDelete) onDelete(key);
-            };
+            const handleDelete = () => onDelete && onDelete(key);
 
             return (
                 <Fragment key={key}>

@@ -4,7 +4,7 @@ import React from 'react';
 import { useTranslation, } from 'react-i18next';
 import { isRouteErrorResponse, useNavigate, useRouteError, } from 'react-router-dom';
 
-import { StyledButton, } from '../components/StyledButton';
+import { MaterialButton, } from '../components/Button';
 
 export const RouteError = () => {
     const error        = useRouteError();
@@ -34,11 +34,11 @@ export const RouteError = () => {
                     </Typography>
                 </>
             )}
-            <StyledButton
+            <MaterialButton
                 variant='contained'
                 onClick={handleClick}>
                 {t('error.route_not_found.action')}
-            </StyledButton>
+            </MaterialButton>
         </Stack>
     );
 };

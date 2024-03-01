@@ -1,8 +1,8 @@
 import '@fontsource/fjalla-one/latin-400.css';
-import '@fontsource/roboto/latin-300.css';
-import '@fontsource/roboto/latin-400.css';
-import '@fontsource/roboto/latin-500.css';
-import '@fontsource/roboto/latin-700.css';
+import '@fontsource/rubik/latin-300.css';
+import '@fontsource/rubik/latin-400.css';
+import '@fontsource/rubik/latin-500.css';
+import '@fontsource/rubik/latin-700.css';
 import { createTheme, CssBaseline, ThemeProvider, } from '@mui/material';
 import { withThemeFromJSXProvider, } from '@storybook/addon-themes';
 import * as React from 'react';

@@ -4,7 +4,7 @@ import CardActions from '@mui/material/CardActions';
 import CardActionArea from '@mui/material/CardActionArea';
 import CardContent from '@mui/material/CardContent';
 import Tooltip from '@mui/material/Tooltip';
-import React, { FC, Fragment, } from 'react';
+import React, { type FC, } from 'react';
 
 import { TruncatedTypography, } from '../TruncatedTypography';
 import type { CardViewProps, } from './CardView.types';
@@ -26,9 +26,7 @@ export const CardView : FC<CardViewProps> = ({
     onClick,
     ...rest
 }) => (
-    <Card
-        variant='outlined'
-        {...rest}>
+    <Card {...rest}>
         <CardActionArea onClick={onClick}>
             <CardContent>
                 <Tooltip title={title}>
@@ -36,13 +34,14 @@ export const CardView : FC<CardViewProps> = ({
                         {title}
                     </TruncatedTypography>
                 </Tooltip>
-                <TruncatedTypography color='text.secondary'>
+                <TruncatedTypography
+                    variant='body2'
+                    color='text.secondary'>
                     {subtitle}
                 </TruncatedTypography>
                 <Tooltip title={description}>
                     <TruncatedTypography
                         height='2lh'
-                        variant='body2'
                         lines={2}>
                         {description}
                     </TruncatedTypography>
@@ -51,10 +50,10 @@ export const CardView : FC<CardViewProps> = ({
         </CardActionArea>
         {children !== undefined && (
             <CardActions>
-                <Fragment>
+                <>
                     <Box flexGrow={1} />
                     {children}
-                </Fragment>
+                </>
             </CardActions>
         )}
     </Card>

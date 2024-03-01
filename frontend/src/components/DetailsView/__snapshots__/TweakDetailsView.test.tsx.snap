@@ -12,12 +12,12 @@ exports[`<TweakDetailsView /> > renders correctly 1`] = `
           class="MuiBox-root css-0"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption css-1sn4lm3-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-overline css-1ooch7a-MuiTypography-root"
           >
             common.description
           </span>
           <p
-            class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 css-1che66z-MuiTypography-root"
           >
             Description
           </p>
@@ -26,17 +26,17 @@ exports[`<TweakDetailsView /> > renders correctly 1`] = `
           class="MuiBox-root css-0"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption css-1sn4lm3-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-overline css-1ooch7a-MuiTypography-root"
           >
             common.website
           </span>
           <a
-            class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1xylxj1-MuiTypography-root-MuiLink-root"
+            class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1g8o8w2-MuiTypography-root-MuiLink-root"
             href="https://example.com"
             target="_blank"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-1che66z-MuiTypography-root"
             >
               https://example.com
             </p>
@@ -52,7 +52,7 @@ exports[`<TweakDetailsView /> > renders correctly 1`] = `
             class="MuiStack-root css-crjfvx-MuiStack-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 css-1oc1ahk-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-1lpz5xa-MuiTypography-root"
             >
               Width
             </p>
@@ -60,7 +60,7 @@ exports[`<TweakDetailsView /> > renders correctly 1`] = `
               class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
             >
               <div
-                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorSecondary MuiInputBase-formControl css-16bfqta-MuiInputBase-root-MuiOutlinedInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -91,7 +91,7 @@ exports[`<TweakDetailsView /> > renders correctly 1`] = `
             class="MuiStack-root css-crjfvx-MuiStack-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 css-1oc1ahk-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-1lpz5xa-MuiTypography-root"
             >
               Height
             </p>
@@ -99,7 +99,7 @@ exports[`<TweakDetailsView /> > renders correctly 1`] = `
               class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
             >
               <div
-                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorSecondary MuiInputBase-formControl css-16bfqta-MuiInputBase-root-MuiOutlinedInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -130,7 +130,7 @@ exports[`<TweakDetailsView /> > renders correctly 1`] = `
             class="MuiStack-root css-crjfvx-MuiStack-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 css-1oc1ahk-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-1lpz5xa-MuiTypography-root"
             >
               Disabled
             </p>
@@ -138,7 +138,7 @@ exports[`<TweakDetailsView /> > renders correctly 1`] = `
               class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
             >
               <span
-                class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
+                class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorSecondary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorSecondary css-1p6w0jw-MuiButtonBase-root-MuiSwitch-switchBase"
               >
                 <input
                   class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
@@ -160,7 +160,7 @@ exports[`<TweakDetailsView /> > renders correctly 1`] = `
             class="MuiStack-root css-crjfvx-MuiStack-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 css-1oc1ahk-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-1lpz5xa-MuiTypography-root"
             >
               Colour
             </p>
@@ -168,7 +168,7 @@ exports[`<TweakDetailsView /> > renders correctly 1`] = `
               class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
             >
               <div
-                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorSecondary MuiInputBase-formControl css-16bfqta-MuiInputBase-root-MuiOutlinedInput-root"
               >
                 <input
                   aria-invalid="false"
@@ -207,12 +207,12 @@ exports[`<TweakDetailsView /> > renders correctly 1`] = `
         class="MuiBox-root css-0"
       >
         <span
-          class="MuiTypography-root MuiTypography-caption css-1sn4lm3-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-overline css-1ooch7a-MuiTypography-root"
         >
           common.description
         </span>
         <p
-          class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-1che66z-MuiTypography-root"
         >
           Description
         </p>
@@ -221,17 +221,17 @@ exports[`<TweakDetailsView /> > renders correctly 1`] = `
         class="MuiBox-root css-0"
       >
         <span
-          class="MuiTypography-root MuiTypography-caption css-1sn4lm3-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-overline css-1ooch7a-MuiTypography-root"
         >
           common.website
         </span>
         <a
-          class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1xylxj1-MuiTypography-root-MuiLink-root"
+          class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1g8o8w2-MuiTypography-root-MuiLink-root"
           href="https://example.com"
           target="_blank"
         >
           <p
-            class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 css-1che66z-MuiTypography-root"
           >
             https://example.com
           </p>
@@ -247,7 +247,7 @@ exports[`<TweakDetailsView /> > renders correctly 1`] = `
           class="MuiStack-root css-crjfvx-MuiStack-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body1 css-1oc1ahk-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 css-1lpz5xa-MuiTypography-root"
           >
             Width
           </p>
@@ -255,7 +255,7 @@ exports[`<TweakDetailsView /> > renders correctly 1`] = `
             class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
           >
             <div
-              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorSecondary MuiInputBase-formControl css-16bfqta-MuiInputBase-root-MuiOutlinedInput-root"
             >
               <input
                 aria-invalid="false"
@@ -286,7 +286,7 @@ exports[`<TweakDetailsView /> > renders correctly 1`] = `
           class="MuiStack-root css-crjfvx-MuiStack-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body1 css-1oc1ahk-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 css-1lpz5xa-MuiTypography-root"
           >
             Height
           </p>
@@ -294,7 +294,7 @@ exports[`<TweakDetailsView /> > renders correctly 1`] = `
             class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
           >
             <div
-              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorSecondary MuiInputBase-formControl css-16bfqta-MuiInputBase-root-MuiOutlinedInput-root"
             >
               <input
                 aria-invalid="false"
@@ -325,7 +325,7 @@ exports[`<TweakDetailsView /> > renders correctly 1`] = `
           class="MuiStack-root css-crjfvx-MuiStack-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body1 css-1oc1ahk-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 css-1lpz5xa-MuiTypography-root"
           >
             Disabled
           </p>
@@ -333,7 +333,7 @@ exports[`<TweakDetailsView /> > renders correctly 1`] = `
             class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
           >
             <span
-              class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
+              class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorSecondary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorSecondary css-1p6w0jw-MuiButtonBase-root-MuiSwitch-switchBase"
             >
               <input
                 class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
@@ -355,7 +355,7 @@ exports[`<TweakDetailsView /> > renders correctly 1`] = `
           class="MuiStack-root css-crjfvx-MuiStack-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body1 css-1oc1ahk-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 css-1lpz5xa-MuiTypography-root"
           >
             Colour
           </p>
@@ -363,7 +363,7 @@ exports[`<TweakDetailsView /> > renders correctly 1`] = `
             class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
           >
             <div
-              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorSecondary MuiInputBase-formControl css-16bfqta-MuiInputBase-root-MuiOutlinedInput-root"
             >
               <input
                 aria-invalid="false"

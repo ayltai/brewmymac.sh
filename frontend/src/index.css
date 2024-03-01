@@ -1,5 +1,6 @@
 html {
     scroll-behavior : smooth;
+    scrollbar-width : thin;
 }
 
 a {
@@ -47,22 +48,22 @@ a {
 
 @keyframes wave {
     5% {
-        transform: translateX(0);
+        transform : translateX(0);
     }
 
     25% {
-        transform: translateX(-25%);
+        transform : translateX(-25%);
     }
 
     50% {
-        transform: translateX(-50%);
+        transform : translateX(-50%);
     }
 
     75% {
-        transform: translateX(-25%);
+        transform : translateX(-25%);
     }
 
     100% {
-        transform: translateX(0);
+        transform : translateX(0);
     }
 }

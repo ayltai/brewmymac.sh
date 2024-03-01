@@ -1,7 +1,7 @@
 import { createTheme, ThemeProvider, } from '@mui/material';
-import { configureStore, Store, } from '@reduxjs/toolkit';
+import { configureStore, type Store, } from '@reduxjs/toolkit';
 import { render, } from '@testing-library/react';
-import React, { ReactNode, } from 'react';
+import React, { type ReactNode, } from 'react';
 import { Provider, } from 'react-redux';
 import { MemoryRouter, } from 'react-router-dom';
 
@@ -55,7 +55,6 @@ const customRender = (ui : any, {
     ...rest,
 });
 
-// eslint-disable-next-line react-refresh/only-export-components
 export * from '@testing-library/react';
 
 export { customRender as render, };

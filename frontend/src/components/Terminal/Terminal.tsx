@@ -1,5 +1,5 @@
 import Box from '@mui/material/Box';
-import React, { FC, } from 'react';
+import React, { type FC, } from 'react';
 import { TypeAnimation, } from 'react-type-animation';
 
 import { useDesktopMode, } from '../../hooks';

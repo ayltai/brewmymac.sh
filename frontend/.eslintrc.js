@@ -26,7 +26,6 @@ module.exports = {
         'eslint-plugin-react',
         'eslint-plugin-react-hooks',
         'eslint-plugin-unicorn',
-        'react-refresh',
     ],
     settings       : {
         react : {
@@ -261,12 +260,6 @@ module.exports = {
             },
         ],
         'react/self-closing-comp'                           : 'error',
-        'react-refresh/only-export-components'              : [
-            'warn',
-            {
-                allowConstantExport : true,
-            },
-        ],
         semi                                                : 'error',
         'spaced-comment'                                    : [
             'error',

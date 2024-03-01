@@ -1,4 +1,5 @@
-export interface TerminalProps {
-    commands         : (number | string)[],
-    [ key : string ] : any,
-}
+import type { HTMLAttributes, } from 'react';
+
+export type TerminalProps = HTMLAttributes<HTMLDivElement> & {
+    commands : (number | string)[],
+};

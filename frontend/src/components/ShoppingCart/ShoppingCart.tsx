@@ -1,7 +1,7 @@
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Badge from '@mui/material/Badge';
 import IconButton from '@mui/material/IconButton';
-import React, { FC, } from 'react';
+import React, { type FC, } from 'react';
 import { useTranslation, } from 'react-i18next';
 
 import { useAppSelector, } from '../../hooks';

@@ -6,7 +6,7 @@ exports[`<CardView /> > renders with buttons correctly 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiCard-root css-m979x0-MuiPaper-root-MuiCard-root"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-5f3tb7-MuiPaper-root-MuiCard-root"
       >
         <button
           class="MuiButtonBase-root MuiCardActionArea-root css-1oitmrd-MuiButtonBase-root-MuiCardActionArea-root"
@@ -18,19 +18,19 @@ exports[`<CardView /> > renders with buttons correctly 1`] = `
           >
             <h5
               aria-label="Headline"
-              class="MuiTypography-root MuiTypography-h5  css-1w1yj34-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5  css-4lba41-MuiTypography-root"
               data-mui-internal-clone-element="true"
             >
               Headline
             </h5>
             <p
-              class="MuiTypography-root MuiTypography-body1 css-1tb20dr-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-sebv0w-MuiTypography-root"
             >
               Subheader
             </p>
             <p
               aria-label="Explain more about the topic shown in the headline and subheader through supporting text."
-              class="MuiTypography-root MuiTypography-body2  css-1o0o0f0-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1  css-gqj3pa-MuiTypography-root"
               data-mui-internal-clone-element="true"
               lines="2"
             >
@@ -51,7 +51,7 @@ exports[`<CardView /> > renders with buttons correctly 1`] = `
             class="MuiBox-root css-i9gxme"
           />
           <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-u5rzjm-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-lzklvy-MuiButtonBase-root-MuiButton-root"
             tabindex="0"
             type="button"
           >
@@ -61,7 +61,7 @@ exports[`<CardView /> > renders with buttons correctly 1`] = `
             />
           </button>
           <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-u5rzjm-MuiButtonBase-root-MuiButton-root"
+            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-lzklvy-MuiButtonBase-root-MuiButton-root"
             tabindex="0"
             type="button"
           >
@@ -76,7 +76,7 @@ exports[`<CardView /> > renders with buttons correctly 1`] = `
   </body>,
   "container": <div>
     <div
-      class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiCard-root css-m979x0-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-5f3tb7-MuiPaper-root-MuiCard-root"
     >
       <button
         class="MuiButtonBase-root MuiCardActionArea-root css-1oitmrd-MuiButtonBase-root-MuiCardActionArea-root"
@@ -88,19 +88,19 @@ exports[`<CardView /> > renders with buttons correctly 1`] = `
         >
           <h5
             aria-label="Headline"
-            class="MuiTypography-root MuiTypography-h5  css-1w1yj34-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5  css-4lba41-MuiTypography-root"
             data-mui-internal-clone-element="true"
           >
             Headline
           </h5>
           <p
-            class="MuiTypography-root MuiTypography-body1 css-1tb20dr-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 css-sebv0w-MuiTypography-root"
           >
             Subheader
           </p>
           <p
             aria-label="Explain more about the topic shown in the headline and subheader through supporting text."
-            class="MuiTypography-root MuiTypography-body2  css-1o0o0f0-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1  css-gqj3pa-MuiTypography-root"
             data-mui-internal-clone-element="true"
             lines="2"
           >
@@ -121,7 +121,7 @@ exports[`<CardView /> > renders with buttons correctly 1`] = `
           class="MuiBox-root css-i9gxme"
         />
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-u5rzjm-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-lzklvy-MuiButtonBase-root-MuiButton-root"
           tabindex="0"
           type="button"
         >
@@ -131,7 +131,7 @@ exports[`<CardView /> > renders with buttons correctly 1`] = `
           />
         </button>
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-u5rzjm-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-lzklvy-MuiButtonBase-root-MuiButton-root"
           tabindex="0"
           type="button"
         >
@@ -203,7 +203,7 @@ exports[`<CardView /> > renders without buttons correctly 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiCard-root css-m979x0-MuiPaper-root-MuiCard-root"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-5f3tb7-MuiPaper-root-MuiCard-root"
       >
         <button
           class="MuiButtonBase-root MuiCardActionArea-root css-1oitmrd-MuiButtonBase-root-MuiCardActionArea-root"
@@ -215,19 +215,19 @@ exports[`<CardView /> > renders without buttons correctly 1`] = `
           >
             <h5
               aria-label="Headline"
-              class="MuiTypography-root MuiTypography-h5  css-1w1yj34-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5  css-4lba41-MuiTypography-root"
               data-mui-internal-clone-element="true"
             >
               Headline
             </h5>
             <p
-              class="MuiTypography-root MuiTypography-body1 css-1tb20dr-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-sebv0w-MuiTypography-root"
             >
               Subheader
             </p>
             <p
               aria-label="Explain more about the topic shown in the headline and subheader through supporting text."
-              class="MuiTypography-root MuiTypography-body2  css-1o0o0f0-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1  css-gqj3pa-MuiTypography-root"
               data-mui-internal-clone-element="true"
               lines="2"
             >
@@ -246,7 +246,7 @@ exports[`<CardView /> > renders without buttons correctly 1`] = `
   </body>,
   "container": <div>
     <div
-      class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiCard-root css-m979x0-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-5f3tb7-MuiPaper-root-MuiCard-root"
     >
       <button
         class="MuiButtonBase-root MuiCardActionArea-root css-1oitmrd-MuiButtonBase-root-MuiCardActionArea-root"
@@ -258,19 +258,19 @@ exports[`<CardView /> > renders without buttons correctly 1`] = `
         >
           <h5
             aria-label="Headline"
-            class="MuiTypography-root MuiTypography-h5  css-1w1yj34-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5  css-4lba41-MuiTypography-root"
             data-mui-internal-clone-element="true"
           >
             Headline
           </h5>
           <p
-            class="MuiTypography-root MuiTypography-body1 css-1tb20dr-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 css-sebv0w-MuiTypography-root"
           >
             Subheader
           </p>
           <p
             aria-label="Explain more about the topic shown in the headline and subheader through supporting text."
-            class="MuiTypography-root MuiTypography-body2  css-1o0o0f0-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1  css-gqj3pa-MuiTypography-root"
             data-mui-internal-clone-element="true"
             lines="2"
           >

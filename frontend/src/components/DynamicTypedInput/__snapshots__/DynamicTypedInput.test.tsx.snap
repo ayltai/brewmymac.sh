@@ -9,7 +9,7 @@ exports[`<DynamicTypedInput /> > renders boolean typed input correctly 1`] = `
         class="MuiStack-root css-crjfvx-MuiStack-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 css-1oc1ahk-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-1lpz5xa-MuiTypography-root"
         >
           Title
         </p>
@@ -17,7 +17,7 @@ exports[`<DynamicTypedInput /> > renders boolean typed input correctly 1`] = `
           class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
         >
           <span
-            class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
+            class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-azuvdk-MuiButtonBase-root-MuiSwitch-switchBase"
           >
             <input
               class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
@@ -42,7 +42,7 @@ exports[`<DynamicTypedInput /> > renders boolean typed input correctly 1`] = `
       class="MuiStack-root css-crjfvx-MuiStack-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body1 css-1oc1ahk-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-1lpz5xa-MuiTypography-root"
       >
         Title
       </p>
@@ -50,7 +50,7 @@ exports[`<DynamicTypedInput /> > renders boolean typed input correctly 1`] = `
         class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
       >
         <span
-          class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
+          class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-azuvdk-MuiButtonBase-root-MuiSwitch-switchBase"
         >
           <input
             class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
@@ -132,7 +132,7 @@ exports[`<DynamicTypedInput /> > renders string typed input correctly 1`] = `
         class="MuiStack-root css-crjfvx-MuiStack-root"
       >
         <p
-          class="MuiTypography-root MuiTypography-body1 css-1oc1ahk-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-1lpz5xa-MuiTypography-root"
         >
           Title
         </p>
@@ -140,7 +140,7 @@ exports[`<DynamicTypedInput /> > renders string typed input correctly 1`] = `
           class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
         >
           <div
-            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-1dyv133-MuiInputBase-root-MuiOutlinedInput-root"
           >
             <input
               aria-invalid="false"
@@ -174,7 +174,7 @@ exports[`<DynamicTypedInput /> > renders string typed input correctly 1`] = `
       class="MuiStack-root css-crjfvx-MuiStack-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body1 css-1oc1ahk-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-1lpz5xa-MuiTypography-root"
       >
         Title
       </p>
@@ -182,7 +182,7 @@ exports[`<DynamicTypedInput /> > renders string typed input correctly 1`] = `
         class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
       >
         <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-1dyv133-MuiInputBase-root-MuiOutlinedInput-root"
         >
           <input
             aria-invalid="false"

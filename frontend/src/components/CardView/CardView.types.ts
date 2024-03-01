@@ -1,10 +1,9 @@
-import type { ReactNode, } from 'react';
+import type { HTMLAttributes, ReactNode, } from 'react';
 
-export interface CardViewProps {
-    title?           : string,
-    subtitle?        : string,
-    description?     : string,
-    onClick?         : () => void,
-    children?        : ReactNode,
-    [ key : string ] : any,
-}
+export type CardViewProps = HTMLAttributes<HTMLDivElement> & {
+    title?       : string,
+    subtitle?    : string,
+    description? : string,
+    onClick?     : () => void,
+    children?    : ReactNode,
+};

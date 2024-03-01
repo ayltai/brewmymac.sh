@@ -1,7 +1,7 @@
-import type { ReactNode, } from 'react';
+import type { HTMLAttributes, ReactNode, } from 'react';
 
-export interface LoadingProps {
-    show?            : boolean,
-    children?        : ReactNode,
-    [ key : string ] : any,
-}
+export type LoadingProps = HTMLAttributes<HTMLDivElement> & {
+    show?     : boolean,
+    size?     : number | string,
+    children? : ReactNode,
+};

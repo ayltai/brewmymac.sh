@@ -34,10 +34,10 @@ exports[`<Instruction /> > renders correctly 1`] = `
           role="dialog"
         >
           <h2
-            class="MuiTypography-root MuiTypography-h6 MuiDialogTitle-root css-bdhsul-MuiTypography-root-MuiDialogTitle-root"
+            class="MuiTypography-root MuiTypography-h6 MuiDialogTitle-root css-14o58l0-MuiTypography-root-MuiDialogTitle-root"
             id=":r0:"
           >
-            tweaks.checkout.title
+            checkout.title
           </h2>
           <button
             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-lc2yqr-MuiButtonBase-root-MuiIconButton-root"
@@ -66,24 +66,25 @@ exports[`<Instruction /> > renders correctly 1`] = `
               class="MuiStack-root css-jfdv4h-MuiStack-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body1 css-1che66z-MuiTypography-root"
               >
                 tweaks.checkout.copy
               </p>
               <a
-                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1xylxj1-MuiTypography-root-MuiLink-root"
+                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1b3q4o2-MuiTypography-root-MuiLink-root"
                 href="https://support.apple.com/en-gb/guide/terminal/apd5265185d-f365-44cb-8b09-71a064a42125/mac"
+                rel="noreferrer"
                 target="_blank"
               >
                 https://support.apple.com/en-gb/guide/terminal/apd5265185d-f365-44cb-8b09-71a064a42125/mac
               </a>
               <div
-                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-adornedEnd css-1oi4ow-MuiInputBase-root-MuiOutlinedInput-root"
+                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-adornedEnd css-16tmvdj-MuiInputBase-root-MuiOutlinedInput-root"
               >
                 <input
                   class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd css-nxo287-MuiInputBase-input-MuiOutlinedInput-input"
                   type="text"
-                  value="bash -c "$(curl -fsSL 'http://localhost:8080/spellbooks/install/dummy')""
+                  value="bash -c "$(curl -fsSL 'http://localhost:8080/recipes/install/dummy"
                 />
                 <div
                   class="MuiInputAdornment-root MuiInputAdornment-positionEnd css-1laqsz7-MuiInputAdornment-root"
@@ -132,7 +133,7 @@ exports[`<Instruction /> > renders correctly 1`] = `
             class="MuiDialogActions-root MuiDialogActions-spacing css-knqc4i-MuiDialogActions-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-13evscf-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-lzklvy-MuiButtonBase-root-MuiButton-root"
               tabindex="0"
               type="button"
             >
@@ -241,10 +242,10 @@ exports[`<Instruction /> > renders instructions correctly 1`] = `
           role="dialog"
         >
           <h2
-            class="MuiTypography-root MuiTypography-h6 MuiDialogTitle-root css-bdhsul-MuiTypography-root-MuiDialogTitle-root"
+            class="MuiTypography-root MuiTypography-h6 MuiDialogTitle-root css-14o58l0-MuiTypography-root-MuiDialogTitle-root"
             id=":r2:"
           >
-            tweaks.checkout.title
+            checkout.title
           </h2>
           <button
             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-lc2yqr-MuiButtonBase-root-MuiIconButton-root"
@@ -273,24 +274,25 @@ exports[`<Instruction /> > renders instructions correctly 1`] = `
               class="MuiStack-root css-jfdv4h-MuiStack-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body1 css-1che66z-MuiTypography-root"
               >
                 tweaks.checkout.copy
               </p>
               <a
-                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1xylxj1-MuiTypography-root-MuiLink-root"
+                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1b3q4o2-MuiTypography-root-MuiLink-root"
                 href="https://support.apple.com/en-gb/guide/terminal/apd5265185d-f365-44cb-8b09-71a064a42125/mac"
+                rel="noreferrer"
                 target="_blank"
               >
                 https://support.apple.com/en-gb/guide/terminal/apd5265185d-f365-44cb-8b09-71a064a42125/mac
               </a>
               <div
-                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-adornedEnd css-1oi4ow-MuiInputBase-root-MuiOutlinedInput-root"
+                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-adornedEnd css-16tmvdj-MuiInputBase-root-MuiOutlinedInput-root"
               >
                 <input
                   class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd css-nxo287-MuiInputBase-input-MuiOutlinedInput-input"
                   type="text"
-                  value="bash -c "$(curl -fsSL 'http://localhost:8080/spellbooks/install/dummy')""
+                  value="bash -c "$(curl -fsSL 'http://localhost:8080/recipes/install/dummy"
                 />
                 <div
                   class="MuiInputAdornment-root MuiInputAdornment-positionEnd css-1laqsz7-MuiInputAdornment-root"
@@ -339,7 +341,7 @@ exports[`<Instruction /> > renders instructions correctly 1`] = `
             class="MuiDialogActions-root MuiDialogActions-spacing css-knqc4i-MuiDialogActions-root"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-13evscf-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-lzklvy-MuiButtonBase-root-MuiButton-root"
               tabindex="0"
               type="button"
             >

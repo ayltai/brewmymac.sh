@@ -26,12 +26,12 @@ exports[`<Spellbook /> > renders correctly 1`] = `
             />
           </svg>
           <h5
-            class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-1b7t60j-MuiTypography-root"
           >
             cart.empty
           </h5>
           <p
-            class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 css-1che66z-MuiTypography-root"
           >
             cart.hint
           </p>
@@ -48,7 +48,7 @@ exports[`<Spellbook /> > renders correctly 1`] = `
             class="MuiStack-root css-6rg9iv-MuiStack-root"
           >
             <span
-              class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-18lrjg1-MuiCircularProgress-root"
+              class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-mod6k9-MuiCircularProgress-root"
               role="progressbar"
               style="width: 40px; height: 40px;"
             >
@@ -66,7 +66,7 @@ exports[`<Spellbook /> > renders correctly 1`] = `
                 />
               </svg>
             </span>
-            tweaks.checkout.processing
+            cart.processing
           </div>
         </div>
       </div>
@@ -94,12 +94,12 @@ exports[`<Spellbook /> > renders correctly 1`] = `
           />
         </svg>
         <h5
-          class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-1b7t60j-MuiTypography-root"
         >
           cart.empty
         </h5>
         <p
-          class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-1che66z-MuiTypography-root"
         >
           cart.hint
         </p>
@@ -116,7 +116,7 @@ exports[`<Spellbook /> > renders correctly 1`] = `
           class="MuiStack-root css-6rg9iv-MuiStack-root"
         >
           <span
-            class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-18lrjg1-MuiCircularProgress-root"
+            class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-mod6k9-MuiCircularProgress-root"
             role="progressbar"
             style="width: 40px; height: 40px;"
           >
@@ -134,7 +134,7 @@ exports[`<Spellbook /> > renders correctly 1`] = `
               />
             </svg>
           </span>
-          tweaks.checkout.processing
+          cart.processing
         </div>
       </div>
     </div>

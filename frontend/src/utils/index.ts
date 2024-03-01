@@ -16,52 +16,82 @@ export const logPageView = (app : FirebaseApp, {
 } : {
     pageName : string,
     route    : string,
-}) => logEvent(getAnalytics(app), 'page_view', {
-    page_title    : pageName,
-    page_location : route,
-});
+}) => {
+    try {
+        logEvent(getAnalytics(app), 'page_view', {
+            page_title    : pageName,
+            page_location : route,
+        });
+    } catch (error) {
+        handleError(error);
+    }
+};
 
 export const logAddToCart = (app : FirebaseApp, {
     itemId,
 } : {
     itemId : string,
-}) => logEvent(getAnalytics(app), 'add_to_cart', {
-    items : [
-        {
-            item_id : itemId,
-        },
-    ],
-});
+}) => {
+    try {
+        logEvent(getAnalytics(app), 'add_to_cart', {
+            items : [
+                {
+                    item_id : itemId,
+                },
+            ],
+        });
+    } catch (error) {
+        handleError(error);
+    }
+};
 
 export const logRemoveFromCart = (app : FirebaseApp, {
     itemId,
 } : {
     itemId : string,
-}) => logEvent(getAnalytics(app), 'remove_from_cart', {
-    items : [
-        {
-            item_id : itemId,
-        },
-    ],
-});
+}) => {
+    try {
+        logEvent(getAnalytics(app), 'remove_from_cart', {
+            items : [
+                {
+                    item_id : itemId,
+                },
+            ],
+        });
+    } catch (error) {
+        handleError(error);
+    }
+};
 
 export const logCheckout = (app : FirebaseApp, {
     itemIds,
 } : {
     itemIds : string[],
-}) => logEvent(getAnalytics(app), 'checkout', {
-    items : itemIds.map((itemId : string) => ({
-        item_id : itemId,
-    })),
-});
+}) => {
+    try {
+        logEvent(getAnalytics(app), 'checkout', {
+            items : itemIds.map((itemId : string) => ({
+                item_id : itemId,
+            })),
+        });
+    } catch (error) {
+        handleError(error);
+    }
+};
 
 export const logSearch = (app : FirebaseApp, {
     query,
 } : {
     query : string,
-}) => logEvent(getAnalytics(app), 'search', {
-    search_term : query,
-});
+}) => {
+    try {
+        logEvent(getAnalytics(app), 'search', {
+            search_term : query,
+        });
+    } catch (error) {
+        handleError(error);
+    }
+};
 
 export const logShare = (app : FirebaseApp, {
     product,
@@ -69,7 +99,13 @@ export const logShare = (app : FirebaseApp, {
 } : {
     product : 'packages' | 'tweaks',
     itemId  : string,
-}) => logEvent(getAnalytics(app), 'share', {
-    content_type : product,
-    item_id      : itemId,
-});
+}) => {
+    try {
+        logEvent(getAnalytics(app), 'share', {
+            content_type : product,
+            item_id      : itemId,
+        });
+    } catch (error) {
+        handleError(error);
+    }
+};
