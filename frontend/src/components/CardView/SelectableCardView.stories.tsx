@@ -4,7 +4,6 @@ import type { Meta, StoryObj, } from '@storybook/react';
 import React, { useState, } from 'react';
 
 import { SelectableCardView, } from './SelectableCardView';
-import { SelectableCardViewProps, } from './SelectableCardView.types';
 
 const meta : Meta<typeof SelectableCardView> = {
     component : SelectableCardView,

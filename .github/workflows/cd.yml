@@ -53,6 +53,7 @@ jobs:
         working-directory: frontend
       - name: Build Storybook
         run: pnpm storybook:build
+        working-directory: frontend
       - name: Build frontend
         run: pnpm build
         working-directory: frontend
