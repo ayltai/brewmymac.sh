@@ -9,13 +9,11 @@ import { router, } from './routes';
 import { appTheme, } from './styles';
 
 export const App = () => {
-    // @ts-ignore
     const [ theme , setTheme , ] = useState(createTheme(appTheme));
 
     const { themeMode, } = useAppSelector(state => state.preference);
 
     useEffect(() => {
-        // @ts-ignore
         setTheme(createTheme({
             ...appTheme,
             palette : {
