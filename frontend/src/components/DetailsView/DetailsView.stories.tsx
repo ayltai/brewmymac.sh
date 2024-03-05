@@ -4,9 +4,7 @@ import { DetailsView, } from './DetailsView';
 
 const meta : Meta<typeof DetailsView> = {
     component : DetailsView,
-    tags      : [
-        'autodocs',
-    ],
+    title     : 'Components/Data Presentations/Details View',
     argTypes  : {
         description : {
             description : 'The description of the component',

@@ -4,9 +4,7 @@ import { Loading, } from './Loading';
 
 const meta : Meta<typeof Loading> = {
     component : Loading,
-    tags      : [
-        'autodocs',
-    ],
+    title     : 'Components/Overlays/Loading',
     argTypes  : {
         show     : {
             description : 'Whether to show the component',

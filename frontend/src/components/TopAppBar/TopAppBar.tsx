@@ -25,7 +25,7 @@ const ElevationScroll = ({
 };
 
 /**
- * A top app bar that displays the title and actions related to the currently displayed content.
+ * A top app bar displays the title and actions related to the currently displayed content.
  * @param logo The logo to show at the start of the top app bar
  * @param title The title to show at the start of the top app bar and after the logo
  * @param actions The actions to show at the end of the top app bar
@@ -46,7 +46,8 @@ export const TopAppBar : FC<TopAppBarProps> = ({
             <ElevationScroll>
                 <AppBar
                     style={{
-                        backdropFilter : 'blur(16px)',
+                        backdropFilter       : 'blur(16px)',
+                        WebkitBackdropFilter : 'blur(16px)',
                     }}
                     color='transparent'
                     {...rest}>

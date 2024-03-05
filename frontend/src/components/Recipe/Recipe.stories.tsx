@@ -7,6 +7,7 @@ import { Recipe, } from './Recipe';
 
 const meta : Meta<typeof Recipe> = {
     component : Recipe,
+    title     : 'Components/Data Presentations/Recipe',
     tags      : [
         'autodocs',
     ],

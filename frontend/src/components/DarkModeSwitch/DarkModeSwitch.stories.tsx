@@ -4,9 +4,7 @@ import { DarkModeSwitch, } from './DarkModeSwitch';
 
 const meta : Meta<typeof DarkModeSwitch> = {
     component : DarkModeSwitch,
-    tags      : [
-        'autodocs',
-    ],
+    title     : 'Components/Actions/Dark Mode Switch',
     argTypes  : {
     },
 };

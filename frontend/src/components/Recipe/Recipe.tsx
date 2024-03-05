@@ -1,4 +1,3 @@
-import RemoveShoppingCart from '@mui/icons-material/RemoveShoppingCart';
 import React, { useEffect, useState, } from 'react';
 
 import { useAddRecipeMutation, } from '../../apis';
@@ -47,12 +46,6 @@ export const Recipe = () => {
     return (
         <ShoppingCartDetail
             items={ingredients}
-            emptyIcon={
-                <RemoveShoppingCart sx={{
-                    marginY  : 4,
-                    fontSize : 128,
-                }} />
-            }
             detailsView={
                 <DetailsView
                     description={selected?.description}

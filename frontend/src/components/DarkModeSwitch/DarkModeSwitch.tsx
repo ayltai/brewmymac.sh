@@ -9,7 +9,7 @@ import { setThemeMode, } from '../../states';
 import type { DarkModeSwitchProps, } from './DarkModeSwitch.types';
 
 /**
- * A component that toggles the dark mode on and off.
+ * A dark mode switch lets users switch easily between light and dark theme modes.
  * @param rest Other props
  */
 export const DarkModeSwitch : FC<DarkModeSwitchProps> = ({

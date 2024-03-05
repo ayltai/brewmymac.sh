@@ -4,9 +4,7 @@ import { SearchInput, } from './SearchInput';
 
 const meta : Meta<typeof SearchInput> = {
     component : SearchInput,
-    tags      : [
-        'autodocs',
-    ],
+    title     : 'Components/Inputs/Search',
     argTypes  : {
         loading  : {
             description : 'Whether the input is loading',

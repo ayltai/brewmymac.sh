@@ -6,6 +6,7 @@ import { SectionedGridView, } from './SectionedGridView';
 
 const meta : Meta<typeof SectionedGridView> = {
     component : SectionedGridView,
+    title     : 'Components/Layouts/Sectioned Grid',
     tags      : [
         'autodocs',
     ],

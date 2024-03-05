@@ -35,7 +35,7 @@
         "serve"           : "vite preview",
         "start"           : "vite --host 0.0.0.0 --open",
         "storybook"       : "cross-env STORYBOOK_DISABLE_TELEMETRY=1 storybook dev -p 6006",
-        "storybook:build" : "cross-env STORYBOOK_DISABLE_TELEMETRY=1 storybook build"
+        "storybook:build" : "pnpm dlx rimraf --glob ./public/design && cross-env STORYBOOK_DISABLE_TELEMETRY=1 storybook build -o ./public/design"
     },
     "dependencies"    : {
         "@emotion/react"                   : "^11.11.4",
@@ -69,13 +69,16 @@
         "@storybook/addon-essentials"      : "^7.6.17",
         "@storybook/addon-interactions"    : "^7.6.17",
         "@storybook/addon-themes"          : "^7.6.17",
+        "@storybook/blocks"                : "^7.6.17",
         "@storybook/builder-vite"          : "^7.6.17",
+        "@storybook/manager-api"           : "^7.6.17",
         "@storybook/react"                 : "^7.6.17",
         "@storybook/react-vite"            : "^7.6.17",
         "@testing-library/jest-dom"        : "^6.4.2",
         "@testing-library/react"           : "^14.2.1",
         "@tsconfig/create-react-app"       : "^2.0.2",
         "@types/react"                     : "^18.2.61",
+        "@types/mdx"                       : "^2.0.11",
         "@types/react-dom"                 : "^18.2.19",
         "@types/react-test-renderer"       : "^18.0.7",
         "@typescript-eslint/eslint-plugin" : "^7.1.0",

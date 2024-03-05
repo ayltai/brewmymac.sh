@@ -12,6 +12,7 @@ import { useAppSelector, useDesktopMode, } from '../../hooks';
 import type { Item, } from '../../models';
 import { gradientPalette, } from '../../styles';
 import { logPageView, logSearch, } from '../../utils';
+import { EmptyState, } from '../EmptyState';
 import { GridView, SectionedGridView, } from '../GridView';
 import { Loading, } from '../Loading';
 import { SearchInput, } from '../SearchInput';
@@ -186,11 +187,13 @@ export const Catalogue : <T extends Item>(props : CatalogueProps<T>) => JSX.Elem
                         <Box
                             width='100%'
                             alignItems='center'>
-                            <Typography
-                                paddingTop={8}
-                                variant='h5'>
-                                {t('error.no_results')}
-                            </Typography>
+                            <EmptyState>
+                                <Typography
+                                    paddingTop={8}
+                                    variant='h5'>
+                                    {t('error.no_results')}
+                                </Typography>
+                            </EmptyState>
                         </Box>
                     )}
                     {!matchedItems && suggestedItems && categories.map(category => (

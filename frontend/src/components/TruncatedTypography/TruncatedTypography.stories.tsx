@@ -4,6 +4,7 @@ import { TruncatedTypography, } from './TruncatedTypography';
 
 const meta : Meta<typeof TruncatedTypography> = {
     component : TruncatedTypography,
+    title     : 'Components/Data Presentations/Truncated Typography',
     tags      : [
         'autodocs',
     ],

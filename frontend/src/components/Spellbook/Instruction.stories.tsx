@@ -7,6 +7,7 @@ import { SpellbookInstruction, } from './Instruction';
 
 const meta : Meta<typeof SpellbookInstruction> = {
     component : SpellbookInstruction,
+    title     : 'Components/Data Presentations/Spellbook Instruction',
     tags      : [
         'autodocs',
     ],

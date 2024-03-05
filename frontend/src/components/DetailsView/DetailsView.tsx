@@ -8,7 +8,7 @@ import { useTranslation, } from 'react-i18next';
 import type { DetailsViewProps, } from './DetailsView.types';
 
 /**
- * A details view displays a title and content.
+ * A details view is a container for displaying a description and optionally a URL for additional information and other arbitrary content.
  * @param color The color of the component
  * @param description The description of the component
  * @param infoUrl The URL of the information

@@ -11,7 +11,7 @@ import { MaterialButton, } from '../Button';
 import type { DialogViewProps, } from './DialogView.types';
 
 /**
- * A dialog that can be used to inform users about a task or show critical information, or requires decisions.
+ * A dialogue is an overlay that requires users to take an action or gives them important information.
  * @param open Whether the dialog is open
  * @param color The color of the dialog controls
  * @param title The title of the dialog

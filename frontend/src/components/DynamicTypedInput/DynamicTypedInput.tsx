@@ -8,7 +8,7 @@ import { useTranslation, } from 'react-i18next';
 import type { DynamicTypedInputProps, } from './DynamicTypedInput.types';
 
 /**
- * An input that can be used to enter a boolean, number, or string value.
+ * An input field that allows users to specify a boolean value, or input a number or string value depending on the type specified.
  * @param color Color of the input
  * @param title Title of the input
  * @param type Type of the input

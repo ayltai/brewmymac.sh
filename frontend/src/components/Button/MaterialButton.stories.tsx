@@ -4,9 +4,7 @@ import { MaterialButton, } from './MaterialButton';
 
 const meta : Meta<typeof MaterialButton> = {
     component : MaterialButton,
-    tags      : [
-        'autodocs',
-    ],
+    title     : 'Components/Actions/Button',
     argTypes  : {
     },
 };

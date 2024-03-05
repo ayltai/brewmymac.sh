@@ -9,7 +9,6 @@ import type { ListViewProps, } from '../ListView';
 
 export type ShoppingCartDetailProps<T extends Item, D extends DetailsViewProps, I extends InstructionProps> = Omit<ListViewProps, 'onSelect' | 'onDelete'> & {
     items             : T[],
-    emptyIcon?        : ReactNode,
     detailsView?      : ReactElement<D>,
     dialogAction?     : ReactNode,
     instruction?      : ReactElement<I>,

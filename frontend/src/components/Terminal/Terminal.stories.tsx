@@ -5,6 +5,7 @@ import { Terminal, } from './Terminal';
 
 const meta : Meta<typeof Terminal> = {
     component : Terminal,
+    title     : 'Components/Surfaces/Terminal',
     tags      : [
         'autodocs',
     ],

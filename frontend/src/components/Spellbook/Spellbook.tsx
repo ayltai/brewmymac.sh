@@ -1,4 +1,3 @@
-import AutoFixOff from '@mui/icons-material/AutoFixOff';
 import React, { useCallback, useEffect, useState, } from 'react';
 
 import { useAddSpellbookMutation, } from '../../apis';
@@ -59,12 +58,6 @@ export const Spellbook = () => {
     return (
         <ShoppingCartDetail
             items={tweaks}
-            emptyIcon={
-                <AutoFixOff sx={{
-                    marginY  : 4,
-                    fontSize : 128,
-                }} />
-            }
             detailsView={
                 <TweakDetailsView
                     description={selected?.description}

@@ -18,7 +18,7 @@ const MonospaceInput = styled(OutlinedInput)({
 });
 
 /**
- * An input field where the value can be copied to the clipboard.
+ * An input field that allows a user to copy information to the clipboard.
  * @param value The value to copy
  * @param onCopy Function to call when the copy button is clicked
  * @param rest Other props

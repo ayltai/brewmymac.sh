@@ -5,6 +5,7 @@ import '@fontsource/rubik/latin-500.css';
 import '@fontsource/rubik/latin-700.css';
 import { createTheme, CssBaseline, ThemeProvider, } from '@mui/material';
 import { withThemeFromJSXProvider, } from '@storybook/addon-themes';
+import { themes, } from '@storybook/theming';
 import * as React from 'react';
 import { Provider, } from 'react-redux';
 import { withRouter, } from 'storybook-addon-react-router-v6';
@@ -12,8 +13,8 @@ import { withRouter, } from 'storybook-addon-react-router-v6';
 import { store, } from '../src/states';
 import { appTheme, } from '../src/styles';
 import i18n from './i18next';
+import template from './template.mdx';
 
-// @ts-ignore
 const darkTheme = createTheme({
     ...appTheme,
     palette : {
@@ -22,7 +23,6 @@ const darkTheme = createTheme({
     },
 });
 
-// @ts-ignore
 const lightTheme = createTheme({
     ...appTheme,
     palette : {
@@ -45,7 +45,7 @@ export const decorators = [
             dark  : darkTheme,
             light : lightTheme,
         },
-        defaultTheme : 'light',
+        defaultTheme : 'dark',
         Provider     : ThemeProvider,
         GlobalStyles : CssBaseline,
     }),
@@ -58,14 +58,22 @@ export const decorators = [
 
 export const parameters = {
     i18n,
-    actions      : {
+    actions  : {
         argTypesRegex : '^on[A-Z].*',
     },
-    controls     : {
+    controls : {
         expanded : true,
         matchers : {
             color : /(background|color)$/i,
             date  : /Date$/,
         },
     },
+    docs     : {
+        page  : template,
+        toc   : {
+            title : 'Examples',
+        },
+        theme : themes.dark,
+    },
+    layout   : 'centered',
 };

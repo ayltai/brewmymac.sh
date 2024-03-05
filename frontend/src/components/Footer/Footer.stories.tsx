@@ -4,9 +4,7 @@ import { Footer, } from './Footer';
 
 const meta : Meta<typeof Footer> = {
     component : Footer,
-    tags      : [
-        'autodocs',
-    ],
+    title     : 'Components/Data Presentations/Footer',
     argTypes  : {
     },
 };

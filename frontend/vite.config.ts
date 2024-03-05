@@ -30,6 +30,7 @@ export default defineConfig({
             exclude  : [
                 '.storybook/**',
                 'html/**',
+                'public/**',
                 'src/**/*.stories.tsx',
                 'src/**/vite-env.d.ts',
                 'src/**/*.types.ts',

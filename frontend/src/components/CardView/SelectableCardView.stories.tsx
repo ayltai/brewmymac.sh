@@ -8,6 +8,7 @@ import { SelectableCardViewProps, } from './SelectableCardView.types';
 
 const meta : Meta<typeof SelectableCardView> = {
     component : SelectableCardView,
+    title     : 'Components/Data Presentations/Selectable Card',
     tags      : [
         'autodocs',
     ],
@@ -39,19 +40,6 @@ const meta : Meta<typeof SelectableCardView> = {
 export default meta;
 
 type Story = StoryObj<typeof SelectableCardView>;
-
-const StatefulSelectableCardView = (props : SelectableCardViewProps) => {
-    const [ selected, setSelected, ] = useState(false);
-
-    const handleChange = (newValue : boolean) => setSelected(newValue);
-
-    return (
-        <SelectableCardView
-            {...props}
-            selected={selected}
-            onChange={handleChange} />
-    );
-};
 
 const description : string = 'Explain more about the topic shown in the headline and subheader through supporting text.';
 const infoUrl     : string = 'https://nodejs.org';
@@ -91,7 +79,16 @@ export const Default : Story = {
             </Stack>
         ),
     },
-    render : args => <StatefulSelectableCardView {...args} />,
+    render : props => {
+        const [ selected, setSelected, ] = useState(false);
+
+        return (
+            <SelectableCardView
+                {...props}
+                selected={selected}
+                onChange={setSelected} />
+        );
+    },
 };
 
 export const WithAction : Story = {

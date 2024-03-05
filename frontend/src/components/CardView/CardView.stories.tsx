@@ -6,9 +6,7 @@ import { CardView, } from './CardView';
 
 const meta : Meta<typeof CardView> = {
     component : CardView,
-    tags      : [
-        'autodocs',
-    ],
+    title     : 'Components/Data Presentations/Card',
     argTypes  : {
         title       : {
             description : 'Title of the card',

@@ -4,9 +4,7 @@ import { CopyableInput, } from './CopyableInput';
 
 const meta : Meta<typeof CopyableInput> = {
     component : CopyableInput,
-    tags      : [
-        'autodocs',
-    ],
+    title     : 'Components/Inputs/Copyable Input',
     argTypes  : {
         value  : {
             description : 'The value to copy',

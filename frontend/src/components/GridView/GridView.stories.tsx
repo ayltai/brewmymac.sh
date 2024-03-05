@@ -6,9 +6,7 @@ import { GridView, } from './GridView';
 
 const meta : Meta<typeof GridView> = {
     component : GridView,
-    tags      : [
-        'autodocs',
-    ],
+    title     : 'Components/Layouts/Grid',
     argTypes  : {
         children : {
             description : 'The content of the component',

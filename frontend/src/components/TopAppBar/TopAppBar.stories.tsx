@@ -11,9 +11,7 @@ import { TopAppBar, } from './TopAppBar';
 
 const meta : Meta<typeof TopAppBar> = {
     component : TopAppBar,
-    tags      : [
-        'autodocs',
-    ],
+    title     : 'Components/Data Presentations/Toolbar',
     argTypes  : {
         logo : {
             description : 'The logo to show at the start of the top app bar',
@@ -66,5 +64,8 @@ export const Default : Story = {
                     marginLeft : -16,
                 }} />
         ),
+    },
+    parameters : {
+        layout : 'padded',
     },
 };

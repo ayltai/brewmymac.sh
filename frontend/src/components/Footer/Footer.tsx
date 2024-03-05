@@ -52,7 +52,7 @@ const LinkItem = ({
 };
 
 /**
- * A footer that displays links and copyright information.
+ * A footer provides copyright information, terms and policy details, and links to allow users to quickly navigate to other parts of a website.
  * @param rest Other props
  */
 export const Footer : FC<FooterProps> = ({

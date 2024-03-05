@@ -37,8 +37,6 @@ const withSelectable = (Component : ComponentType<CardViewProps>) => {
                         border          : `1px solid ${selected ? borderColor : 'transparent'}`,
                         backgroundColor : selected ? theme.palette.action.selected : theme.palette.background.paper,
                     }}
-                    aria-checked={selected}
-                    role='button'
                     onClick={handleClick}
                     {...rest}>
                     {(actionIcon || actionText) && (
@@ -77,4 +75,7 @@ const withSelectable = (Component : ComponentType<CardViewProps>) => {
     return ComponentWithSelectable;
 };
 
+/**
+ * A selectable card displays a title, subtitle, description, and optionally one or more buttons.
+ */
 export const SelectableCardView = withSelectable(CardView);

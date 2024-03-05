@@ -4,6 +4,7 @@ import { ProductSelection, } from './ProductSelection';
 
 const meta : Meta<typeof ProductSelection> = {
     component : ProductSelection,
+    title     : 'Components/Actions/Product Selection',
     tags      : [
         'autodocs',
     ],

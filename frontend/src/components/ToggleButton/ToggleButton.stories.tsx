@@ -1,14 +1,12 @@
 import { Check, DeleteForever, } from '@mui/icons-material';
 import type { Meta, StoryObj, } from '@storybook/react';
-import React from 'react';
+import React, { useState, } from 'react';
 
 import { ToggleButton, } from './ToggleButton';
 
 const meta : Meta<typeof ToggleButton> = {
     component : ToggleButton,
-    tags      : [
-        'autodocs',
-    ],
+    title     : 'Components/Actions/Toggle',
     argTypes  : {
         icon          : {
             description : 'The icon to show when the button is in the unselected state',
@@ -39,13 +37,23 @@ export default meta;
 type Story = StoryObj<typeof ToggleButton>;
 
 export const Default : Story = {
-    args : {
+    args   : {
         icon          : <Check />,
         selectedIcon  : <Check />,
         deselectIcon  : <DeleteForever />,
         text          : 'Select',
         selectedText  : 'Selected',
         deselectText  : 'Remove',
+    },
+    render : props => {
+        const [ selected, setSelected, ] = useState(false);
+
+        return (
+            <ToggleButton
+                {...props}
+                selected={selected}
+                onChange={setSelected} />
+        );
     },
 };
 

@@ -24,4 +24,7 @@ const withSection = (Component : ComponentType<GridViewProps>) => {
     return ComponentWithSection;
 };
 
+/**
+ * A grid layout with sections.
+ */
 export const SectionedGridView = withSection(GridView);

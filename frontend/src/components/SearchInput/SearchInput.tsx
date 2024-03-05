@@ -50,7 +50,7 @@ const StyledInputBase = styled(InputBase)(({ theme, }) => ({
 }));
 
 /**
- * A search input lets users enter search queries.
+ * A search input lets users enter search queries and find relevant pieces of content.
  * @param loading Whether the input is loading
  * @param hint Placeholder text
  * @param onSearch Function to call when the input is changed

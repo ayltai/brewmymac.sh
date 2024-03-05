@@ -10,7 +10,7 @@ import { TruncatedTypography, } from '../TruncatedTypography';
 import type { CardViewProps, } from './CardView.types';
 
 /**
- * A card view that displays the title, subtitle, description, and optionally one or more buttons.
+ * A card is a container that can displays a title, subtitle, description, and optionally one or more buttons.
  * @param title Title of the card
  * @param subtitle Subtitle of the card
  * @param description Description of the card

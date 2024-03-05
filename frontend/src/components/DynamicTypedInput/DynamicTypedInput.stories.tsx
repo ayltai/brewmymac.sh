@@ -4,9 +4,7 @@ import { DynamicTypedInput, } from './DynamicTypedInput';
 
 const meta : Meta<typeof DynamicTypedInput> = {
     component : DynamicTypedInput,
-    tags      : [
-        'autodocs',
-    ],
+    title     : 'Components/Inputs/Dynamic Typed Input',
     argTypes  : {
         title : {
             description : 'The title of the component',
@@ -29,5 +27,29 @@ export const Default : Story = {
         title : 'Dynamic Typed Input',
         type  : 'boolean',
         value : true,
+    },
+};
+
+export const BooleanType : Story = {
+    args : {
+        title : 'Dynamic Typed Input',
+        type  : 'boolean',
+        value : true,
+    },
+};
+
+export const NumberType : Story = {
+    args : {
+        title : 'Dynamic Typed Input',
+        type  : 'number',
+        value : '1',
+    },
+};
+
+export const StringType : Story = {
+    args : {
+        title : 'Dynamic Typed Input',
+        type  : 'string',
+        value : 'String value',
     },
 };

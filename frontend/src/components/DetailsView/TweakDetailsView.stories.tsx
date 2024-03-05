@@ -4,6 +4,7 @@ import { TweakDetailsView, } from './TweakDetailsView';
 
 const meta : Meta<typeof TweakDetailsView> = {
     component : TweakDetailsView,
+    title     : 'Components/Data Presentations/Tweak Details View',
     tags      : [
         'autodocs',
     ],

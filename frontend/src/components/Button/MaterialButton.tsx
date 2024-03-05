@@ -3,6 +3,9 @@ import type { ButtonBaseOwnProps, } from '@mui/material/ButtonBase';
 import { styled, } from '@mui/material/styles';
 import type { FC, HTMLAttributes, } from 'react';
 
+/**
+ *A button lets users take actions and make choices with one click or tap.
+ */
 export const MaterialButton : FC<HTMLAttributes<HTMLButtonElement> & ButtonBaseOwnProps & ButtonOwnProps> = styled(Button)(({
     theme,
     variant,

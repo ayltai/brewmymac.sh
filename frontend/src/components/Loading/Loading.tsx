@@ -7,7 +7,7 @@ import { useAppSelector, } from '../../hooks';
 import type { LoadingProps, } from './Loading.types';
 
 /**
- * An indicator that shows a loading state.
+ * A loading indicator shows the status of a process in real time
  * @param show Whether to show the component
  * @param size The size of the component
  * @param children Additional content to show below the component

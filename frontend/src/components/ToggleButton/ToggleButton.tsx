@@ -4,7 +4,7 @@ import { MaterialButton, } from '../Button';
 import type { ToggleButtonProps, } from './ToggleButton.types';
 
 /**
- * A ToggleButton can be used to turn an option on or off.
+ * A toggle button lets users switch between the selection of an item on or off.
  * @param icon The icon to show when the button is in the unselected state
  * @param selectedIcon The icon to show when the button is in the selected state
  * @param deselectIcon The icon to show when the button is in the selected state and is hovered

@@ -51,7 +51,9 @@ jobs:
       - name: Install dependencies
         run: pnpm i
         working-directory: frontend
-      - name: Build
+      - name: Build Storybook
+        run: pnpm storybook:build
+      - name: Build frontend
         run: pnpm build
         working-directory: frontend
         env:

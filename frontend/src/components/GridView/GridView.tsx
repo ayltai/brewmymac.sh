@@ -3,7 +3,7 @@ import React, { Children, type FC, } from 'react';
 import type { GridViewProps, } from './GridView.types';
 
 /**
- * A layout that displays one or more children in a grid.
+ * A grid provides a visual structuring system for a homogeneous and balanced content placement.
  * @param children The content of the component
  * @param rest Other props
  */

@@ -17,11 +17,8 @@ const config : StorybookConfig = {
         autodocs : 'tag',
     },
     stories    : [
-        '../src/**/*.stories.mdx',
+        '../src/**/*.mdx',
         '../src/**/*.stories.@(js|jsx|ts|tsx)',
-    ],
-    staticDirs : [
-        '../public',
     ],
 };
 

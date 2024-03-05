@@ -9,7 +9,7 @@ import { useAppSelector, } from '../../hooks';
 import type { ShoppingCartProps, } from './ShoppingCart.types';
 
 /**
- * An icon button that displays the number of items selected.
+ * An icon button displays the number of items selected.
  * @param onClick Function to call when the button is clicked
  * @param rest Other props
  */

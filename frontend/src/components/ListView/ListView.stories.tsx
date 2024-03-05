@@ -6,9 +6,7 @@ import { ListView, } from './ListView';
 
 const meta : Meta<typeof ListView> = {
     component : ListView,
-    tags      : [
-        'autodocs',
-    ],
+    title     : 'Components/Layouts/List',
     argTypes  : {
         children : {
             description : 'The content of the component',

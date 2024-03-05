@@ -14,6 +14,7 @@ import { useAppSelector, } from '../../hooks';
 import type { Item, } from '../../models';
 import { handleError, logCheckout, logRemoveFromCart, } from '../../utils';
 import type { DetailsViewProps, } from '../DetailsView';
+import { EmptyState, } from '../EmptyState';
 import { MaterialButton, } from '../Button';
 import { DialogView, } from '../DialogView';
 import type { InstructionProps, } from '../Instruction';
@@ -28,7 +29,6 @@ import type { ShoppingCartDetailProps, } from './ShoppingCartDetail.types';
  */
 export const ShoppingCartDetail = <T extends Item, D extends DetailsViewProps, I extends InstructionProps>({
     items,
-    emptyIcon,
     detailsView,
     dialogAction,
     instruction,
@@ -104,15 +104,16 @@ export const ShoppingCartDetail = <T extends Item, D extends DetailsViewProps, I
                     alignItems='center'
                     textAlign='center'>
                     <Box flexGrow={1} />
-                    {emptyIcon}
-                    <Typography
-                        gutterBottom
-                        variant='h5'>
-                        {t('cart.empty')}
-                    </Typography>
-                    <Typography>
-                        {t('cart.hint')}
-                    </Typography>
+                    <EmptyState flexGrow={1}>
+                        <Typography
+                            gutterBottom
+                            variant='h5'>
+                            {t('cart.empty')}
+                        </Typography>
+                        <Typography>
+                            {t('cart.hint')}
+                        </Typography>
+                    </EmptyState>
                     <Box flexGrow={1} />
                 </Stack>
             )}
