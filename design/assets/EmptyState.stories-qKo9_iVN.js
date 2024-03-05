@@ -1,0 +1,5 @@
+import{j as a}from"./useTheme-AMHikNwr.js";import{E as d}from"./EmptyState-f8e3YPqZ.js";import"./iframe-C6jAGuY7.js";import{T as p}from"./Typography-C2KmF5Dd.js";(function(){try{var t=typeof window<"u"?window:typeof global<"u"?global:typeof self<"u"?self:{},r=new Error().stack;r&&(t._sentryDebugIds=t._sentryDebugIds||{},t._sentryDebugIds[r]="0c8f7d1c-1574-4506-93d1-32d918259df4",t._sentryDebugIdIdentifier="sentry-dbid-0c8f7d1c-1574-4506-93d1-32d918259df4")}catch{}})();const c={component:d,title:"Components/Data Presentations/Empty State",argTypes:{children:{description:"The content of the component"}}},e={args:{children:a.jsx(p,{children:"No results"})}};var o,n,s;e.parameters={...e.parameters,docs:{...(o=e.parameters)==null?void 0:o.docs,source:{originalSource:`{
+  args: {
+    children: <Typography>No results</Typography>
+  }
+}`,...(s=(n=e.parameters)==null?void 0:n.docs)==null?void 0:s.source}}};const i=["Default"],g=Object.freeze(Object.defineProperty({__proto__:null,Default:e,__namedExportsOrder:i,default:c},Symbol.toStringTag,{value:"Module"}));export{g as C};

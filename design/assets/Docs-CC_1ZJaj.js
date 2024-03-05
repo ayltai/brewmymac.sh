@@ -1,0 +1,14 @@
+import{j as t}from"./useTheme-AMHikNwr.js";import{M as o,T as s,D as p,P as m,C as a,b as d}from"./index-BHZ7dQJv.js";import{C as c}from"./DynamicTypedInput.stories-B_H5t3eQ.js";import{u as n}from"./index-BvEm2UGZ.js";import"./index-C-wxagUl.js";import"./_commonjsHelpers-DnngPxDC.js";import"./iframe-C6jAGuY7.js";import"../sb-preview/runtime.js";import"./extends-Bih7WiFi.js";import"./index-CRdi82cl.js";import"./assertThisInitialized-JNA2pt04.js";import"./inheritsLoose-D9gYxgQu.js";import"./index-BSc9wpIy.js";import"./index-BWTWe0Km.js";import"./DynamicTypedInput-DSMEF-Kv.js";import"./useTranslation-Dkj9UuF-.js";import"./context-CdFf3LDh.js";import"./i18nInstance-DtMpzgZE.js";import"./Stack--VKe57hX.js";import"./styled-Cea7lQfD.js";import"./generateUtilityClasses-BkXz_rP6.js";import"./useThemeProps-DN7sIikO.js";import"./styled-C8BlTHvG.js";import"./Typography-C2KmF5Dd.js";import"./InputBase-DmCtuGzU.js";import"./useForkRef-DHyczKbH.js";import"./useEnhancedEffect-DicSz42a.js";import"./ownerWindow-BekXJnat.js";import"./useControlled-pFiEE0Ib.js";import"./isHostComponent-BISCXPu1.js";import"./GlobalStyles-DBIS83lM.js";import"./ButtonBase-DRswLrFq.js";import"./useIsFocusVisible-rM4MwBSL.js";import"./TransitionGroupContext-CSjgsBwq.js";import"./useEventCallback-CVO70Gln.js";import"./useTheme-C8Z8IRiV.js";import"./Modal-Bn0DxBsS.js";import"./Backdrop-c1eof2Dq.js";import"./utils-BEtwtKnX.js";import"./useSlotProps-5DfGAFMd.js";import"./Portal-BvedyDEB.js";import"./Paper-BwAYxPvw.js";import"./Grow-xRpIP6ws.js";import"./List-uRYJW8Nf.js";import"./createSvgIcon-doiNn1VB.js";import"./OutlinedInput-tDNia01P.js";(function(){try{var r=typeof window<"u"?window:typeof global<"u"?global:typeof self<"u"?self:{},i=new Error().stack;i&&(r._sentryDebugIds=r._sentryDebugIds||{},r._sentryDebugIds[i]="c5f5c960-c8c9-44bc-bb7d-5ff0822d2765",r._sentryDebugIdIdentifier="sentry-dbid-c5f5c960-c8c9-44bc-bb7d-5ff0822d2765")}catch{}})();function e(r){const i=Object.assign({h1:"h1",p:"p",ul:"ul",li:"li"},n(),r.components);return t.jsxs(t.Fragment,{children:[t.jsx(o,{of:c}),`
+`,t.jsx(s,{}),`
+`,t.jsx(p,{}),`
+`,t.jsx(i.h1,{id:"how-to-use-dynamic-typed-inputs",children:"How to use dynamic typed inputs"}),`
+`,t.jsx(i.p,{children:"Dynamic typed inputs are used when the required input data type is only known at runtime so that users can input data using an appropriate input field."}),`
+`,t.jsx(i.p,{children:"When using dynamic typed inputs,"}),`
+`,t.jsxs(i.ul,{children:[`
+`,t.jsx(i.li,{children:"Use a label to explain exactly what data is required"}),`
+`]}),`
+`,t.jsx(i.h1,{id:"default-usage",children:"Default usage"}),`
+`,t.jsx(m,{}),`
+`,t.jsx(i.h1,{id:"parameters",children:"Parameters"}),`
+`,t.jsx(a,{sort:"requiredFirst"}),`
+`,t.jsx(d,{title:"Examples",includePrimary:!1})]})}function ot(r={}){const{wrapper:i}=Object.assign({},n(),r.components);return i?t.jsx(i,Object.assign({},r,{children:t.jsx(e,r)})):e(r)}export{ot as default};
