@@ -14,13 +14,13 @@ import { addTweak, removeTweak, updateTweak, } from '../states';
 import { handleError, } from '../utils';
 
 export const Tweaks = () => {
-    const [ matchedTweaks, setMatchedTweaks, ] = useState<Tweak[] | undefined>();
-    const [ cachedTweaks,  setCachedTweaks,  ] = useState<Tweak[] | undefined>();
+    const [ cachedTweaks, setCachedTweaks, ] = useState<Tweak[] | undefined>();
 
     const { tweaks, } : { tweaks : Tweak[], } = useAppSelector(state => state.spellbook);
 
     const { data : suggestedTweaks, error, } = useTweaksQuery(undefined, {
         pollingInterval : TWEAKS_REFRESH_INTERVAL,
+        skip            : cachedTweaks !== undefined,
     });
 
     const dispatch = useAppDispatch();
@@ -49,55 +49,52 @@ export const Tweaks = () => {
     } : {
         tweak : Tweak,
     }) => {
-        const tweakRef = useRef(tweak);
+        const tweakRef = useRef({
+            ...tweak,
+            values : {
+                ...tweak.values,
+            },
+        });
 
         const isSelected = tweaks.some(item => item.id === tweakRef.current.id);
 
         const handleValueChange = (parameter : string, value? : boolean | number | string) => {
-            if (value) {
-                const targetIndex = tweakRef.current.parameters.indexOf(parameter);
-                tweakRef.current.values = tweakRef.current.values.map((oldValue, index) => index === targetIndex ? value : oldValue);
-            }
+            if (value) tweakRef.current.values[tweakRef.current.parameters.indexOf(parameter)] = value;
         };
 
         const handleSubmit = () => {
-            const updatedTweak = {
-                ...tweakRef.current,
-            };
-
             if (cachedTweaks) {
                 const newCachedTweaks = [
                     ...cachedTweaks,
                 ];
 
-                newCachedTweaks[newCachedTweaks.findIndex(cachedTweak => cachedTweak.id === updatedTweak.id)] = updatedTweak;
+                newCachedTweaks[newCachedTweaks.findIndex(cachedTweak => cachedTweak.id === tweakRef.current.id)] = tweakRef.current;
 
                 setCachedTweaks(newCachedTweaks);
             }
 
-            if (matchedTweaks) {
-                const newMatchedTweaks = [
-                    ...matchedTweaks,
-                ];
-
-                newMatchedTweaks[newMatchedTweaks.findIndex(matchedTweak => matchedTweak.id === updatedTweak.id)] = updatedTweak;
-
-                setMatchedTweaks(newMatchedTweaks);
-            }
-
-            if (tweaks.some(selectedTweak => selectedTweak.id === updatedTweak.id)) dispatch(updateTweak(updatedTweak));
+            if (tweaks.some(selectedTweak => selectedTweak.id === tweakRef.current.id)) dispatch(updateTweak(tweakRef.current));
         };
+
+        useEffect(() => {
+            tweakRef.current = {
+                ...tweak,
+                values : {
+                    ...tweak.values,
+                },
+            };
+        }, [ tweak, ]);
 
         return (
             <CatalogueItem
-                selected={tweaks.some(item => item.id === tweak.id)}
-                item={tweak}
+                selected={isSelected}
+                item={tweakRef.current}
                 detailsView={
                     <TweakDetailsView
-                        description={tweak.description}
-                        infoUrl={tweak.infoUrl}
-                        parameters={tweak.parameters}
-                        types={tweak.types}
+                        description={tweakRef.current.description}
+                        infoUrl={tweakRef.current.infoUrl}
+                        parameters={tweakRef.current.parameters}
+                        types={tweakRef.current.types}
                         values={tweakRef.current.values}
                         onChange={handleValueChange} />
                 }
@@ -131,8 +128,8 @@ export const Tweaks = () => {
 
     return (
         <Catalogue
-            suggestedItems={suggestedTweaks}
-            downloadedItems={suggestedTweaks}
+            suggestedItems={cachedTweaks}
+            downloadedItems={cachedTweaks}
             tagLine={t('tweaks.tagline')}
             searchHint={t('tweaks.search.hint')}
             title={t('tweaks.about.title')}
