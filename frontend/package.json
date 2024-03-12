@@ -68,7 +68,7 @@
         "@storybook/addon-actions"         : "^7.6.17",
         "@storybook/addon-essentials"      : "^7.6.17",
         "@storybook/addon-interactions"    : "^7.6.17",
-        "@storybook/addon-themes"          : "^7.6.17",
+        "@storybook/addon-themes"          : "^8.0.0",
         "@storybook/blocks"                : "^7.6.17",
         "@storybook/builder-vite"          : "^7.6.17",
         "@storybook/manager-api"           : "^7.6.17",
