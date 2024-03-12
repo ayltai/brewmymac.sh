@@ -73,7 +73,7 @@
         "@storybook/builder-vite"          : "^7.6.17",
         "@storybook/manager-api"           : "^7.6.17",
         "@storybook/react"                 : "^7.6.17",
-        "@storybook/react-vite"            : "^7.6.17",
+        "@storybook/react-vite"            : "^8.0.0",
         "@storybook/theming"               : "^7.6.17",
         "@testing-library/jest-dom"        : "^6.4.2",
         "@testing-library/react"           : "^14.2.1",
